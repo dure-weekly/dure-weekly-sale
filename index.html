@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>경기두레생협 주간할인 생활재 | 이번 주 매장 할인 안내</title>
+<meta name="description" content="경기두레생협 매장에서 만나는 이번 주 할인 생활재와 가까운 매장 찾기. 할인 기간은 매주 월요일부터 일요일까지입니다." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="brand-logo" aria-hidden="true">🌱</span>
+      <span>
+        경기두레생협
+        <small>주간할인 생활재</small>
+      </span>
+    </a>
+    <span class="period-badge">📅 <span data-period-badge>이번 주 월~일</span></span>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">경기두레생협 매장 소식</span>
+      <h1>이번 주, 두레생협 매장<br /><span class="accent">주간할인</span> 생활재</h1>
+      <span class="hero-period">🗓️ <span data-period-badge>이번 주 월~일</span> 매장에서 만나요</span>
+      <p class="hero-desc">
+        온라인이 아닌 <strong>매장에서만</strong> 만날 수 있는 이번 주 할인 생활재를 소개합니다.
+        가까운 두레생협 매장에 방문해 건강한 먹거리를 합리적인 가격에 만나보세요.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#products">🛒 이번 주 할인 보기</a>
+        <a class="btn btn-outline" href="#store-finder">📍 가까운 매장 찾기</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-chip">🌿 친환경 생활협동조합</span>
+        <span class="trust-chip">🏪 경기 16개 매장</span>
+        <span class="trust-chip">🔄 매주 상품 갱신</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section A: 주간할인 생활재 -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">SECTION A</span>
+        <h2>이번 주 할인 생활재</h2>
+        <p>두레생협 매장에서만 만나는 이번 주 할인 생활재 <strong><span id="product-total-count">-</span>종</strong>이에요. 수량이 한정될 수 있으니 서둘러 방문해주세요.</p>
+        <span class="period-note">⏰ 할인 기간: <span data-period-badge>이번 주 월~일</span> · 매장 판매 기준</span>
+      </div>
+
+      <div id="product-grid" class="product-grid" aria-live="polite">
+        <p class="product-grid-status">이번 주 할인 생활재를 불러오는 중입니다...</p>
+      </div>
+
+      <p id="product-more-wrap" class="product-more-wrap" hidden>
+        <button type="button" id="product-more-btn" class="btn btn-outline">할인 상품 더보기</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section B: 매장 찾기 -->
+  <section class="section section-alt" id="store-finder">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">SECTION B</span>
+        <h2>가까운 매장 찾기</h2>
+        <p>동/구/시 등 지역명을 입력하면 근처 두레생협 매장을 알려드려요. (지도 없이 간단한 지역 매칭으로 안내합니다)</p>
+      </div>
+
+      <div class="store-finder">
+        <form id="store-finder-form" class="store-finder-form" role="search">
+          <label for="store-finder-input" class="visually-hidden">지역명 입력</label>
+          <input
+            type="text"
+            id="store-finder-input"
+            name="query"
+            placeholder="예) 부천시 중동, 시흥 은행동, 광명 하안동"
+            autocomplete="off"
+          />
+          <button type="submit" class="btn btn-primary">🔍 가까운 매장 찾기</button>
+        </form>
+        <p class="store-finder-hint">💡 정확한 주소가 아니어도 괜찮아요. 시/구/동 이름만 입력해보세요.</p>
+        <div class="store-finder-examples">
+          <button type="button" class="example-chip" data-example="부천시 중동">부천시 중동</button>
+          <button type="button" class="example-chip" data-example="시흥시 은행동">시흥시 은행동</button>
+          <button type="button" class="example-chip" data-example="광명시 하안동">광명시 하안동</button>
+          <button type="button" class="example-chip" data-example="원미구">원미구</button>
+        </div>
+      </div>
+
+      <p id="store-result-status" class="result-status" aria-live="polite"></p>
+      <div id="store-results" class="store-results"></div>
+
+      <p class="store-all-link">
+        <a class="btn btn-outline" href="stores.html">📋 전체 매장 16곳 보기</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-title">경기두레생협</p>
+    <p class="footer-line">지역과 함께하는 친환경 생활협동조합, 건강한 먹거리와 지속가능한 소비를 실천합니다.</p>
+    <p class="footer-line">경기두레생협 사무국: <a href="tel:032-664-0072" class="footer-link">032-664-0072</a> · 가까운 매장 전화번호는 <a href="stores.html" class="footer-link">전체 매장 연락처 보기</a>에서 확인하세요</p>
+    <hr class="footer-divider" />
+    <p class="footer-note">
+      상품 정보 출처: ecoop 장보기몰(ecoop.or.kr) · 매장 정보 출처: 경기두레생협 홈페이지(bsdure.or.kr) ·
+      할인 기간은 매장 판매 기준으로 매주 월요일~일요일 적용됩니다.
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
