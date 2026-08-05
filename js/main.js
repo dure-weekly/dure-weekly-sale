@@ -159,11 +159,64 @@ const CATEGORY_LABELS = [
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
-function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap) {
+// 검색어가 상품명에 그대로 없어도("새우" 검색에 "자연산대하"가 걸리도록) 자주 쓰는 장보기 용어를
+// 카테고리나 유사어로 넓혀서 매칭한다. 정확한 상품명 부분일치는 항상 기본으로 함께 적용된다.
+const SEARCH_SYNONYMS = {
+  고기: { category: "meat" },
+  정육: { category: "meat" },
+  육류: { category: "meat" },
+  새우: { terms: ["새우", "대하"] },
+  생선: { category: "seafood" },
+  수산: { category: "seafood" },
+  해산물: { category: "seafood" },
+  야채: { category: "produce" },
+  채소: { category: "produce" },
+  나물: { category: "produce" },
+  과일: { category: "produce" },
+  쌀: { category: "grain" },
+  잡곡: { category: "grain" },
+  반찬: { category: "processed" },
+  세제: { category: "living" },
+  생필품: { category: "living" },
+};
+
+function matchesSearchQuery(product, rawQuery) {
+  const q = normalizeText(rawQuery).toLowerCase();
+  if (!q) return true;
+  if (normalizeText(product.name).toLowerCase().includes(q)) return true;
+
+  const synonym = SEARCH_SYNONYMS[rawQuery.trim()];
+  if (!synonym) return false;
+  if (synonym.category && product.category === synonym.category) return true;
+  if (synonym.terms) {
+    return synonym.terms.some((t) => normalizeText(product.name).toLowerCase().includes(normalizeText(t).toLowerCase()));
+  }
+  return false;
+}
+
+// 카테고리 칩과 이름 검색창은 동시에 적용된다(AND 조건).
+// 예: "정육" 칩을 누른 채로 "새우"를 입력하면 결과가 0건이 되는 게 정상 동작이다.
+function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap, searchInput) {
   if (!filterWrap) return;
 
   const presentCategories = new Set(allProducts.map((p) => p.category));
   const chips = CATEGORY_LABELS.filter((c) => c.value === "all" || presentCategories.has(c.value));
+
+  const state = { category: "all", query: "" };
+
+  function applyFilters() {
+    let filtered = state.category === "all" ? allProducts : allProducts.filter((p) => p.category === state.category);
+    if (state.query.trim()) {
+      filtered = filtered.filter((p) => matchesSearchQuery(p, state.query));
+    }
+    grid.innerHTML = "";
+    if (filtered.length === 0) {
+      grid.innerHTML = `<p class="product-grid-status">조건에 맞는 할인 생활재가 없습니다.</p>`;
+      if (loadMoreWrap) loadMoreWrap.innerHTML = "";
+      return;
+    }
+    renderNextProductBatch(filtered, grid, loadMoreWrap);
+  }
 
   filterWrap.innerHTML = "";
   chips.forEach((c, idx) => {
@@ -177,23 +230,25 @@ function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap) {
     btn.addEventListener("click", () => {
       filterWrap.querySelectorAll(".filter-chip").forEach((el) => el.setAttribute("aria-selected", "false"));
       btn.setAttribute("aria-selected", "true");
-      const filtered = c.value === "all" ? allProducts : allProducts.filter((p) => p.category === c.value);
-      grid.innerHTML = "";
-      if (filtered.length === 0) {
-        grid.innerHTML = `<p class="product-grid-status">이 카테고리에는 이번 주 할인 생활재가 없습니다.</p>`;
-        if (loadMoreWrap) loadMoreWrap.innerHTML = "";
-        return;
-      }
-      renderNextProductBatch(filtered, grid, loadMoreWrap);
+      state.category = c.value;
+      applyFilters();
     });
     filterWrap.appendChild(btn);
   });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      state.query = searchInput.value;
+      applyFilters();
+    });
+  }
 }
 
 async function initProducts() {
   const grid = document.getElementById("product-grid");
   const loadMoreWrap = document.getElementById("product-grid-loadmore");
   const filterWrap = document.getElementById("product-filter");
+  const searchInput = document.getElementById("product-search-input");
   const countEl = document.getElementById("product-total-count");
   if (!grid) return;
 
@@ -212,7 +267,7 @@ async function initProducts() {
 
     if (countEl) countEl.textContent = products.length;
 
-    renderProductFilter(products, grid, loadMoreWrap, filterWrap);
+    renderProductFilter(products, grid, loadMoreWrap, filterWrap, searchInput);
     renderNextProductBatch(products, grid, loadMoreWrap);
   } catch (err) {
     console.error(err);
