@@ -531,11 +531,6 @@ main section[id] {
   grid-column: 1 / -1;
 }
 
-.product-more-wrap {
-  text-align: center;
-  margin-top: 28px;
-}
-
 /* ------------------------------------------------------------- Store find */
 .store-finder {
   background: var(--color-surface);

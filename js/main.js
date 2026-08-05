@@ -70,12 +70,8 @@ function buildProductCard(product) {
   return card;
 }
 
-const PRODUCTS_INITIAL_COUNT = 9;
-
 async function initProducts() {
   const grid = document.getElementById("product-grid");
-  const moreWrap = document.getElementById("product-more-wrap");
-  const moreBtn = document.getElementById("product-more-btn");
   const countEl = document.getElementById("product-total-count");
   if (!grid) return;
 
@@ -94,30 +90,9 @@ async function initProducts() {
 
     if (countEl) countEl.textContent = products.length;
 
-    products.forEach((product, index) => {
-      const card = buildProductCard(product);
-      if (index >= PRODUCTS_INITIAL_COUNT) {
-        card.hidden = true;
-        card.dataset.extra = "true";
-      }
-      grid.appendChild(card);
+    products.forEach((product) => {
+      grid.appendChild(buildProductCard(product));
     });
-
-    if (moreWrap && moreBtn) {
-      if (products.length > PRODUCTS_INITIAL_COUNT) {
-        const remaining = products.length - PRODUCTS_INITIAL_COUNT;
-        moreWrap.hidden = false;
-        moreBtn.textContent = `할인 상품 더보기 (+${remaining})`;
-        moreBtn.addEventListener("click", () => {
-          grid.querySelectorAll('[data-extra="true"]').forEach((card) => {
-            card.hidden = false;
-          });
-          moreWrap.hidden = true;
-        });
-      } else {
-        moreWrap.hidden = true;
-      }
-    }
   } catch (err) {
     console.error(err);
     grid.innerHTML = `<p class="product-grid-status">할인 상품 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;
