@@ -84,7 +84,7 @@ async function initProducts() {
     grid.innerHTML = "";
     const products = data.products || [];
     if (products.length === 0) {
-      grid.innerHTML = `<p class="product-grid-status">이번 주 등록된 할인 상품이 없습니다.</p>`;
+      grid.innerHTML = `<p class="product-grid-status">이번 주 등록된 할인 생활재가 없습니다.</p>`;
       return;
     }
 
@@ -95,7 +95,7 @@ async function initProducts() {
     });
   } catch (err) {
     console.error(err);
-    grid.innerHTML = `<p class="product-grid-status">할인 상품 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;
+    grid.innerHTML = `<p class="product-grid-status">할인 생활재 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;
   }
 }
 
