@@ -3,7 +3,7 @@
     "start": "2026-08-03",
     "end": "2026-08-09"
   },
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-05",
   "products": [
     {
       "id": "p001",
@@ -59,17 +59,6 @@
       "discountRate": 30,
       "category": "seafood",
       "description": "국내산 자포니카 장어를 무항생제로 키워 애벌구이한 뒤 급랭해, 집에서 한 번 더 구우면 쫄깃하고 든든한 장어구이를 즐길 수 있어요."
-    },
-    {
-      "id": "p064",
-      "name": "6년근 홍삼캔디 세트(114g×3)",
-      "icon": "🍬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57834C.png",
-      "originalPrice": 28900,
-      "salePrice": 20200,
-      "discountRate": 30,
-      "category": "processed",
-      "description": "국산 6년근 홍삼농축액을 담은 캔디로, 언제 어디서나 간편하게 즐기는 건강 간식이에요."
     },
     {
       "id": "p065",
@@ -149,15 +138,15 @@
       "description": "전복의 최대 산지 완도에서 출하하는 완도참전복이에요."
     },
     {
-      "id": "p069",
-      "name": "실속유기산양삼(5~6년근/5뿌리)",
-      "icon": "🌿",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/47890C.png",
-      "originalPrice": 39000,
-      "salePrice": 31000,
-      "discountRate": 21,
+      "id": "p144",
+      "name": "김부각(3번들)",
+      "icon": "🍘",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56238C.jpg",
+      "originalPrice": 9600,
+      "salePrice": 7500,
+      "discountRate": 22,
       "category": "processed",
-      "description": "소백산 자락에 씨앗을 자연 그대로 뿌려 키운 5~6년근 산양삼으로, 은은한 자연의 기운을 담았어요."
+      "description": "국산 지주식 김을 3~5초 단시간 튀겨 기름은 적고 바삭한 식감이 살아있어요."
     },
     {
       "id": "p070",
@@ -191,17 +180,6 @@
       "discountRate": 20,
       "category": "seafood",
       "description": "전복의 최대 산지 완도에서 출하하는 완도참전복이에요."
-    },
-    {
-      "id": "p071",
-      "name": "단호박(1kg이상/무농약)",
-      "icon": "🎃",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/230C.png",
-      "originalPrice": 5000,
-      "salePrice": 4000,
-      "discountRate": 20,
-      "category": "produce",
-      "description": "무농약으로 키워 달콤하고 포근한 맛이 일품인 단호박으로, 찜이나 수프, 샐러드 등 다양하게 즐기기 좋아요."
     },
     {
       "id": "p072",
@@ -710,28 +688,6 @@
       "description": "알알이 우려낸 진한 육수 4종을 한 번에 맛볼 수 있는 정성 가득한 선물세트예요."
     },
     {
-      "id": "p094",
-      "name": "맛찬 머우대나물(100g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59888C.jpg",
-      "originalPrice": 6200,
-      "salePrice": 5600,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "은은한 쌉싸름함과 들깨의 고소함이 조화를 이룬 여름철 별미 나물이에요."
-    },
-    {
-      "id": "p095",
-      "name": "맛찬 고구마순나물(90g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59887C.jpg",
-      "originalPrice": 5900,
-      "salePrice": 5300,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "아삭한 식감의 햇고구마순을 국산 들깨가루로 고소하게 볶아낸 여름 별미 나물이에요."
-    },
-    {
       "id": "p096",
       "name": "품질인증 오징어(900g)",
       "icon": "🦑",
@@ -776,39 +732,6 @@
       "description": "구이로 즐기기 좋은 동물복지 인증 삼겹살 100% 부위예요."
     },
     {
-      "id": "p100",
-      "name": "맛찬 부지깽이나물(100g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58067C.png",
-      "originalPrice": 6200,
-      "salePrice": 5600,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "울릉도 청정 지역에서 자란 어린 부지깽이잎을 국산 들기름으로 맛을 낸 자극적이지 않은 밑반찬이에요."
-    },
-    {
-      "id": "p101",
-      "name": "맛찬 얼갈이나물(100g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59890C.jpg",
-      "originalPrice": 4800,
-      "salePrice": 4300,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "어린 배추잎을 친정어머니 비법 양념으로 조물조물 무쳐낸 구수한 집밥 밑반찬이에요."
-    },
-    {
-      "id": "p102",
-      "name": "맛찬 쑥갓나물(100g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59892C.jpg",
-      "originalPrice": 4800,
-      "salePrice": 4300,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "쑥갓 특유의 싱그러운 향을 살려 어머니 손맛으로 무쳐낸 가정식 나물이에요."
-    },
-    {
       "id": "p103",
       "name": "동물복지 제육(500g/앞다리살)",
       "icon": "🍖",
@@ -831,17 +754,6 @@
       "description": "부드러운 육질의 오리슬라이스로 간편하게 오리불고기를 즐길 수 있어요."
     },
     {
-      "id": "p105",
-      "name": "맛찬 비름나물(100g/냉장)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59889C.jpg",
-      "originalPrice": 5100,
-      "salePrice": 4600,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "어머니의 손맛으로 조물조물 무쳐낸 정성 가득 밑반찬이에요."
-    },
-    {
       "id": "p106",
       "name": "봄맞이 쑥버무리(250g)",
       "icon": "🌿",
@@ -862,17 +774,6 @@
       "discountRate": 10,
       "category": "meat",
       "description": "동물복지 인증 갈비 100%로 만들어 푹 찜으로 즐기기 좋아요."
-    },
-    {
-      "id": "p108",
-      "name": "곤드레나물(100g)",
-      "icon": "🌾",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58068C.png",
-      "originalPrice": 6200,
-      "salePrice": 5600,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "강원도 영월 청정지역에서 채취한 곤드레나물로 밥만 있으면 바로 영양밥을 즐길 수 있어요."
     },
     {
       "id": "p109",
@@ -917,17 +818,6 @@
       "discountRate": 10,
       "category": "processed",
       "description": "합성첨가물 없이 국산 천연원재료 100%로만 만든 프리미엄 조미료 선물세트예요."
-    },
-    {
-      "id": "p113",
-      "name": "맛찬 생깻잎무침(240g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59061C.jpg",
-      "originalPrice": 12200,
-      "salePrice": 11000,
-      "discountRate": 10,
-      "category": "produce",
-      "description": "친정 어머니 특급 비법으로 만든 깻잎무침, 삼겹살이나 수육과 함께 먹으면 개운해요."
     },
     {
       "id": "p114",
@@ -1040,39 +930,6 @@
       "description": "통현미, 사과, 아몬드를 4:3:3 황금비율로 완성한 생동감 있는 시리얼이에요."
     },
     {
-      "id": "p117",
-      "name": "맛찬 고등어무조림(700g/냉장)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58803C.jpg",
-      "originalPrice": 18500,
-      "salePrice": 16900,
-      "discountRate": 9,
-      "category": "seafood",
-      "description": "청정 국내산 고등어와 아삭한 무를 넣어 달큰하고 깊은 맛이 우러난 고등어무조림이에요."
-    },
-    {
-      "id": "p118",
-      "name": "맛찬 열무된장무침(100g)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59891C.jpg",
-      "originalPrice": 5300,
-      "salePrice": 4800,
-      "discountRate": 9,
-      "category": "produce",
-      "description": "제철 어린 열무를 살짝 데쳐 아삭하게 살리고 구수한 된장과 매실청으로 감칠맛을 더한 밑반찬입니다."
-    },
-    {
-      "id": "p119",
-      "name": "맛찬 셀러리장아찌(300g)",
-      "icon": "🥒",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60116C.png",
-      "originalPrice": 6000,
-      "salePrice": 5500,
-      "discountRate": 8,
-      "category": "produce",
-      "description": "향긋한 유기농 셀러리에 무, 당근, 아삭이고추를 더해 우리밀 진간장으로 감칠맛 나게 담근 장아찌예요."
-    },
-    {
       "id": "p120",
       "name": "생통닭(551g/6호)",
       "icon": "🍗",
@@ -1093,39 +950,6 @@
       "discountRate": 8,
       "category": "produce",
       "description": "경북 영천 생산자님들이 제초제 없이 친환경으로 키워 당도 14.5브릭스 이상을 보장하는 부사 사과입니다."
-    },
-    {
-      "id": "p122",
-      "name": "맛찬 도라지초무침(220g)",
-      "icon": "🥗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59060C.png",
-      "originalPrice": 11800,
-      "salePrice": 10900,
-      "discountRate": 8,
-      "category": "produce",
-      "description": "국내산 도라지에 아삭한 오이를 더해 새콤달콤하게 무쳐, 은은한 쌉싸름함이 입맛을 돋우는 반찬이에요."
-    },
-    {
-      "id": "p123",
-      "name": "맛찬 우엉조림(200g)",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59059C.png",
-      "originalPrice": 10400,
-      "salePrice": 9600,
-      "discountRate": 8,
-      "category": "produce",
-      "description": "우리 땅에서 자란 국내산 우엉만을 오랜 시간 정성껏 졸여낸 슬로우푸드로, 밥반찬은 물론 김밥 속재료로도 좋아요."
-    },
-    {
-      "id": "p055",
-      "name": "묵은지 닭볶음탕",
-      "icon": "🍗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58802C.jpg",
-      "originalPrice": 31500,
-      "salePrice": 29200,
-      "discountRate": 7,
-      "category": "processed",
-      "description": "묵은지와 닭고기가 만나 얼큰한 맛을 내는 닭볶음탕이에요."
     },
     {
       "id": "p057",
@@ -1150,158 +974,26 @@
       "description": "부드러운 무항생제 순살 닭다리살과 쫄깃한 곱창을 직접 만든 고추기름과 청양고추로 얼큰하게 끓여낸 매콤한 도리탕입니다."
     },
     {
-      "id": "p125",
-      "name": "맛찬 깻잎순들깨볶음(200g)",
-      "icon": "🌿",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59058C.png",
-      "originalPrice": 12600,
-      "salePrice": 11700,
-      "discountRate": 7,
-      "category": "produce",
-      "description": "갓 자란 부드러운 깻잎 새순에 고소한 들깨가루를 더해 볶아낸, 고기와 함께 먹기 좋은 향긋한 반찬이에요."
-    },
-    {
-      "id": "p126",
-      "name": "맛찬 고구마순김치(300g)",
-      "icon": "🌶️",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60117C.png",
-      "originalPrice": 15500,
-      "salePrice": 14500,
-      "discountRate": 6,
-      "category": "processed",
-      "description": "100% 국산 고구마줄기를 사과와 매실청으로 은은하게 담가 아삭한 식감이 살아있는 화학첨가물 최소화 김치입니다."
-    },
-    {
-      "id": "p127",
-      "name": "맛찬 우엉조림(100g)",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58033C.png",
-      "originalPrice": 5200,
-      "salePrice": 4900,
-      "discountRate": 6,
-      "category": "produce",
-      "description": "국내산 우엉만을 오랜 시간 졸여낸 슬로우푸드 반찬으로, 남녀노소 누구나 좋아하는 밥도둑이에요."
-    },
-    {
-      "id": "p128",
-      "name": "국산 산안유정란(600g 15구/초란)",
-      "icon": "🥚",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21188C.jpg",
-      "originalPrice": 8000,
-      "salePrice": 7500,
-      "discountRate": 6,
-      "category": "meat",
-      "description": "무항생제 축산물 인증을 받은 산란 초기 초란으로 담아낸, 신선하고 고소한 국내산 유정란입니다."
-    },
-    {
-      "id": "p129",
-      "name": "맛찬 오미자무생채(330g)",
-      "icon": "🥗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58062C.png",
-      "originalPrice": 8700,
-      "salePrice": 8300,
+      "id": "p145",
+      "name": "순대곱창 볶음세트(510g)",
+      "icon": "🍲",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54670C.jpg",
+      "originalPrice": 8800,
+      "salePrice": 8400,
       "discountRate": 5,
       "category": "processed",
-      "description": "오미자의 고향 문경에서 나는 최상급 오미자를 첨가물 없이 무와 함께 버무려 새콤달콤하게 만든 무생채예요."
+      "description": "손질된 생채소와 함께 냉장으로 공급되는 순대곱창볶음 세트로, 청양고추를 더하면 더 얼큰하게 즐길 수 있어요."
     },
     {
-      "id": "p130",
-      "name": "맛찬 얼갈이보리 물김치(1.4kg)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59414C.jpg",
-      "originalPrice": 18600,
-      "salePrice": 17700,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "얼갈이와 찰보리, 배 등 국산 재료로 시원하고 개운하게 담근 물김치로, 더운 날 입맛 살리기 좋아요."
-    },
-    {
-      "id": "p131",
-      "name": "맛찬 지리멸치볶음(80g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58030C.png",
-      "originalPrice": 4200,
-      "salePrice": 4000,
+      "id": "p146",
+      "name": "초계막국수 밀키트(890g)",
+      "icon": "🍜",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59778C.jpg",
+      "originalPrice": 11000,
+      "salePrice": 10500,
       "discountRate": 5,
       "category": "processed",
-      "description": "청정 남해안에서 잡은 지리 멸치를 견과류와 함께 짜지 않고 고소하게 볶아낸, 밥반찬과 술안주로 좋은 밑반찬입니다."
-    },
-    {
-      "id": "p132",
-      "name": "맛찬 열무얼갈이 물김치(1.4kg)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58072C.png",
-      "originalPrice": 18800,
-      "salePrice": 17900,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "열무와 얼갈이, 쪽파를 황금 비율로 담근 여름철 대표 시원한 물김치예요."
-    },
-    {
-      "id": "p133",
-      "name": "맛찬 산채나물비빔세트(270g)",
-      "icon": "🥗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58425C.png",
-      "originalPrice": 14200,
-      "salePrice": 13500,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "곤드레, 부지깽이 등 국산 산나물을 MSG 없이 정성껏 무쳐 비빔밥으로 즐기기 좋은 세트예요."
-    },
-    {
-      "id": "p134",
-      "name": "맛찬 공심채 나박물김치(1.4kg)",
-      "icon": "🥬",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60037C.png",
-      "originalPrice": 16900,
-      "salePrice": 16100,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "국산 공심채로 시원하게 담근 별미 물김치로, 익을수록 새콤함이 깊어져 고기 요리와 잘 어울려요."
-    },
-    {
-      "id": "p135",
-      "name": "맛찬 깻잎순들깨볶음(100g)",
-      "icon": "🌿",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58064C.png",
-      "originalPrice": 6300,
-      "salePrice": 6000,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "갓 자란 깻잎 새순에 껍질 벗긴 들깨가루를 더해 부드럽고 구수하게 볶아냈어요."
-    },
-    {
-      "id": "p136",
-      "name": "맛찬 도라지초무침(110g)",
-      "icon": "🥗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58065C.png",
-      "originalPrice": 5900,
-      "salePrice": 5600,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "순 국산 도라지만을 손질해 새콤하게 무쳐 입맛을 돋우는 밑반찬이에요."
-    },
-    {
-      "id": "p137",
-      "name": "맛찬 생깻잎무침(120g)",
-      "icon": "🌿",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58634C.jpg",
-      "originalPrice": 6100,
-      "salePrice": 5800,
-      "discountRate": 5,
-      "category": "produce",
-      "description": "국산 깻잎을 MSG 없이 집안 대대로 내려온 방식으로 무쳐 삼겹살이나 수육과 잘 어울려요."
-    },
-    {
-      "id": "p138",
-      "name": "맛찬 코다리조림(700g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58059C.png",
-      "originalPrice": 13700,
-      "salePrice": 13000,
-      "discountRate": 5,
-      "category": "processed",
-      "description": "반건조 코다리를 큼직한 무와 특제 양념에 칼칼하고 시원하게 조려낸 든든한 반찬이에요."
+      "description": "닭육수에 닭안심과 채소 고명을 올려 새콤하게 즐기는 밀키트로, 막국수면만 삶아 곁들이면 간편해요."
     },
     {
       "id": "p061",
@@ -1313,39 +1005,6 @@
       "discountRate": 4,
       "category": "meat",
       "description": "달큰한 양념이 잘 밴 돼지 LA갈비예요."
-    },
-    {
-      "id": "p139",
-      "name": "맛찬 고추장멸치볶음(80g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59893C.jpg",
-      "originalPrice": 4800,
-      "salePrice": 4600,
-      "discountRate": 4,
-      "category": "produce",
-      "description": "남해안 청정 멸치를 매콤달콤한 고추장 양념에 볶아 밥반찬이자 술안주로도 좋아요."
-    },
-    {
-      "id": "p140",
-      "name": "맛찬 김장아찌(150g)",
-      "icon": "🍙",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59942C.png",
-      "originalPrice": 6900,
-      "salePrice": 6600,
-      "discountRate": 4,
-      "category": "processed",
-      "description": "유기농 국산 김을 우리밀 진간장과 쌀조청으로 정성껏 조려 짭짤달콤한 맛이 남녀노소 입맛을 사로잡아요."
-    },
-    {
-      "id": "p141",
-      "name": "맛찬 오이지무침(100g)",
-      "icon": "🥒",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59167C.jpg",
-      "originalPrice": 4800,
-      "salePrice": 4600,
-      "discountRate": 4,
-      "category": "processed",
-      "description": "아삭한 오이지를 새콤짭짤하게 무쳐 여름철 잃은 입맛을 되살려주는 밑반찬이에요."
     },
     {
       "id": "p142",
@@ -1379,17 +1038,6 @@
       "discountRate": 45,
       "category": "living",
       "description": "갈바닉 전류로 얼굴 근육과 피부를 편안하게 케어할 수 있는 홈케어 뷰티 디바이스예요."
-    },
-    {
-      "id": "p077",
-      "name": "촉촉아쿠아세럼(100ml)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59669C.jpg",
-      "originalPrice": 29500,
-      "salePrice": 25200,
-      "discountRate": 15,
-      "category": "living",
-      "description": "촉촉한 수분감을 오래 유지해주는 산뜻한 아쿠아 세럼입니다."
     },
     {
       "id": "p023",
