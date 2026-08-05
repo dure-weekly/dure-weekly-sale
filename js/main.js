@@ -12,11 +12,13 @@ function formatPrice(n) {
 
 function formatPeriodLabel(period) {
   // period.start / period.end : "YYYY-MM-DD" (월요일 ~ 일요일 고정)
-  const toMD = (isoStr) => {
-    const [, m, d] = isoStr.split("-");
-    return `${parseInt(m, 10)}.${parseInt(d, 10)}`;
+  const WEEKDAY_KO = ["일", "월", "화", "수", "목", "금", "토"];
+  const toLabel = (isoStr) => {
+    const [y, m, d] = isoStr.split("-").map((v) => parseInt(v, 10));
+    const weekday = WEEKDAY_KO[new Date(y, m - 1, d).getDay()];
+    return `${m}.${d}(${weekday})`;
   };
-  return `이번 주 월~일 (${toMD(period.start)}~${toMD(period.end)})`;
+  return `${toLabel(period.start)} – ${toLabel(period.end)}`;
 }
 
 async function fetchJSON(path) {

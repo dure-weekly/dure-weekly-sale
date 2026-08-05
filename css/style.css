@@ -159,25 +159,38 @@ ul {
   border-bottom: 1px solid var(--color-border);
 }
 
-.hero-eyebrow {
-  display: inline-block;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 12px;
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 
-.hero h1 {
-  margin: 0 0 16px;
-  font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+.hero-divider-line {
+  width: 44px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.hero-divider-icon {
+  font-size: 1.15rem;
+  opacity: 0.75;
+}
+
+.hero-title {
+  margin: 0 0 14px;
+  font-size: clamp(2.1rem, 5.5vw, 3.1rem);
   font-weight: 800;
-  color: var(--color-primary-dark);
-  line-height: 1.35;
+  color: var(--color-accent);
+  line-height: 1.2;
 }
 
-.hero h1 .accent {
-  color: var(--color-accent);
+.hero-desc {
+  max-width: 480px;
+  margin: 0 auto 22px;
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
 }
 
 .hero-period {
@@ -191,14 +204,6 @@ ul {
   padding: 10px 20px;
   border-radius: 999px;
   font-size: 1rem;
-  margin-bottom: 18px;
-}
-
-.hero-desc {
-  max-width: 560px;
-  margin: 0 auto;
-  color: var(--color-text-muted);
-  font-size: 0.98rem;
 }
 
 .hero-cta {
@@ -210,9 +215,9 @@ ul {
 }
 
 .hero-trust {
-  margin-top: 22px;
+  margin-top: 30px;
   display: flex;
-  gap: 8px;
+  gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -220,14 +225,22 @@ ul {
 .trust-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.76rem;
+  gap: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-primary-dark);
-  background: var(--color-surface);
-  border: 1px solid var(--color-primary-light);
-  padding: 6px 12px;
-  border-radius: 999px;
+}
+
+.trust-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------- Buttons */
