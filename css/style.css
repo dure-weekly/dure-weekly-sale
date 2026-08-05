@@ -572,39 +572,6 @@ main section[id] {
   border-radius: 999px;
 }
 
-/* 이미지를 못 구한 상품용 텍스트 전용 카드 (사진 썸네일 대신 도형 배지만 사용) */
-.product-card-info {
-  padding-top: 4px;
-}
-
-.product-info-badge {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  align-self: flex-start;
-  margin: 14px 14px 0;
-  background: var(--color-accent);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  width: fit-content;
-}
-
-.product-info-badge strong {
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
-.product-info-badge .badge-sub {
-  font-size: 0.66rem;
-  font-weight: 700;
-  opacity: 0.95;
-}
-
-.product-desc-fallback {
-  font-style: italic;
-}
-
 .product-grid-status {
   text-align: center;
   color: var(--color-text-muted);

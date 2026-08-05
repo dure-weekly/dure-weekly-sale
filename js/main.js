@@ -61,42 +61,19 @@ function renderDday(period) {
   }
 }
 
-// 쇼핑몰에서 검색이 안 돼 이미지/설명을 못 구한 상품(향후 매주 자동 갱신 시 발생 가능)은
-// 사진 카드 대신 품목/정가/할인가/할인율만 담은 텍스트 카드로 대체해, 빈 이미지 없이 안전하게 노출한다.
-function buildProductInfoCard(product) {
-  const card = document.createElement("article");
-  card.className = "product-card product-card-info";
-  const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
-
-  card.innerHTML = `
-    <div class="product-info-badge"><strong>${product.discountRate}%</strong><span class="badge-sub">할인</span></div>
-    <div class="product-body">
-      <p class="product-name">${product.name}</p>
-      <p class="product-desc product-desc-fallback">매장에서 실물로 확인해주세요.</p>
-      <div class="price-block">
-        <div class="price-row">
-          <span class="price-original">${formatPrice(product.originalPrice)}</span>
-          <span class="price-sale">${formatPrice(product.salePrice)}</span>
-        </div>
-        <span class="price-save">${formatPrice(saveAmount)} 절약</span>
-      </div>
-    </div>
-  `;
-  return card;
-}
-
+// 쇼핑몰에 사진이 등록되지 않은 상품(향후 매주 자동 갱신 시 발생 가능)은 <img> 없이
+// 사진 카드와 똑같은 구조(아이콘 원형 + 그라데이션 배경)로 그려서, 빈칸처럼 보이지 않고
+// "의도된 아이콘 카드"로 자연스럽게 섞이게 한다.
 function buildProductCard(product) {
-  if (!product.image) {
-    return buildProductInfoCard(product);
-  }
-
   const card = document.createElement("article");
   card.className = "product-card";
   const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
 
   // 상품 이미지는 ecoop 원본 이미지를 fetch로 그려주되, 외부 서버 이미지라 로드 실패 가능성이
   // 있으므로 onerror 시 자기 자신을 숨기고 뒤에 깔린 이모지 플레이스홀더가 드러나게 한다.
-  const imageHtml = `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`;
+  const imageHtml = product.image
+    ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
+    : "";
 
   card.innerHTML = `
     <div class="product-thumb">
