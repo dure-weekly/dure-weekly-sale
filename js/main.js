@@ -36,18 +36,67 @@ function renderPeriodBadges(period) {
   document.querySelectorAll("[data-period-badge]").forEach((el) => {
     el.textContent = label;
   });
+  renderDday(period);
+}
+
+// 할인 종료일(일요일, period.end)까지 남은 일수를 "D-N" / "오늘까지" 형태로 보여줘 긴급성을 더한다.
+function renderDday(period) {
+  const el = document.getElementById("hero-dday");
+  if (!el || !period || !period.end) return;
+
+  const [y, m, d] = period.end.split("-").map((v) => parseInt(v, 10));
+  const end = new Date(y, m - 1, d);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  end.setHours(0, 0, 0, 0);
+
+  const diffDays = Math.round((end - today) / (1000 * 60 * 60 * 24));
+
+  if (diffDays > 0) {
+    el.textContent = `· D-${diffDays}`;
+  } else if (diffDays === 0) {
+    el.textContent = "· 오늘까지";
+  } else {
+    el.textContent = "";
+  }
+}
+
+// 쇼핑몰에서 검색이 안 돼 이미지/설명을 못 구한 상품(향후 매주 자동 갱신 시 발생 가능)은
+// 사진 카드 대신 품목/정가/할인가/할인율만 담은 텍스트 카드로 대체해, 빈 이미지 없이 안전하게 노출한다.
+function buildProductInfoCard(product) {
+  const card = document.createElement("article");
+  card.className = "product-card product-card-info";
+  const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
+
+  card.innerHTML = `
+    <div class="product-info-badge"><strong>${product.discountRate}%</strong><span class="badge-sub">할인</span></div>
+    <div class="product-body">
+      <p class="product-name">${product.name}</p>
+      <p class="product-desc product-desc-fallback">매장에서 실물로 확인해주세요.</p>
+      <div class="price-block">
+        <div class="price-row">
+          <span class="price-original">${formatPrice(product.originalPrice)}</span>
+          <span class="price-sale">${formatPrice(product.salePrice)}</span>
+        </div>
+        <span class="price-save">${formatPrice(saveAmount)} 절약</span>
+      </div>
+    </div>
+  `;
+  return card;
 }
 
 function buildProductCard(product) {
+  if (!product.image) {
+    return buildProductInfoCard(product);
+  }
+
   const card = document.createElement("article");
   card.className = "product-card";
   const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
 
   // 상품 이미지는 ecoop 원본 이미지를 fetch로 그려주되, 외부 서버 이미지라 로드 실패 가능성이
   // 있으므로 onerror 시 자기 자신을 숨기고 뒤에 깔린 이모지 플레이스홀더가 드러나게 한다.
-  const imageHtml = product.image
-    ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
-    : "";
+  const imageHtml = `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`;
 
   card.innerHTML = `
     <div class="product-thumb">
@@ -70,8 +119,104 @@ function buildProductCard(product) {
   return card;
 }
 
+const PRODUCT_PAGE_SIZE = 12;
+// 두 번째 배치(24개째)를 넘기는 시점에 매장 찾기로 유도하는 넛지를 한 번만 끼워 넣어,
+// 상품 목록을 계속 넘기다 스크롤 피로로 이탈하는 것을 막는다.
+const PRODUCT_NUDGE_AFTER = PRODUCT_PAGE_SIZE * 2;
+
+function buildStoreNudgeCard() {
+  const card = document.createElement("div");
+  card.className = "product-nudge";
+  card.innerHTML = `
+    <span class="product-nudge-icon" aria-hidden="true">🏪</span>
+    <p class="product-nudge-text">마음에 드는 생활재를 찾으셨나요? 가까운 매장에서 실물로 확인해보세요.</p>
+    <a class="btn btn-outline" href="#store-finder">📍 가까운 매장 찾기</a>
+  `;
+  return card;
+}
+
+// products는 이미 할인율 내림차순으로 정렬되어 내려온다(data/products.json 생성 시 정렬).
+// 상품 수가 많아졌으므로(약 130개) 한 번에 다 그리지 않고 PRODUCT_PAGE_SIZE개씩 이어서 그린다.
+function renderNextProductBatch(products, grid, loadMoreWrap) {
+  const start = grid.querySelectorAll(".product-card").length;
+  const end = Math.min(start + PRODUCT_PAGE_SIZE, products.length);
+  for (let i = start; i < end; i++) {
+    grid.appendChild(buildProductCard(products[i]));
+  }
+
+  const shownAfter = grid.querySelectorAll(".product-card").length;
+  const nudgeAlreadyShown = !!grid.querySelector(".product-nudge");
+  if (!nudgeAlreadyShown && start < PRODUCT_NUDGE_AFTER && shownAfter >= PRODUCT_NUDGE_AFTER && shownAfter < products.length) {
+    grid.appendChild(buildStoreNudgeCard());
+  }
+
+  renderProductLoadMoreButton(products, grid, loadMoreWrap);
+}
+
+function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
+  if (!loadMoreWrap) return;
+  loadMoreWrap.innerHTML = "";
+
+  const shownCount = grid.querySelectorAll(".product-card").length;
+  if (shownCount >= products.length) return;
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn btn-outline btn-loadmore";
+  btn.textContent = `할인 상품 더보기 (${shownCount}/${products.length})`;
+  btn.addEventListener("click", () => renderNextProductBatch(products, grid, loadMoreWrap));
+  loadMoreWrap.appendChild(btn);
+}
+
+/* ------------------------------------------------------- 카테고리 필터 */
+
+// 정육/수산/과일·채소/쌀·잡곡/가공·반찬/생활용품 순서로 노출한다.
+// 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
+const CATEGORY_LABELS = [
+  { value: "all", label: "전체", icon: "🏷️" },
+  { value: "meat", label: "정육", icon: "🥩" },
+  { value: "seafood", label: "수산", icon: "🐟" },
+  { value: "produce", label: "과일·채소", icon: "🥬" },
+  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
+  { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "living", label: "생활용품", icon: "🧴" },
+];
+
+function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap) {
+  if (!filterWrap) return;
+
+  const presentCategories = new Set(allProducts.map((p) => p.category));
+  const chips = CATEGORY_LABELS.filter((c) => c.value === "all" || presentCategories.has(c.value));
+
+  filterWrap.innerHTML = "";
+  chips.forEach((c, idx) => {
+    const count = c.value === "all" ? allProducts.length : allProducts.filter((p) => p.category === c.value).length;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "filter-chip";
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", idx === 0 ? "true" : "false");
+    btn.textContent = `${c.icon} ${c.label} (${count})`;
+    btn.addEventListener("click", () => {
+      filterWrap.querySelectorAll(".filter-chip").forEach((el) => el.setAttribute("aria-selected", "false"));
+      btn.setAttribute("aria-selected", "true");
+      const filtered = c.value === "all" ? allProducts : allProducts.filter((p) => p.category === c.value);
+      grid.innerHTML = "";
+      if (filtered.length === 0) {
+        grid.innerHTML = `<p class="product-grid-status">이 카테고리에는 이번 주 할인 생활재가 없습니다.</p>`;
+        if (loadMoreWrap) loadMoreWrap.innerHTML = "";
+        return;
+      }
+      renderNextProductBatch(filtered, grid, loadMoreWrap);
+    });
+    filterWrap.appendChild(btn);
+  });
+}
+
 async function initProducts() {
   const grid = document.getElementById("product-grid");
+  const loadMoreWrap = document.getElementById("product-grid-loadmore");
+  const filterWrap = document.getElementById("product-filter");
   const countEl = document.getElementById("product-total-count");
   if (!grid) return;
 
@@ -90,9 +235,8 @@ async function initProducts() {
 
     if (countEl) countEl.textContent = products.length;
 
-    products.forEach((product) => {
-      grid.appendChild(buildProductCard(product));
-    });
+    renderProductFilter(products, grid, loadMoreWrap, filterWrap);
+    renderNextProductBatch(products, grid, loadMoreWrap);
   } catch (err) {
     console.error(err);
     grid.innerHTML = `<p class="product-grid-status">할인 생활재 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;

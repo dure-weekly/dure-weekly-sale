@@ -206,6 +206,11 @@ ul {
   font-size: 1rem;
 }
 
+.hero-dday {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
 .hero-cta {
   margin-top: 26px;
   display: flex;
@@ -346,6 +351,42 @@ main section[id] {
   border-radius: 999px;
 }
 
+/* -------------------------------------------------------- Product filter */
+.product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.filter-chip[aria-selected="true"] {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
 /* ----------------------------------------------------------- Product grid */
 .product-grid {
   display: grid;
@@ -477,6 +518,10 @@ main section[id] {
   font-size: 1rem;
   color: var(--color-text);
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-desc {
@@ -484,6 +529,10 @@ main section[id] {
   color: var(--color-text-muted);
   margin: 0;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .price-block {
@@ -523,12 +572,80 @@ main section[id] {
   border-radius: 999px;
 }
 
+/* 이미지를 못 구한 상품용 텍스트 전용 카드 (사진 썸네일 대신 도형 배지만 사용) */
+.product-card-info {
+  padding-top: 4px;
+}
+
+.product-info-badge {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  align-self: flex-start;
+  margin: 14px 14px 0;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.product-info-badge strong {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.product-info-badge .badge-sub {
+  font-size: 0.66rem;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.product-desc-fallback {
+  font-style: italic;
+}
+
 .product-grid-status {
   text-align: center;
   color: var(--color-text-muted);
   padding: 30px 0;
   font-size: 0.9rem;
   grid-column: 1 / -1;
+}
+
+.product-nudge {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-earth-light));
+  border: 1.5px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.product-nudge-icon {
+  font-size: 1.6rem;
+}
+
+.product-nudge-text {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-size: 0.92rem;
+  max-width: 420px;
+}
+
+.product-loadmore {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.btn-loadmore {
+  min-width: 220px;
 }
 
 /* ------------------------------------------------------------- Store find */
@@ -593,7 +710,7 @@ main section[id] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
+  min-height: 44px;
   background: var(--color-primary-light);
   color: var(--color-primary-dark);
   border: none;

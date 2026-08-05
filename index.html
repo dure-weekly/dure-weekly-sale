@@ -36,9 +36,9 @@
         <span class="hero-divider-icon">🌱</span>
         <span class="hero-divider-line"></span>
       </div>
-      <h1 class="hero-title">주간할인 안내</h1>
+      <h1 class="hero-title">경기두레생협 이번 주 특가</h1>
       <p class="hero-desc">매주 엄선한 생활재를 합리적인 가격에 만나보세요.</p>
-      <span class="hero-period">📅 <span data-period-badge>이번 주 월~일</span></span>
+      <span class="hero-period">📅 <span data-period-badge>이번 주 월~일</span> <span id="hero-dday" class="hero-dday"></span></span>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#products">🏷️ 주간 할인 보기</a>
         <a class="btn btn-outline" href="#store-finder">📍 가까운 매장 찾기</a>
@@ -60,9 +60,12 @@
         <span class="period-note">⏰ 할인 기간: <span data-period-badge>이번 주 월~일</span></span>
       </div>
 
+      <div id="product-filter" class="product-filter" role="tablist" aria-label="생활재 카테고리 필터"></div>
+
       <div id="product-grid" class="product-grid" aria-live="polite">
         <p class="product-grid-status">이번 주 할인 생활재를 불러오는 중입니다...</p>
       </div>
+      <div id="product-grid-loadmore" class="product-loadmore"></div>
     </div>
   </section>
 
