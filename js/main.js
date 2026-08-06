@@ -75,22 +75,32 @@ function buildProductCard(product) {
     ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
     : "";
 
+  // discountRate가 0이면 할인이 아니라 "이번 주 새로 들어온 생활재(햇출하)"라는 뜻 —
+  // %대신 전용 배지를 쓰고, 정가/할인가가 같으므로 취소선·절약문구 없이 가격 한 줄만 보여준다.
+  const isNewArrival = product.discountRate === 0;
+  const badgeHtml = isNewArrival
+    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
+    : `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}%</strong><span class="badge-sub">할인</span></span>`;
+  const priceHtml = isNewArrival
+    ? `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`
+    : `<div class="price-block">
+        <div class="price-row">
+          <span class="price-original">${formatPrice(product.originalPrice)}</span>
+          <span class="price-sale">${formatPrice(product.salePrice)}</span>
+        </div>
+        <span class="price-save">${formatPrice(saveAmount)} 절약</span>
+      </div>`;
+
   card.innerHTML = `
     <div class="product-thumb">
-      <span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}%</strong><span class="badge-sub">할인</span></span>
+      ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${product.icon || "🥬"}</span>
     </div>
     <div class="product-body">
       <p class="product-name">${product.name}</p>
       <p class="product-desc">${product.description}</p>
-      <div class="price-block">
-        <div class="price-row">
-          <span class="price-original">${formatPrice(product.originalPrice)}</span>
-          <span class="price-sale">${formatPrice(product.salePrice)}</span>
-        </div>
-        <span class="price-save">${formatPrice(saveAmount)} 절약</span>
-      </div>
+      ${priceHtml}
     </div>
   `;
   return card;
@@ -278,9 +288,9 @@ async function initProducts() {
 /* ------------------------------------------------------------- 사전예약 */
 
 // 사전예약 가격은 세 가지 패턴이 있다.
-// A) 정가만(상시가격 없음): 할인 아님 — 정가로만 표시, 할인율 배지 대신 "햇출하" 등 타입 배지
-// B) 정가 -> 할인가(2단): 일반 할인 표시와 동일
-// C) 정가 -> 할인가 -> 쿠폰적용가(3단, 수산쿠폰): 세 값을 화살표로 이어서 표시 + "수산쿠폰 적용시" 배지
+// A) 정가만(상시가격 없음): 할인 아님 — 정가로만 표시, 배지 없음
+// B) 정가 -> 할인가(2단): 주간할인과 동일한 discount-badge(오른쪽 상단) 사용
+// C) 정가 -> 할인가 -> 쿠폰적용가(3단, 수산쿠폰): 세 값을 화살표로 이어서 표시 + 가격 위에 쿠폰 안내 태그
 function buildReservationPriceBlock(item) {
   if (item.originalPrice == null) {
     return `
@@ -296,6 +306,7 @@ function buildReservationPriceBlock(item) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
     return `
       <div class="price-block">
+        <span class="coupon-tag">🎟️ 수산쿠폰 적용시</span>
         <div class="price-row price-row-chain">
           <span class="price-original">${formatPrice(item.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
@@ -320,19 +331,6 @@ function buildReservationPriceBlock(item) {
   `;
 }
 
-function buildReservationBadges(item) {
-  const badges = [];
-  if (item.reservationType === "햇출하") {
-    badges.push(`<span class="reservation-badge reservation-badge-new">🌱 햇출하</span>`);
-  } else if (item.discountRate != null) {
-    badges.push(`<span class="reservation-badge reservation-badge-discount">${item.discountRate}% 할인</span>`);
-  }
-  if (item.hasCoupon) {
-    badges.push(`<span class="reservation-badge reservation-badge-coupon">🎟️ 수산쿠폰 적용시</span>`);
-  }
-  return badges.join("");
-}
-
 function buildReservationCard(item) {
   const card = document.createElement("article");
   card.className = "product-card reservation-card";
@@ -341,9 +339,14 @@ function buildReservationCard(item) {
     ? `<img class="product-image" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.remove();" />`
     : "";
 
+  // 할인율은 주간할인과 완전히 동일한 discount-badge(오른쪽 상단, 같은 크기)로 표시한다.
+  const badgeHtml = item.discountRate != null
+    ? `<span class="discount-badge" aria-hidden="true"><strong>${item.discountRate}%</strong><span class="badge-sub">할인</span></span>`
+    : "";
+
   card.innerHTML = `
     <div class="product-thumb">
-      <div class="reservation-badge-row">${buildReservationBadges(item)}</div>
+      ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${item.icon || "📦"}</span>
     </div>
@@ -351,7 +354,7 @@ function buildReservationCard(item) {
       <p class="product-name">${item.name}</p>
       <p class="product-desc">${item.description || ""}</p>
       ${buildReservationPriceBlock(item)}
-      ${item.supplyDate ? `<span class="reservation-date-badge">📅 받는날 ${item.supplyDate}</span>` : ""}
+      ${item.supplyDate ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>` : ""}
     </div>
   `;
   return card;

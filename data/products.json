@@ -952,6 +952,39 @@
       "description": "해남 지역에 맞게 개발된 새청무 품종으로 찰지고 투명한 밥알에 은은한 단맛이 좋은 국산 유기농 쌀이에요."
     },
     {
+      "id": "p145",
+      "name": "자두(800g/도담/별빛)",
+      "icon": "🍑",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/29366C.png",
+      "originalPrice": 10000,
+      "salePrice": 10000,
+      "discountRate": 0,
+      "category": "produce",
+      "description": "별빛촌 작목반에서 정성껏 키운 자두입니다. 아삭하고 달콤한 도담 자두, 지금이 가장 맛있는 제철입니다."
+    },
+    {
+      "id": "p146",
+      "name": "고구마줄기(300g/유기)",
+      "icon": "🍠",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52927C.jpg",
+      "originalPrice": 4200,
+      "salePrice": 4200,
+      "discountRate": 0,
+      "category": "produce",
+      "description": ""
+    },
+    {
+      "id": "p147",
+      "name": "아이스블루베리(500g/무농약)",
+      "icon": "🫐",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/23620C.png",
+      "originalPrice": 18000,
+      "salePrice": 18000,
+      "discountRate": 0,
+      "category": "produce",
+      "description": "무농약 블루베리를 신선하게! 급속 냉동 아이스 블루베리 필요할 때마다 꺼내 먹는 건강한 블루베리"
+    },
+    {
       "id": "p062",
       "name": "휴라이프 뷰리미 갈바닉 마사지기(화이트)",
       "icon": "💆",

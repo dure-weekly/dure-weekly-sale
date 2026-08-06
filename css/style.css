@@ -596,43 +596,20 @@ main section[id] {
   border-radius: 999px;
 }
 
-/* ------------------------------------------------------------- 사전예약 */
-.reservation-badge-row {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  z-index: 3;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.reservation-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  padding: 5px 9px;
-  border-radius: 999px;
-  border: 2px solid var(--color-surface);
-  white-space: nowrap;
-}
-
-.reservation-badge-new {
+/* --------------------------------------------------- 주간할인 신규입고 배지 */
+.discount-badge-new {
   background: var(--color-primary);
-  color: #fff;
 }
 
-.reservation-badge-discount {
-  background: var(--color-accent);
+/* ------------------------------------------------------------- 사전예약 */
+.coupon-tag {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
   color: #fff;
-}
-
-.reservation-badge-coupon {
   background: var(--color-earth);
-  color: #fff;
+  padding: 3px 9px;
+  border-radius: 999px;
 }
 
 .price-row-chain {
@@ -652,14 +629,15 @@ main section[id] {
   text-decoration: line-through;
 }
 
+/* "공급: 8/27(금)" — 받는 날짜는 방문/구매 결정에 중요한 정보라 눈에 띄게 크게 표시한다 */
 .reservation-date-badge {
   align-self: flex-start;
-  margin-top: 2px;
-  font-size: 0.74rem;
-  font-weight: 700;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-weight: 800;
   color: var(--color-primary-dark);
   background: var(--color-primary-light);
-  padding: 4px 10px;
+  padding: 6px 12px;
   border-radius: 999px;
 }
 
