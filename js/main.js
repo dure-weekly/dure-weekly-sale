@@ -28,8 +28,12 @@ function formatPeriodLabel(period) {
   return `${toLabel(period.start)} – ${toLabel(period.end)}`;
 }
 
+// 상품/예약 데이터는 매주 바뀌는데, 브라우저나 CDN이 옛 버전을 캐시해두면
+// 새로고침해도 갱신이 안 보일 수 있다. 매 요청마다 타임스탬프를 붙이고
+// cache: "no-store"로 강제해, 항상 최신 파일을 받아오게 한다.
 async function fetchJSON(path) {
-  const res = await fetch(path);
+  const bustedPath = path + (path.includes("?") ? "&" : "?") + "v=" + Date.now();
+  const res = await fetch(bustedPath, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`${path} 요청 실패: ${res.status}`);
   }

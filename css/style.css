@@ -615,6 +615,16 @@ main section[id] {
   box-shadow: 0 5px 14px rgba(23, 63, 36, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.85);
 }
 
+/* 햇출하는 숫자(%) 대신 글자가 주인공이라, 원 안에 꽉 차 보이도록 크게 키운다 */
+.discount-badge-new strong {
+  font-size: 1.15rem;
+}
+
+.discount-badge-new .badge-sub {
+  font-size: 0.74rem;
+  margin-top: 1px;
+}
+
 /* ------------------------------------------------------------- 사전예약 */
 .coupon-tag {
   align-self: flex-start;
