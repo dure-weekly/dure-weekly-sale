@@ -11,6 +11,12 @@ function formatPrice(n) {
   return `${n.toLocaleString("ko-KR")}<span class="unit">원</span>`;
 }
 
+// 정가·중간가처럼 "최종가가 아닌" 값은 원 단위 없이 숫자만 — 모바일에서 원이 다음 줄로
+// 밀려나 줄바꿈되는 문제를 막고, 최종 판매가만 원이 붙어 더 도드라지게 한다.
+function formatNumberOnly(n) {
+  return n.toLocaleString("ko-KR");
+}
+
 function formatPeriodLabel(period) {
   // period.start / period.end : "YYYY-MM-DD" (월요일 ~ 일요일 고정)
   const WEEKDAY_KO = ["일", "월", "화", "수", "목", "금", "토"];
@@ -86,7 +92,7 @@ function buildProductCard(product) {
     ? `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`
     : `<div class="price-block">
         <div class="price-row">
-          <span class="price-original">${formatPrice(product.originalPrice)}</span>
+          <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
           <span class="price-sale">${formatPrice(product.salePrice)}</span>
         </div>
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
@@ -307,11 +313,11 @@ function buildReservationPriceBlock(item) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
     return `
       <div class="price-block">
-        <span class="coupon-tag">🎟️ 수산쿠폰 적용시</span>
+        <span class="coupon-tag">🐟 수산쿠폰 적용시</span>
         <div class="price-row price-row-chain">
-          <span class="price-original">${formatPrice(item.originalPrice)}</span>
+          <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
-          <span class="price-mid">${formatPrice(item.salePrice)}</span>
+          <span class="price-mid">${formatNumberOnly(item.salePrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
           <span class="price-sale">${formatPrice(item.couponPrice)}</span>
         </div>
@@ -324,7 +330,7 @@ function buildReservationPriceBlock(item) {
   return `
     <div class="price-block">
       <div class="price-row">
-        <span class="price-original">${formatPrice(item.originalPrice)}</span>
+        <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
         <span class="price-sale">${formatPrice(item.salePrice)}</span>
       </div>
       <span class="price-save">${formatPrice(saveAmount)} 절약</span>

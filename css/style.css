@@ -500,6 +500,8 @@ main section[id] {
   background: var(--color-surface);
 }
 
+/* 원형 + 그라데이션 + 컬러 그림자로 입체감을 주되, 흰 글씨/굵은 폰트는 그대로 유지해
+   세련되면서도 가독성과 시인성은 오히려 더 살아나게 한다. */
 .discount-badge {
   position: absolute;
   top: 10px;
@@ -508,17 +510,18 @@ main section[id] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1.05;
-  background: var(--color-accent);
+  justify-content: center;
+  line-height: 1;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #e5713a, var(--color-accent-dark));
   color: #fff;
-  padding: 6px 9px 5px;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  border: 2px solid var(--color-surface);
+  box-shadow: 0 5px 14px rgba(168, 71, 26, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.85);
 }
 
 .discount-badge strong {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
 }
 
@@ -577,6 +580,7 @@ main section[id] {
   font-size: 0.95rem;
   color: var(--color-text-muted);
   text-decoration: line-through;
+  white-space: nowrap;
 }
 
 .price-sale {
@@ -584,6 +588,7 @@ main section[id] {
   font-weight: 800;
   color: var(--color-accent-dark);
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 /* 숫자 옆 단위("원"/"%")는 숫자보다 작게 — 숫자 자체의 가독성을 살린다.
@@ -596,17 +601,18 @@ main section[id] {
 
 .price-save {
   align-self: flex-start;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--color-primary-dark);
   background: var(--color-primary-light);
-  padding: 3px 10px;
+  padding: 4px 11px;
   border-radius: 999px;
 }
 
 /* --------------------------------------------------- 주간할인 신규입고 배지 */
 .discount-badge-new {
-  background: var(--color-primary);
+  background: linear-gradient(150deg, #3d8a55, var(--color-primary-dark));
+  box-shadow: 0 5px 14px rgba(23, 63, 36, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.85);
 }
 
 /* ------------------------------------------------------------- 사전예약 */
@@ -635,6 +641,7 @@ main section[id] {
   font-size: 1rem;
   color: var(--color-text-muted);
   text-decoration: line-through;
+  white-space: nowrap;
 }
 
 /* "공급: 8/27(금)" — 받는 날짜는 방문/구매 결정에 중요한 정보라 눈에 띄게 크게 표시한다 */
@@ -643,8 +650,8 @@ main section[id] {
   margin-top: 4px;
   font-size: 0.95rem;
   font-weight: 800;
-  color: var(--color-primary-dark);
-  background: var(--color-primary-light);
+  color: #fff;
+  background: var(--color-primary);
   padding: 6px 12px;
   border-radius: 999px;
 }
