@@ -275,6 +275,185 @@ async function initProducts() {
   }
 }
 
+/* ------------------------------------------------------------- 사전예약 */
+
+// 사전예약 가격은 세 가지 패턴이 있다.
+// A) 정가만(상시가격 없음): 할인 아님 — 정가로만 표시, 할인율 배지 대신 "햇출하" 등 타입 배지
+// B) 정가 -> 할인가(2단): 일반 할인 표시와 동일
+// C) 정가 -> 할인가 -> 쿠폰적용가(3단, 수산쿠폰): 세 값을 화살표로 이어서 표시 + "수산쿠폰 적용시" 배지
+function buildReservationPriceBlock(item) {
+  if (item.originalPrice == null) {
+    return `
+      <div class="price-block">
+        <div class="price-row">
+          <span class="price-sale">${formatPrice(item.salePrice)}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  if (item.hasCoupon && item.couponPrice != null) {
+    const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
+    return `
+      <div class="price-block">
+        <div class="price-row price-row-chain">
+          <span class="price-original">${formatPrice(item.originalPrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          <span class="price-mid">${formatPrice(item.salePrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          <span class="price-sale">${formatPrice(item.couponPrice)}</span>
+        </div>
+        <span class="price-save">쿠폰 적용시 ${formatPrice(saveAmount)} 절약</span>
+      </div>
+    `;
+  }
+
+  const saveAmount = Math.max(item.originalPrice - item.salePrice, 0);
+  return `
+    <div class="price-block">
+      <div class="price-row">
+        <span class="price-original">${formatPrice(item.originalPrice)}</span>
+        <span class="price-sale">${formatPrice(item.salePrice)}</span>
+      </div>
+      <span class="price-save">${formatPrice(saveAmount)} 절약</span>
+    </div>
+  `;
+}
+
+function buildReservationBadges(item) {
+  const badges = [];
+  if (item.reservationType === "햇출하") {
+    badges.push(`<span class="reservation-badge reservation-badge-new">🌱 햇출하</span>`);
+  } else if (item.discountRate != null) {
+    badges.push(`<span class="reservation-badge reservation-badge-discount">${item.discountRate}% 할인</span>`);
+  }
+  if (item.hasCoupon) {
+    badges.push(`<span class="reservation-badge reservation-badge-coupon">🎟️ 수산쿠폰 적용시</span>`);
+  }
+  return badges.join("");
+}
+
+function buildReservationCard(item) {
+  const card = document.createElement("article");
+  card.className = "product-card reservation-card";
+
+  const imageHtml = item.image
+    ? `<img class="product-image" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.remove();" />`
+    : "";
+
+  card.innerHTML = `
+    <div class="product-thumb">
+      <div class="reservation-badge-row">${buildReservationBadges(item)}</div>
+      ${imageHtml}
+      <span class="product-icon-wrap" aria-hidden="true">${item.icon || "📦"}</span>
+    </div>
+    <div class="product-body">
+      <p class="product-name">${item.name}</p>
+      <p class="product-desc">${item.description || ""}</p>
+      ${buildReservationPriceBlock(item)}
+      ${item.supplyDate ? `<span class="reservation-date-badge">📅 받는날 ${item.supplyDate}</span>` : ""}
+    </div>
+  `;
+  return card;
+}
+
+const RESERVATION_PAGE_SIZE = 12;
+
+function renderNextReservationBatch(items, grid, loadMoreWrap) {
+  const start = grid.querySelectorAll(".product-card").length;
+  const end = Math.min(start + RESERVATION_PAGE_SIZE, items.length);
+  for (let i = start; i < end; i++) {
+    grid.appendChild(buildReservationCard(items[i]));
+  }
+  renderReservationLoadMoreButton(items, grid, loadMoreWrap);
+}
+
+function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
+  if (!loadMoreWrap) return;
+  loadMoreWrap.innerHTML = "";
+  const shownCount = grid.querySelectorAll(".product-card").length;
+  if (shownCount >= items.length) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn btn-outline btn-loadmore";
+  btn.textContent = `사전예약 더보기 (${shownCount}/${items.length})`;
+  btn.addEventListener("click", () => renderNextReservationBatch(items, grid, loadMoreWrap));
+  loadMoreWrap.appendChild(btn);
+}
+
+// 테마(예: "[축산예약]제주흑돼지 예약전")의 대괄호 태그를 걷어내 칩 라벨로 쓴다.
+function cleanThemeLabel(theme) {
+  return (theme || "기타").replace(/^\[[^\]]*\]/, "").replace(/[_~!]+$/, "").trim() || "기타";
+}
+
+function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
+  if (!filterWrap) return;
+
+  const themeGroups = new Map();
+  allItems.forEach((it) => {
+    const label = cleanThemeLabel(it.theme);
+    if (!themeGroups.has(label)) themeGroups.set(label, 0);
+    themeGroups.set(label, themeGroups.get(label) + 1);
+  });
+
+  const chips = [{ label: "전체", count: allItems.length }, ...Array.from(themeGroups, ([label, count]) => ({ label, count }))];
+
+  const state = { theme: null };
+
+  function applyFilter() {
+    const filtered = state.theme == null ? allItems : allItems.filter((it) => cleanThemeLabel(it.theme) === state.theme);
+    grid.innerHTML = "";
+    if (filtered.length === 0) {
+      grid.innerHTML = `<p class="product-grid-status">해당 테마의 사전예약 생활재가 없습니다.</p>`;
+      if (loadMoreWrap) loadMoreWrap.innerHTML = "";
+      return;
+    }
+    renderNextReservationBatch(filtered, grid, loadMoreWrap);
+  }
+
+  filterWrap.innerHTML = "";
+  chips.forEach((c, idx) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "filter-chip";
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", idx === 0 ? "true" : "false");
+    btn.textContent = `${c.label} (${c.count})`;
+    btn.addEventListener("click", () => {
+      filterWrap.querySelectorAll(".filter-chip").forEach((el) => el.setAttribute("aria-selected", "false"));
+      btn.setAttribute("aria-selected", "true");
+      state.theme = idx === 0 ? null : c.label;
+      applyFilter();
+    });
+    filterWrap.appendChild(btn);
+  });
+}
+
+async function initReservations() {
+  const grid = document.getElementById("reservation-grid");
+  const loadMoreWrap = document.getElementById("reservation-grid-loadmore");
+  const filterWrap = document.getElementById("reservation-filter");
+  if (!grid) return;
+
+  grid.innerHTML = `<p class="product-grid-status">사전예약 생활재를 불러오는 중입니다...</p>`;
+
+  try {
+    const data = await fetchJSON("data/reservations.json");
+    grid.innerHTML = "";
+    const items = data.reservations || [];
+    if (items.length === 0) {
+      grid.innerHTML = `<p class="product-grid-status">현재 등록된 사전예약 생활재가 없습니다.</p>`;
+      return;
+    }
+
+    renderReservationFilter(items, grid, loadMoreWrap, filterWrap);
+    renderNextReservationBatch(items, grid, loadMoreWrap);
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = `<p class="product-grid-status">사전예약 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;
+  }
+}
+
 /* --------------------------------------------------------- 매장 매칭 로직 */
 
 /**
@@ -496,6 +675,7 @@ async function initAllStoresList() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initProducts();
+  initReservations();
   initStoreFinder();
   initAllStoresList();
 });

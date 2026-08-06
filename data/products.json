@@ -50,17 +50,6 @@
       "description": "제주 레몬으로 만들어 상큼한 맛이 매력적인 레몬차예요."
     },
     {
-      "id": "p063",
-      "name": "초벌장어(470g/2~3미)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55924C.jpg",
-      "originalPrice": 55600,
-      "salePrice": 38900,
-      "discountRate": 30,
-      "category": "seafood",
-      "description": "국내산 자포니카 장어를 무항생제로 키워 애벌구이한 뒤 급랭해, 집에서 한 번 더 구우면 쫄깃하고 든든한 장어구이를 즐길 수 있어요."
-    },
-    {
       "id": "p065",
       "name": "손질민물장어(600g/2~3미)",
       "icon": "🐟",
@@ -127,17 +116,6 @@
       "description": "국내산 유기농 보리를 정성껏 덖어 진하게 우려냈어요."
     },
     {
-      "id": "p008",
-      "name": "완도왕전복(5미/600g이상)",
-      "icon": "🛒",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57877C.jpg",
-      "originalPrice": 35500,
-      "salePrice": 26600,
-      "discountRate": 25,
-      "category": "seafood",
-      "description": "전복의 최대 산지 완도에서 출하하는 완도참전복이에요."
-    },
-    {
       "id": "p144",
       "name": "김부각(3번들)",
       "icon": "🍘",
@@ -169,17 +147,6 @@
       "discountRate": 20,
       "category": "processed",
       "description": "단백질과 불포화지방산이 풍부한 건강 간식이에요."
-    },
-    {
-      "id": "p011",
-      "name": "완도참전복700g(8~10미)",
-      "icon": "🛒",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54634C.jpg",
-      "originalPrice": 30100,
-      "salePrice": 24000,
-      "discountRate": 20,
-      "category": "seafood",
-      "description": "전복의 최대 산지 완도에서 출하하는 완도참전복이에요."
     },
     {
       "id": "p072",
@@ -257,17 +224,6 @@
       "discountRate": 15,
       "category": "processed",
       "description": "분쇄두부와 견과류, 감미료 없이 국산 콩의 진한 맛을 그대로 담았어요."
-    },
-    {
-      "id": "p078",
-      "name": "완도참전복(480g/6미)",
-      "icon": "🐚",
-      "image": "images/58700.jpg",
-      "originalPrice": 23200,
-      "salePrice": 19700,
-      "discountRate": 15,
-      "category": "seafood",
-      "description": "전복의 최대 산지 완도에서 출하하는 완도참전복입니다."
     },
     {
       "id": "p079",
@@ -972,39 +928,6 @@
       "discountRate": 7,
       "category": "processed",
       "description": "부드러운 무항생제 순살 닭다리살과 쫄깃한 곱창을 직접 만든 고추기름과 청양고추로 얼큰하게 끓여낸 매콤한 도리탕입니다."
-    },
-    {
-      "id": "p145",
-      "name": "순대곱창 볶음세트(510g)",
-      "icon": "🍲",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54670C.jpg",
-      "originalPrice": 8800,
-      "salePrice": 8400,
-      "discountRate": 5,
-      "category": "processed",
-      "description": "손질된 생채소와 함께 냉장으로 공급되는 순대곱창볶음 세트로, 청양고추를 더하면 더 얼큰하게 즐길 수 있어요."
-    },
-    {
-      "id": "p146",
-      "name": "초계막국수 밀키트(890g)",
-      "icon": "🍜",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59778C.jpg",
-      "originalPrice": 11000,
-      "salePrice": 10500,
-      "discountRate": 5,
-      "category": "processed",
-      "description": "닭육수에 닭안심과 채소 고명을 올려 새콤하게 즐기는 밀키트로, 막국수면만 삶아 곁들이면 간편해요."
-    },
-    {
-      "id": "p061",
-      "name": "양념 돼지LA갈비(1kg)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52941C.jpg",
-      "originalPrice": 26500,
-      "salePrice": 25500,
-      "discountRate": 4,
-      "category": "meat",
-      "description": "달큰한 양념이 잘 밴 돼지 LA갈비예요."
     },
     {
       "id": "p142",

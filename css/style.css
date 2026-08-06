@@ -596,6 +596,73 @@ main section[id] {
   border-radius: 999px;
 }
 
+/* ------------------------------------------------------------- 사전예약 */
+.reservation-badge-row {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.reservation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 2px solid var(--color-surface);
+  white-space: nowrap;
+}
+
+.reservation-badge-new {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.reservation-badge-discount {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.reservation-badge-coupon {
+  background: var(--color-earth);
+  color: #fff;
+}
+
+.price-row-chain {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-chain-arrow {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.price-mid {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.reservation-date-badge {
+  align-self: flex-start;
+  margin-top: 2px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
 .product-grid-status {
   text-align: center;
   color: var(--color-text-muted);

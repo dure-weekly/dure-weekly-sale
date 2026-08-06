@@ -41,6 +41,7 @@
       <span class="hero-period">📅 <span data-period-badge>이번 주 월~일</span> <span id="hero-dday" class="hero-dday"></span></span>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#products">🏷️ 주간 할인 보기</a>
+        <a class="btn btn-outline" href="#reservation">📦 사전예약</a>
         <a class="btn btn-outline" href="#store-finder">📍 가까운 매장 찾기</a>
       </div>
       <div class="hero-trust">
@@ -79,11 +80,29 @@
     </div>
   </section>
 
+  <!-- Section R: 사전예약 -->
+  <section class="section" id="reservation">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">SECTION B</span>
+        <h2>사전예약 생활재</h2>
+        <p>미리 예약하고 제철에 받아보세요.<br />품목마다 받는 날짜가 다르니 카드에서 꼭 확인해 주세요.</p>
+      </div>
+
+      <div id="reservation-filter" class="product-filter" role="tablist" aria-label="사전예약 테마 필터"></div>
+
+      <div id="reservation-grid" class="product-grid" aria-live="polite">
+        <p class="product-grid-status">사전예약 생활재를 불러오는 중입니다...</p>
+      </div>
+      <div id="reservation-grid-loadmore" class="product-loadmore"></div>
+    </div>
+  </section>
+
   <!-- Section B: 매장 찾기 -->
   <section class="section section-alt" id="store-finder">
     <div class="container">
       <div class="section-head">
-        <span class="section-tag">SECTION B</span>
+        <span class="section-tag">SECTION C</span>
         <h2>가까운 매장 찾기</h2>
         <p>동/구/시 등 지역명을 입력하면 근처 두레생협 매장을 알려드려요. (지도 없이 간단한 지역 매칭으로 안내합니다)</p>
       </div>
