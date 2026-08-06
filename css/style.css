@@ -570,7 +570,7 @@ main section[id] {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .price-original {
@@ -584,6 +584,14 @@ main section[id] {
   font-weight: 800;
   color: var(--color-accent-dark);
   letter-spacing: -0.01em;
+}
+
+/* 숫자 옆 단위("원"/"%")는 숫자보다 작게 — 숫자 자체의 가독성을 살린다.
+   부모 요소의 font-size를 기준으로 한 em 단위라 가격/할인율 배지 등 어디에 쓰이든 자동으로 비례한다. */
+.unit {
+  font-size: 0.62em;
+  font-weight: 600;
+  margin-left: 1px;
 }
 
 .price-save {
@@ -604,11 +612,11 @@ main section[id] {
 /* ------------------------------------------------------------- 사전예약 */
 .coupon-tag {
   align-self: flex-start;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.88rem;
+  font-weight: 800;
   color: #fff;
-  background: var(--color-earth);
-  padding: 3px 9px;
+  background: #1a2f52;
+  padding: 5px 12px;
   border-radius: 999px;
 }
 

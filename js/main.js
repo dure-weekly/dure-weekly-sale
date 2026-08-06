@@ -6,8 +6,9 @@
 
 /* ------------------------------------------------------------ 공통 유틸 */
 
+// 숫자 뒤 단위("원")를 작게 따로 감싸서, 숫자 자체의 가독성을 높인다.
 function formatPrice(n) {
-  return n.toLocaleString("ko-KR") + "원";
+  return `${n.toLocaleString("ko-KR")}<span class="unit">원</span>`;
 }
 
 function formatPeriodLabel(period) {
@@ -80,7 +81,7 @@ function buildProductCard(product) {
   const isNewArrival = product.discountRate === 0;
   const badgeHtml = isNewArrival
     ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
-    : `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}%</strong><span class="badge-sub">할인</span></span>`;
+    : `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`;
   const priceHtml = isNewArrival
     ? `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`
     : `<div class="price-block">
@@ -314,7 +315,7 @@ function buildReservationPriceBlock(item) {
           <span class="price-chain-arrow" aria-hidden="true">→</span>
           <span class="price-sale">${formatPrice(item.couponPrice)}</span>
         </div>
-        <span class="price-save">쿠폰 적용시 ${formatPrice(saveAmount)} 절약</span>
+        <span class="price-save">${formatPrice(saveAmount)} 절약</span>
       </div>
     `;
   }
@@ -341,7 +342,7 @@ function buildReservationCard(item) {
 
   // 할인율은 주간할인과 완전히 동일한 discount-badge(오른쪽 상단, 같은 크기)로 표시한다.
   const badgeHtml = item.discountRate != null
-    ? `<span class="discount-badge" aria-hidden="true"><strong>${item.discountRate}%</strong><span class="badge-sub">할인</span></span>`
+    ? `<span class="discount-badge" aria-hidden="true"><strong>${item.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
     : "";
 
   card.innerHTML = `
@@ -384,30 +385,30 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
   loadMoreWrap.appendChild(btn);
 }
 
-// 테마(예: "[축산예약]제주흑돼지 예약전")의 대괄호 태그를 걷어내 칩 라벨로 쓴다.
-function cleanThemeLabel(theme) {
-  return (theme || "기타").replace(/^\[[^\]]*\]/, "").replace(/[_~!]+$/, "").trim() || "기타";
-}
+// 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
+const RESERVATION_CATEGORY_LABELS = [
+  { value: "meat", label: "정육", icon: "🥩" },
+  { value: "seafood", label: "수산", icon: "🐟" },
+  { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "living", label: "생활용품", icon: "🧴" },
+];
 
 function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
   if (!filterWrap) return;
 
-  const themeGroups = new Map();
-  allItems.forEach((it) => {
-    const label = cleanThemeLabel(it.theme);
-    if (!themeGroups.has(label)) themeGroups.set(label, 0);
-    themeGroups.set(label, themeGroups.get(label) + 1);
-  });
+  const presentCategories = new Set(allItems.map((it) => it.category));
+  const chips = [
+    { value: null, label: "전체", icon: "🏷️" },
+    ...RESERVATION_CATEGORY_LABELS.filter((c) => presentCategories.has(c.value)),
+  ];
 
-  const chips = [{ label: "전체", count: allItems.length }, ...Array.from(themeGroups, ([label, count]) => ({ label, count }))];
-
-  const state = { theme: null };
+  const state = { category: null };
 
   function applyFilter() {
-    const filtered = state.theme == null ? allItems : allItems.filter((it) => cleanThemeLabel(it.theme) === state.theme);
+    const filtered = state.category == null ? allItems : allItems.filter((it) => it.category === state.category);
     grid.innerHTML = "";
     if (filtered.length === 0) {
-      grid.innerHTML = `<p class="product-grid-status">해당 테마의 사전예약 생활재가 없습니다.</p>`;
+      grid.innerHTML = `<p class="product-grid-status">해당 분류의 사전예약 생활재가 없습니다.</p>`;
       if (loadMoreWrap) loadMoreWrap.innerHTML = "";
       return;
     }
@@ -416,16 +417,17 @@ function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
 
   filterWrap.innerHTML = "";
   chips.forEach((c, idx) => {
+    const count = c.value == null ? allItems.length : allItems.filter((it) => it.category === c.value).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "filter-chip";
     btn.setAttribute("role", "tab");
     btn.setAttribute("aria-selected", idx === 0 ? "true" : "false");
-    btn.textContent = `${c.label} (${c.count})`;
+    btn.textContent = `${c.icon} ${c.label} (${count})`;
     btn.addEventListener("click", () => {
       filterWrap.querySelectorAll(".filter-chip").forEach((el) => el.setAttribute("aria-selected", "false"));
       btn.setAttribute("aria-selected", "true");
-      state.theme = idx === 0 ? null : c.label;
+      state.category = c.value;
       applyFilter();
     });
     filterWrap.appendChild(btn);
