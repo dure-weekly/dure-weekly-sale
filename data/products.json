@@ -50,17 +50,6 @@
       "description": "제주 레몬으로 만들어 상큼한 맛이 매력적인 레몬차예요."
     },
     {
-      "id": "p065",
-      "name": "손질민물장어(600g/2~3미)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55923C.jpg",
-      "originalPrice": 52500,
-      "salePrice": 36700,
-      "discountRate": 30,
-      "category": "seafood",
-      "description": "국내산 자포니카 민물장어를 무항생제로 키워 손질 후 바로 급랭한, 쫄깃하고 탱탱한 식감의 장어예요."
-    },
-    {
       "id": "p066",
       "name": "자연산대하(300g)",
       "icon": "🦐",
