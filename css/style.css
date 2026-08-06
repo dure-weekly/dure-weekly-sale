@@ -512,8 +512,8 @@ main section[id] {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  width: 54px;
-  height: 54px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   background: linear-gradient(150deg, #e5713a, var(--color-accent-dark));
   color: #fff;
@@ -521,12 +521,12 @@ main section[id] {
 }
 
 .discount-badge strong {
-  font-size: 1.05rem;
+  font-size: 1.32rem;
   font-weight: 800;
 }
 
 .discount-badge .badge-sub {
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   opacity: 0.95;
@@ -628,11 +628,12 @@ main section[id] {
 /* ------------------------------------------------------------- 사전예약 */
 .coupon-tag {
   align-self: flex-start;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  color: #fff;
-  background: var(--color-earth);
-  padding: 5px 12px;
+  color: #087a91;
+  background: #e6f6fc;
+  border: 1.5px solid #087a91;
+  padding: 5px 13px;
   border-radius: 999px;
 }
 
