@@ -96,8 +96,25 @@ function buildProductCard(product) {
     : product.discountRate > 0
     ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
     : "";
-  const priceHtml = product.discountRate > 0
+  // 수산쿠폰 주간: 이미 주간할인가가 있던 품목은 정가→주간할인가→쿠폰최종가 3단으로,
+  // 나머지(쿠폰으로만 할인되는 품목)는 정가→최종가 2단으로 보여주되 둘 다 쿠폰 태그를 단다
+  // (사전예약 수산쿠폰 카드와 동일한 톤 — coupon-tag + price-chain-arrow 재사용).
+  const couponTagHtml = product.category === "seafood_coupon" ? `<span class="coupon-tag">🐟 수산쿠폰</span>` : "";
+  const priceHtml = product.hasCoupon && product.couponPrice != null
     ? `<div class="price-block">
+        ${couponTagHtml}
+        <div class="price-row price-row-chain">
+          <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          <span class="price-mid">${formatNumberOnly(product.salePrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          <span class="price-sale">${formatPrice(product.couponPrice)}</span>
+        </div>
+        <span class="price-save">${formatPrice(Math.max(product.originalPrice - product.couponPrice, 0))} 절약</span>
+      </div>`
+    : product.discountRate > 0
+    ? `<div class="price-block">
+        ${couponTagHtml}
         <div class="price-row">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
           <span class="price-sale">${formatPrice(product.salePrice)}</span>
@@ -105,7 +122,18 @@ function buildProductCard(product) {
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
       </div>`
     : `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`;
-  const noteHtml = product.note && product.note.trim() !== "" ? `<span class="note-badge note-badge-thumb">💡 ${product.note}</span>` : "";
+  // 특이사항 문구 길이가 제각각이라(예: "4+1증정" vs "2개 구매시 육수 증정") 고정 폰트 크기로는
+  // 짧은 건 헐렁하고 긴 건 줄임표(...)로 잘린다 — 글자 수 구간별로 폰트를 줄여 한 줄에 맞춘다.
+  const noteText = product.note && product.note.trim() !== "" ? product.note.trim() : "";
+  let noteHtml = "";
+  if (noteText) {
+    const displayLen = noteText.length;
+    let noteFontRem = 1.37;
+    if (displayLen > 6) noteFontRem = 1.05;
+    if (displayLen > 10) noteFontRem = 0.86;
+    if (displayLen > 14) noteFontRem = 0.72;
+    noteHtml = `<span class="note-badge note-badge-thumb" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
+  }
 
   card.innerHTML = `
     <div class="product-thumb">
@@ -145,7 +173,8 @@ function renderNextProductBatch(products, grid, loadMoreWrap) {
   const start = grid.querySelectorAll(".product-card").length;
   const end = Math.min(start + PRODUCT_PAGE_SIZE, products.length);
   for (let i = start; i < end; i++) {
-    grid.appendChild(buildProductCard(products[i]));
+    const item = products[i];
+    grid.appendChild(item.__isReservation ? buildReservationCard(item) : buildProductCard(item));
   }
 
   const shownAfter = grid.querySelectorAll(".product-card").length;
@@ -155,6 +184,18 @@ function renderNextProductBatch(products, grid, loadMoreWrap) {
   }
 
   renderProductLoadMoreButton(products, grid, loadMoreWrap);
+}
+
+// "더보기"로 한참 내려간 상태에서 다시 섹션 맨 위로 돌아갈 수 있게, 더보기 버튼 옆에 짝지어 보여준다.
+function buildScrollTopButton(sectionId) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn btn-outline btn-totop";
+  btn.textContent = "▲ 처음으로";
+  btn.addEventListener("click", () => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  return btn;
 }
 
 function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
@@ -167,9 +208,10 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "btn btn-outline btn-loadmore";
-  btn.textContent = `할인 상품 더보기 (${shownCount}/${products.length})`;
+  btn.textContent = `더보기 (${shownCount}/${products.length})`;
   btn.addEventListener("click", () => renderNextProductBatch(products, grid, loadMoreWrap));
   loadMoreWrap.appendChild(btn);
+  loadMoreWrap.appendChild(buildScrollTopButton("products"));
 }
 
 /* ------------------------------------------------------- 카테고리 필터 */
@@ -183,6 +225,7 @@ const CATEGORY_LABELS = [
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
@@ -209,6 +252,8 @@ const SEARCH_SYNONYMS = {
   생필품: { category: "living" },
   생리대: { category: "sanitary" },
   생리용품: { category: "sanitary" },
+  수산쿠폰: { category: "seafood_coupon" },
+  쿠폰: { category: "seafood_coupon" },
 };
 
 function matchesSearchQuery(product, rawQuery) {
@@ -225,9 +270,9 @@ function matchesSearchQuery(product, rawQuery) {
   return false;
 }
 
-// 카테고리 칩과 이름 검색창은 동시에 적용된다(AND 조건).
-// 예: "정육" 칩을 누른 채로 "새우"를 입력하면 결과가 0건이 되는 게 정상 동작이다.
-function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap, searchInput) {
+// 카테고리 칩은 검색어가 없을 때만 적용된다. 검색어를 입력한 순간부터는 선택된 카테고리를
+// 무시하고 주간할인(products)+사전예약(reservations) 전체 범위에서 찾는다.
+function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, filterWrap, searchInput) {
   if (!filterWrap) return;
 
   const presentCategories = new Set(allProducts.map((p) => p.category));
@@ -236,9 +281,28 @@ function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap, search
   const state = { category: "all", query: "" };
 
   function applyFilters() {
-    let filtered = state.category === "all" ? allProducts : allProducts.filter((p) => p.category === state.category);
+    let filtered;
     if (state.query.trim()) {
-      filtered = filtered.filter((p) => matchesSearchQuery(p, state.query));
+      const productMatches = allProducts.filter((p) => matchesSearchQuery(p, state.query));
+      const reservationMatches = allReservations
+        .filter((r) => matchesSearchQuery(r, state.query))
+        .map((r) => ({ ...r, __isReservation: true }));
+      filtered = [...productMatches, ...reservationMatches];
+    } else if (state.category === "all") {
+      // hideFromAll(예: 수산쿠폰 중 "정가→최종가" 2단만 있는 품목)은 전체 목록엔 안 보이고
+      // 해당 카테고리 칩을 직접 눌렀을 때만 노출한다.
+      filtered = allProducts.filter((p) => !p.hideFromAll);
+    } else {
+      filtered = allProducts.filter((p) => p.category === state.category);
+      // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가, hasCoupon)
+      // 품목을 먼저 할인율 높은 순으로, 그다음 2단(정상가→할인가) 품목을 할인가 높은 순으로 배치한다.
+      // (전체 목록에서의 노출 순서는 그대로 두고 이 칩 안에서만 다르게 정렬)
+      if (state.category === "seafood_coupon") {
+        filtered = filtered.slice().sort((a, b) => {
+          if (a.hasCoupon !== b.hasCoupon) return a.hasCoupon ? -1 : 1;
+          return a.hasCoupon ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
+        });
+      }
     }
     grid.innerHTML = "";
     if (filtered.length === 0) {
@@ -251,13 +315,19 @@ function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap, search
 
   filterWrap.innerHTML = "";
   chips.forEach((c, idx) => {
-    const count = c.value === "all" ? allProducts.length : allProducts.filter((p) => p.category === c.value).length;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "filter-chip";
     btn.setAttribute("role", "tab");
     btn.setAttribute("aria-selected", idx === 0 ? "true" : "false");
-    btn.textContent = `${c.icon} ${c.label} (${count})`;
+    // "전체" 옆 숫자는 hideFromAll 예외 때문에 "전체 상품 수"와 정확히 안 맞아 오해를 살 수 있어 뺀다.
+    // 나머지 카테고리 칩은 그 분류 실제 개수를 그대로 보여준다.
+    if (c.value === "all") {
+      btn.textContent = `${c.icon} ${c.label}`;
+    } else {
+      const count = allProducts.filter((p) => p.category === c.value).length;
+      btn.textContent = `${c.icon} ${c.label} (${count})`;
+    }
     btn.addEventListener("click", () => {
       filterWrap.querySelectorAll(".filter-chip").forEach((el) => el.setAttribute("aria-selected", "false"));
       btn.setAttribute("aria-selected", "true");
@@ -273,6 +343,11 @@ function renderProductFilter(allProducts, grid, loadMoreWrap, filterWrap, search
       applyFilters();
     });
   }
+
+  // 최초 렌더링도 반드시 이 함수를 거쳐야 hideFromAll(수산쿠폰 2단 품목 등)이
+  // "전체" 초기 화면에서도 제대로 걸러진다 — 호출부에서 별도로 renderNextProductBatch를
+  // 직접 부르면 이 필터를 건너뛰게 되므로 여기서 한 번 실행해준다.
+  applyFilters();
 }
 
 async function initProducts() {
@@ -298,8 +373,17 @@ async function initProducts() {
 
     if (countEl) countEl.textContent = products.length;
 
-    renderProductFilter(products, grid, loadMoreWrap, filterWrap, searchInput);
-    renderNextProductBatch(products, grid, loadMoreWrap);
+    // 검색어를 입력하면 카테고리 구분 없이 주간할인+사전예약 전체 범위에서 찾아야 하므로
+    // 사전예약 데이터도 미리 받아둔다(검색 안 할 땐 안 쓰이는 데이터라 실패해도 무시).
+    let reservations = [];
+    try {
+      const reservationData = await fetchJSON("data/reservations.json");
+      reservations = reservationData.reservations || [];
+    } catch (err) {
+      console.error(err);
+    }
+
+    renderProductFilter(products, reservations, grid, loadMoreWrap, filterWrap, searchInput);
   } catch (err) {
     console.error(err);
     grid.innerHTML = `<p class="product-grid-status">할인 생활재 정보를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.</p>`;
@@ -400,9 +484,10 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "btn btn-outline btn-loadmore";
-  btn.textContent = `사전예약 더보기 (${shownCount}/${items.length})`;
+  btn.textContent = `더보기 (${shownCount}/${items.length})`;
   btn.addEventListener("click", () => renderNextReservationBatch(items, grid, loadMoreWrap));
   loadMoreWrap.appendChild(btn);
+  loadMoreWrap.appendChild(buildScrollTopButton("reservation"));
 }
 
 // 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
