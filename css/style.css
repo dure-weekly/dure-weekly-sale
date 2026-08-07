@@ -579,7 +579,7 @@ main section[id] {
 }
 
 .price-original {
-  font-size: 0.95rem;
+  font-size: 1.254rem;
   color: var(--color-text-muted);
   text-decoration: line-through;
   white-space: nowrap;
@@ -587,7 +587,7 @@ main section[id] {
 }
 
 .price-sale {
-  font-size: 1.53rem;
+  font-size: 1.8513rem;
   font-weight: 800;
   min-width: 0;
   max-width: 100%;
