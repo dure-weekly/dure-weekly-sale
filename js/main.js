@@ -86,24 +86,30 @@ function buildProductCard(product) {
     ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
     : "";
 
-  // discountRate가 0이면 할인이 아니라 "이번 주 새로 들어온 생활재(햇출하)"라는 뜻 —
+  // itemType이 "햇출하"면 할인이 아니라 "이번 주 새로 들어온 생활재"라는 뜻 —
   // %대신 전용 배지를 쓰고, 정가/할인가가 같으므로 취소선·절약문구 없이 가격 한 줄만 보여준다.
-  const isNewArrival = product.discountRate === 0;
+  // discountRate가 0이어도 햇출하가 아닌 경우(예: "3개이상 구매시 할인" 같은 조건부 할인)가 있으므로
+  // itemType으로 구분한다 — note(특이사항)가 있으면 별도 배지로 그 조건을 보여준다.
+  const isNewArrival = product.itemType === "햇출하";
   const badgeHtml = isNewArrival
     ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
-    : `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`;
-  const priceHtml = isNewArrival
-    ? `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`
-    : `<div class="price-block">
+    : product.discountRate > 0
+    ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
+    : "";
+  const priceHtml = product.discountRate > 0
+    ? `<div class="price-block">
         <div class="price-row">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
           <span class="price-sale">${formatPrice(product.salePrice)}</span>
         </div>
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
-      </div>`;
+      </div>`
+    : `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`;
+  const noteHtml = product.note && product.note.trim() !== "" ? `<span class="note-badge note-badge-thumb">💡 ${product.note}</span>` : "";
 
   card.innerHTML = `
     <div class="product-thumb">
+      ${noteHtml}
       ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${product.icon || "🥬"}</span>
@@ -177,6 +183,8 @@ const CATEGORY_LABELS = [
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
+  { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
@@ -199,6 +207,8 @@ const SEARCH_SYNONYMS = {
   반찬: { category: "processed" },
   세제: { category: "living" },
   생필품: { category: "living" },
+  생리대: { category: "sanitary" },
+  생리용품: { category: "sanitary" },
 };
 
 function matchesSearchQuery(product, rawQuery) {
@@ -317,7 +327,7 @@ function buildReservationPriceBlock(item) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
     return `
       <div class="price-block">
-        <span class="coupon-tag">🐟 수산쿠폰 적용시</span>
+        <span class="coupon-tag">🐟 수산쿠폰</span>
         <div class="price-row price-row-chain">
           <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
@@ -397,9 +407,11 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
 
 // 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
 const RESERVATION_CATEGORY_LABELS = [
+  { value: "jeju_pork", label: "제주흑돼지", icon: "🐖" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "health", label: "면역·건강보조", icon: "🍯" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
