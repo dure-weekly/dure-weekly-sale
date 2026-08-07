@@ -132,7 +132,10 @@ function buildProductCard(product) {
     if (displayLen > 6) noteFontRem = 1.05;
     if (displayLen > 10) noteFontRem = 0.86;
     if (displayLen > 14) noteFontRem = 0.72;
-    noteHtml = `<span class="note-badge note-badge-thumb" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
+    // 즉석반찬(맛찬)의 "3개이상 구매 20%할인" 같은 문구는 다른 분류보다 길어서
+    // 말줄임(...)으로 잘리면 내용을 알 수 없다 — 맛찬만 줄바꿈을 허용한다.
+    const noteWrapClass = product.category === "snack_side" ? " note-badge-thumb-wrap" : "";
+    noteHtml = `<span class="note-badge note-badge-thumb${noteWrapClass}" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
   }
 
   card.innerHTML = `
@@ -203,14 +206,15 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
   loadMoreWrap.innerHTML = "";
 
   const shownCount = grid.querySelectorAll(".product-card").length;
-  if (shownCount >= products.length) return;
-
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "btn btn-outline btn-loadmore";
-  btn.textContent = `더보기 (${shownCount}/${products.length})`;
-  btn.addEventListener("click", () => renderNextProductBatch(products, grid, loadMoreWrap));
-  loadMoreWrap.appendChild(btn);
+  // 품목이 적어 "더보기"가 필요 없어도 "처음으로"는 항상 보여준다(분류를 눌러 내려본 뒤 돌아가기 위함).
+  if (shownCount < products.length) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-outline btn-loadmore";
+    btn.textContent = `더보기 (${shownCount}/${products.length})`;
+    btn.addEventListener("click", () => renderNextProductBatch(products, grid, loadMoreWrap));
+    loadMoreWrap.appendChild(btn);
+  }
   loadMoreWrap.appendChild(buildScrollTopButton("products"));
 }
 
@@ -424,9 +428,13 @@ function buildReservationPriceBlock(item) {
     `;
   }
 
+  // hasCoupon인데 couponPrice가 따로 없는 경우(수산쿠폰 2단: 정상가→할인가만 있음) —
+  // 체인 표시 대신 일반 2단 가격에 쿠폰 태그만 붙여서 "왜 이 가격인지" 알려준다.
   const saveAmount = Math.max(item.originalPrice - item.salePrice, 0);
+  const couponTagHtml = item.hasCoupon ? `<span class="coupon-tag">🐟 수산쿠폰</span>` : "";
   return `
     <div class="price-block">
+      ${couponTagHtml}
       <div class="price-row">
         <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
         <span class="price-sale">${formatPrice(item.salePrice)}</span>
@@ -480,13 +488,14 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
   if (!loadMoreWrap) return;
   loadMoreWrap.innerHTML = "";
   const shownCount = grid.querySelectorAll(".product-card").length;
-  if (shownCount >= items.length) return;
-  const btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "btn btn-outline btn-loadmore";
-  btn.textContent = `더보기 (${shownCount}/${items.length})`;
-  btn.addEventListener("click", () => renderNextReservationBatch(items, grid, loadMoreWrap));
-  loadMoreWrap.appendChild(btn);
+  if (shownCount < items.length) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-outline btn-loadmore";
+    btn.textContent = `더보기 (${shownCount}/${items.length})`;
+    btn.addEventListener("click", () => renderNextReservationBatch(items, grid, loadMoreWrap));
+    loadMoreWrap.appendChild(btn);
+  }
   loadMoreWrap.appendChild(buildScrollTopButton("reservation"));
 }
 

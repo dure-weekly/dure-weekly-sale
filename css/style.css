@@ -698,6 +698,13 @@ main section[id] {
   line-height: 1.3;
 }
 
+/* 즉석반찬(맛찬)은 특이사항 문구가 길어서("3개이상 구매 20%할인") 말줄임 대신 줄바꿈을 허용 */
+.note-badge-thumb-wrap {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 .product-grid-status {
   text-align: center;
   color: var(--color-text-muted);
