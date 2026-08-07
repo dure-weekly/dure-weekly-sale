@@ -567,13 +567,15 @@ main section[id] {
   flex-direction: column;
   gap: 4px;
   margin-top: 2px;
+  min-width: 0;
 }
 
 .price-row {
   display: flex;
   align-items: baseline;
-  gap: 8px;
-  flex-wrap: nowrap;
+  gap: 2px;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .price-original {
@@ -581,14 +583,18 @@ main section[id] {
   color: var(--color-text-muted);
   text-decoration: line-through;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .price-sale {
-  font-size: 1.7rem;
+  font-size: 1.53rem;
   font-weight: 800;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
   color: var(--color-accent-dark);
   letter-spacing: -0.01em;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* 숫자 옆 단위("원"/"%")는 숫자보다 작게 — 숫자 자체의 가독성을 살린다.
@@ -703,6 +709,7 @@ main section[id] {
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
+  color: #d32f2f;
 }
 
 .product-grid-status {

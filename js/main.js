@@ -229,6 +229,7 @@ const CATEGORY_LABELS = [
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
+  { value: "snack", label: "간식", icon: "🍪" },
   { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
@@ -258,6 +259,8 @@ const SEARCH_SYNONYMS = {
   생리용품: { category: "sanitary" },
   수산쿠폰: { category: "seafood_coupon" },
   쿠폰: { category: "seafood_coupon" },
+  간식: { category: "snack" },
+  디저트: { category: "snack" },
 };
 
 function matchesSearchQuery(product, rawQuery) {
@@ -467,7 +470,7 @@ function buildReservationCard(item) {
       <p class="product-name">${item.name}</p>
       <p class="product-desc">${item.description || ""}</p>
       ${buildReservationPriceBlock(item)}
-      ${item.supplyDate ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>` : ""}
+      ${item.directShip ? `<span class="reservation-date-badge">🚚 직송</span>` : item.supplyDate ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>` : ""}
     </div>
   `;
   return card;

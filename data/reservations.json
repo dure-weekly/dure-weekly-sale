@@ -124,6 +124,23 @@
       "description": "한 번 초벌구이로 밑손질을 마쳐 집에서 간편하게 데우기만 하면 즐길 수 있는 장어구이입니다."
     },
     {
+      "id": "r063",
+      "code": "55923",
+      "name": "손질민물장어(600g/2~3미)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 52500,
+      "salePrice": 36700,
+      "couponPrice": 29360,
+      "discountRate": 44,
+      "hasCoupon": true,
+      "supplyDate": "8/13(목)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55923C.jpg",
+      "icon": "🐟",
+      "description": "국내산 자포니카 민물장어를 무항생제로 키워 손질 후 바로 급랭한, 쫄깃하고 탱탱한 식감의 장어예요."
+    },
+    {
       "id": "r046",
       "code": "57877",
       "name": "완도왕전복(5미/600g이상)",
@@ -175,38 +192,123 @@
       "description": "직접 양식한 다시마와 미역을 먹이로 주고 키운 전복 활상태에서 해수와 함께 산소팩에 포장해 신선하게 배송합니다."
     },
     {
-      "id": "r061",
-      "code": "",
-      "name": "문어 슬라이스(200g)",
+      "id": "r064",
+      "code": "54955",
+      "name": "보라성게알(100g)",
       "theme": "",
       "category": "seafood",
       "reservationType": "예약",
-      "originalPrice": 19400,
-      "salePrice": 16500,
+      "originalPrice": 23000,
+      "salePrice": 18400,
       "couponPrice": null,
-      "discountRate": 15,
-      "hasCoupon": false,
-      "supplyDate": "8/11(화)",
-      "image": "images/50045.jpg",
-      "icon": "🐙",
-      "description": "부드럽게 데쳐 얇게 슬라이스한 문어예요. 초장에 찍어 바로 즐기기 좋아요."
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "8/13(목)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54955C.jpg",
+      "icon": "🐟",
+      "description": "신선한 국내산 보라성게알이에요. 향긋하고 부드러운 맛으로 초밥이나 미역국에 넣어 드시기 좋아요."
     },
     {
-      "id": "r062",
-      "code": "",
-      "name": "연어회 슬라이스(180g)",
+      "id": "r065",
+      "code": "58694",
+      "name": "돌멍게(1kg/6~9미)",
       "theme": "",
       "category": "seafood",
       "reservationType": "예약",
-      "originalPrice": 16500,
-      "salePrice": 14800,
+      "originalPrice": 17500,
+      "salePrice": 14000,
       "couponPrice": null,
-      "discountRate": 10,
-      "hasCoupon": false,
-      "supplyDate": "8/11(화)",
-      "image": "images/연어슬라이스.jpg",
+      "discountRate": 20,
+      "hasCoupon": true,
+      "directShip": true,
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58694C.jpg",
       "icon": "🐟",
-      "description": "신선하게 손질한 연어회를 바로 먹기 좋게 슬라이스했어요."
+      "description": "산지에서 직송한 신선한 국내산 멍게예요."
+    },
+    {
+      "id": "r066",
+      "code": "58693",
+      "name": "뿔소라(1kg//6~9미)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 16000,
+      "salePrice": 12800,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "directShip": true,
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58693C.jpg",
+      "icon": "🐟",
+      "description": "산지에서 직송한 신선한 국내산 소라예요."
+    },
+    {
+      "id": "r068",
+      "code": "42603",
+      "name": "자숙골뱅이살(300g)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 12900,
+      "salePrice": 10320,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "8/13(목)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42603C.png",
+      "icon": "🐟",
+      "description": "신선한 국내산 골뱅이살이에요."
+    },
+    {
+      "id": "r070",
+      "code": "16905",
+      "name": "자연산참바지락(900g)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 12100,
+      "salePrice": 9680,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "8/12(수)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/16905C.jpg",
+      "icon": "🐟",
+      "description": "신선한 국내산 자연산 참바지락이에요."
+    },
+    {
+      "id": "r069",
+      "code": "415",
+      "name": "자숙골뱅이살(냉동/160g)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 8100,
+      "salePrice": 6480,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "8/13(목)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/415C.jpg",
+      "icon": "🐟",
+      "description": "신선한 국내산 골뱅이살 냉동 제품이에요."
+    },
+    {
+      "id": "r067",
+      "code": "58692",
+      "name": "세척홍합(1.5kg)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 7900,
+      "salePrice": 6320,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "directShip": true,
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58692C.jpg",
+      "icon": "🐟",
+      "description": "산지에서 직송한 신선한 국내산 홍합이에요."
     },
     {
       "id": "r056",
@@ -243,6 +345,40 @@
       "description": "전남 신안 흑산도 앞바다에서 잡은 홍어를 적당히 삭혀 은은한 홍어 특유의 풍미를 즐길 수 있습니다."
     },
     {
+      "id": "r061",
+      "code": "",
+      "name": "문어 슬라이스(200g)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 19400,
+      "salePrice": 16500,
+      "couponPrice": null,
+      "discountRate": 15,
+      "hasCoupon": false,
+      "supplyDate": "8/11(화)",
+      "image": "images/50045.jpg",
+      "icon": "🐙",
+      "description": "부드럽게 데쳐 얇게 슬라이스한 문어예요. 초장에 찍어 바로 즐기기 좋아요."
+    },
+    {
+      "id": "r062",
+      "code": "",
+      "name": "연어회 슬라이스(180g)",
+      "theme": "",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 16500,
+      "salePrice": 14800,
+      "couponPrice": null,
+      "discountRate": 10,
+      "hasCoupon": false,
+      "supplyDate": "8/11(화)",
+      "image": "images/연어슬라이스.jpg",
+      "icon": "🐟",
+      "description": "신선하게 손질한 연어회를 바로 먹기 좋게 슬라이스했어요."
+    },
+    {
       "id": "r043",
       "code": "58802",
       "name": "묵은지 닭볶음탕(한마리/1.6kg)",
@@ -260,23 +396,6 @@
       "description": "얼큰하게 잘 익은 묵은지와 쫄깃한 닭고기를 함께 넣어 얼큰하고 깊은 맛을 낸 한마리 닭볶음탕입니다."
     },
     {
-      "id": "r004",
-      "code": "52643",
-      "name": "고추장양념 닭갈비(500g)",
-      "theme": "[35주_예약]더신선 간편식단",
-      "category": "meat",
-      "reservationType": "예약",
-      "originalPrice": 16500,
-      "salePrice": 15500,
-      "couponPrice": null,
-      "discountRate": 6,
-      "hasCoupon": false,
-      "supplyDate": "8/28(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52643C.jpg",
-      "icon": "🍗",
-      "description": "칼칼한 고추장 양념이 잘 배어든 닭갈비라 밥반찬으로도 술안주로도 든든해요."
-    },
-    {
       "id": "r005",
       "code": "52644",
       "name": "간장양념 닭갈비(500g)",
@@ -292,6 +411,23 @@
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52644C.jpg",
       "icon": "🍗",
       "description": "짭짤하고 감칠맛 나는 간장양념이 닭다리살에 쏙 배어들어 남녀노소 부담없이 즐기기 좋아요."
+    },
+    {
+      "id": "r004",
+      "code": "52643",
+      "name": "고추장양념 닭갈비(500g)",
+      "theme": "[35주_예약]더신선 간편식단",
+      "category": "meat",
+      "reservationType": "예약",
+      "originalPrice": 16500,
+      "salePrice": 15500,
+      "couponPrice": null,
+      "discountRate": 6,
+      "hasCoupon": false,
+      "supplyDate": "8/28(금)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52643C.jpg",
+      "icon": "🍗",
+      "description": "칼칼한 고추장 양념이 잘 배어든 닭갈비라 밥반찬으로도 술안주로도 든든해요."
     },
     {
       "id": "r041",
@@ -583,9 +719,9 @@
       "description": "한국인의 밥상 단골 메뉴인 돼지고기 김치찌개 ! 담백한 감칠맛과 쫄깃한 식감을 즐겨보세요."
     },
     {
-      "id": "r015",
-      "code": "37976",
-      "name": "제주흑돼지삼겹살-수육용(400g)",
+      "id": "r014",
+      "code": "37975",
+      "name": "제주흑돼지삼겹살-구이용(400g)",
       "theme": "[축산예약]제주흑돼지 예약전",
       "category": "jeju_pork",
       "reservationType": "예약",
@@ -595,9 +731,9 @@
       "discountRate": null,
       "hasCoupon": false,
       "supplyDate": "8/27(목)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37976C.jpg",
-      "icon": "🐷",
-      "description": "두툼한만큼 더욱 촉촉한 수육용 삼겹살이에요. 약 3.5~4cm 두께로 수육, 찜, 구이 등으로 활용 가능해요"
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37975C.jpg",
+      "icon": "🥓",
+      "description": "육즙 풍미 가득, 쫄깃한 식감을 가진 제주흑돼지 1cm로 손질하여 구워 먹기 딱! 좋아요."
     },
     {
       "id": "r013",
@@ -617,9 +753,9 @@
       "description": "지방과 살코기가 조화로워 구이, 찌개 볶음 등으로 다양하게 활용 가능해요. 구워먹기 적합한 약 1cm 두께"
     },
     {
-      "id": "r014",
-      "code": "37975",
-      "name": "제주흑돼지삼겹살-구이용(400g)",
+      "id": "r015",
+      "code": "37976",
+      "name": "제주흑돼지삼겹살-수육용(400g)",
       "theme": "[축산예약]제주흑돼지 예약전",
       "category": "jeju_pork",
       "reservationType": "예약",
@@ -629,9 +765,9 @@
       "discountRate": null,
       "hasCoupon": false,
       "supplyDate": "8/27(목)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37975C.jpg",
-      "icon": "🥓",
-      "description": "육즙 풍미 가득, 쫄깃한 식감을 가진 제주흑돼지 1cm로 손질하여 구워 먹기 딱! 좋아요."
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37976C.jpg",
+      "icon": "🐷",
+      "description": "두툼한만큼 더욱 촉촉한 수육용 삼겹살이에요. 약 3.5~4cm 두께로 수육, 찜, 구이 등으로 활용 가능해요"
     },
     {
       "id": "r019",
@@ -651,23 +787,6 @@
       "description": "대표 특수부위인 항정살, 갈매기살, 가브리살 구이용 특수부위 모듬으로 한 번에 맛보는 세 가지 부위"
     },
     {
-      "id": "r018",
-      "code": "37979",
-      "name": "제주흑돼지수육(500g)",
-      "theme": "[축산예약]제주흑돼지 예약전",
-      "category": "jeju_pork",
-      "reservationType": "예약",
-      "originalPrice": null,
-      "salePrice": 15300,
-      "couponPrice": null,
-      "discountRate": null,
-      "hasCoupon": false,
-      "supplyDate": "8/27(목)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37979C.jpg",
-      "icon": "🐷",
-      "description": "담백하고 지방이적은 앞다리살을 보쌈용으로! 진짜 제주흑돼지를 담백한 수육으로 즐기세요."
-    },
-    {
       "id": "r017",
       "code": "37978",
       "name": "제주흑돼지찌개용(500g)",
@@ -683,6 +802,23 @@
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37978C.jpg",
       "icon": "🐷",
       "description": "풍부한 육즙·쫄깃한 식감으로 사랑받는 앞다리살 고소한 지방과 담백한 살코기의 조화로운 비율"
+    },
+    {
+      "id": "r018",
+      "code": "37979",
+      "name": "제주흑돼지수육(500g)",
+      "theme": "[축산예약]제주흑돼지 예약전",
+      "category": "jeju_pork",
+      "reservationType": "예약",
+      "originalPrice": null,
+      "salePrice": 15300,
+      "couponPrice": null,
+      "discountRate": null,
+      "hasCoupon": false,
+      "supplyDate": "8/27(목)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37979C.jpg",
+      "icon": "🐷",
+      "description": "담백하고 지방이적은 앞다리살을 보쌈용으로! 진짜 제주흑돼지를 담백한 수육으로 즐기세요."
     },
     {
       "id": "r020",
@@ -889,9 +1025,9 @@
       "description": "고소한 돼지곱창과 쫄깃한 순대, 매콤한 양념까지! 명반이 들어가지 않은 당면을 사용한 순대를 사용했어요. 약재육수로 곱창냄새를 최대한 잡았어요"
     },
     {
-      "id": "r050",
-      "code": "60154",
-      "name": "페탈(라운드/라벤더)",
+      "id": "r049",
+      "code": "60130",
+      "name": "페탈(라운드/옐로우)",
       "theme": "플레이팅팬",
       "category": "living",
       "reservationType": "예약",
@@ -901,8 +1037,8 @@
       "discountRate": 34,
       "hasCoupon": false,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60154C.jpg",
-      "icon": "💜",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60130C.jpg",
+      "icon": "🟡",
       "description": "플레이팅팬+유리뚜껑+꼭지+실리콘 손잡이"
     },
     {
@@ -923,9 +1059,9 @@
       "description": "플레이팅팬 +실리콘 손잡이"
     },
     {
-      "id": "r049",
-      "code": "60130",
-      "name": "페탈(라운드/옐로우)",
+      "id": "r050",
+      "code": "60154",
+      "name": "페탈(라운드/라벤더)",
       "theme": "플레이팅팬",
       "category": "living",
       "reservationType": "예약",
@@ -935,14 +1071,14 @@
       "discountRate": 34,
       "hasCoupon": false,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60130C.jpg",
-      "icon": "🟡",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60154C.jpg",
+      "icon": "💜",
       "description": "플레이팅팬+유리뚜껑+꼭지+실리콘 손잡이"
     },
     {
-      "id": "r051",
-      "code": "60131",
-      "name": "페탈(스퀘어/라벤더)",
+      "id": "r054",
+      "code": "60133",
+      "name": "그랑(스퀘어/그린)",
       "theme": "플레이팅팬",
       "category": "living",
       "reservationType": "예약",
@@ -952,9 +1088,9 @@
       "discountRate": 30,
       "hasCoupon": false,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60131C.jpg",
-      "icon": "💜",
-      "description": "플레이팅팬+유리뚜껑+꼭지+실리콘 손잡이"
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60133C.jpg",
+      "icon": "💚",
+      "description": "플레이팅팬 +실리콘 손잡이"
     },
     {
       "id": "r052",
@@ -974,9 +1110,9 @@
       "description": "플레이팅팬+유리뚜껑+꼭지+실리콘 손잡이"
     },
     {
-      "id": "r054",
-      "code": "60133",
-      "name": "그랑(스퀘어/그린)",
+      "id": "r051",
+      "code": "60131",
+      "name": "페탈(스퀘어/라벤더)",
       "theme": "플레이팅팬",
       "category": "living",
       "reservationType": "예약",
@@ -986,9 +1122,9 @@
       "discountRate": 30,
       "hasCoupon": false,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60133C.jpg",
-      "icon": "💚",
-      "description": "플레이팅팬 +실리콘 손잡이"
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60131C.jpg",
+      "icon": "💜",
+      "description": "플레이팅팬+유리뚜껑+꼭지+실리콘 손잡이"
     }
   ]
 }
