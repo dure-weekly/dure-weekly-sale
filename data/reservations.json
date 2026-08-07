@@ -221,7 +221,7 @@
       "discountRate": 16,
       "hasCoupon": true,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/406C.jpg",
+      "image": "images/406.jpg",
       "icon": "🐟",
       "description": "전남 신안 흑산도 앞바다에서 잡은 홍어를 오랜 시간 푹 삭혀 톡 쏘는 진한 맛이 특징인 삭힌 홍어입니다."
     },
@@ -238,7 +238,7 @@
       "discountRate": 16,
       "hasCoupon": true,
       "supplyDate": "8/21(금)",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/31C.jpg",
+      "image": "images/31.jpg",
       "icon": "🐟",
       "description": "전남 신안 흑산도 앞바다에서 잡은 홍어를 적당히 삭혀 은은한 홍어 특유의 풍미를 즐길 수 있습니다."
     },

@@ -3194,38 +3194,6 @@
       "description": "신선한 국내산 문어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p136",
-      "name": "흑산도홍어(많이삭힌것)",
-      "icon": "🐟",
-      "image": "",
-      "originalPrice": 64000,
-      "salePrice": 54000,
-      "couponPrice": null,
-      "discountRate": 16,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 홍어, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p135",
-      "name": "흑산도홍어(덜삭힌것)",
-      "icon": "🐟",
-      "image": "",
-      "originalPrice": 64000,
-      "salePrice": 54000,
-      "couponPrice": null,
-      "discountRate": 16,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 홍어, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p137",
       "name": "자연산 민어회(280g)",
       "icon": "🐟",
