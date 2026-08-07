@@ -42,7 +42,7 @@
       "category": "produce",
       "itemType": "햇출하",
       "note": "",
-      "description": ""
+      "description": "유기농으로 재배한 아삭한 고구마줄기예요. 껍질 벗겨 볶음이나 들깨무침으로 만들면 든든한 밥반찬이 됩니다."
     },
     {
       "id": "p117",
@@ -80,7 +80,7 @@
       "id": "p125",
       "name": "무항생제손질새우(500g)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/50809C.jpg",
+      "image": "images/50809.jpg",
       "originalPrice": 35700,
       "salePrice": 32100,
       "couponPrice": 25680,
@@ -136,7 +136,7 @@
       "hasCoupon": true,
       "category": "seafood_coupon",
       "itemType": "소비촉진",
-      "note": "",
+      "note": "냉동",
       "hideFromAll": false,
       "description": "신선한 국내산 옥돔, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -152,7 +152,7 @@
       "hasCoupon": true,
       "category": "seafood_coupon",
       "itemType": "소비촉진",
-      "note": "",
+      "note": "냉동",
       "hideFromAll": false,
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -189,22 +189,6 @@
       "description": "신선한 국내산 조기(굴비), 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p147",
-      "name": "국물멸치(1kg)",
-      "icon": "🐟",
-      "image": "images/20110.jpg",
-      "originalPrice": 34500,
-      "salePrice": 27600,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 마른멸치, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p146",
       "name": "제주은갈치(420g)",
       "icon": "🐟",
@@ -219,6 +203,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 갈치, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p147",
+      "name": "국물멸치(1kg)",
+      "icon": "🐟",
+      "image": "images/20110.jpg",
+      "originalPrice": 34500,
+      "salePrice": 27600,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 마른멸치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p148",
@@ -301,22 +301,6 @@
       "description": "신선한 국내산 마른멸치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p154",
-      "name": "건다시마(1kg)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55669C.jpg",
-      "originalPrice": 27800,
-      "salePrice": 22240,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p155",
       "name": "품질인증 오징어(900g)",
       "icon": "🐟",
@@ -331,6 +315,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p154",
+      "name": "건다시마(1kg)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55669C.jpg",
+      "originalPrice": 27800,
+      "salePrice": 22240,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p158",
@@ -349,10 +349,10 @@
       "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p159",
-      "name": "볶음멸치(500g)",
+      "id": "p160",
+      "name": "지리멸치(500g)",
       "icon": "🐟",
-      "image": "images/20108.jpg",
+      "image": "images/20109.jpg",
       "originalPrice": 26400,
       "salePrice": 21120,
       "couponPrice": null,
@@ -365,10 +365,10 @@
       "description": "신선한 국내산 마른멸치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p160",
-      "name": "지리멸치(500g)",
+      "id": "p159",
+      "name": "볶음멸치(500g)",
       "icon": "🐟",
-      "image": "images/20109.jpg",
+      "image": "images/20108.jpg",
       "originalPrice": 26400,
       "salePrice": 21120,
       "couponPrice": null,
@@ -413,22 +413,6 @@
       "description": "신선한 국내산 김, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p163",
-      "name": "순살고등어(800g/노르웨이)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52283C.jpg",
-      "originalPrice": 24500,
-      "salePrice": 19600,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p164",
       "name": "명품왕새우(500g)",
       "icon": "🐟",
@@ -443,6 +427,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 새우, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p163",
+      "name": "순살고등어(800g/노르웨이)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52283C.jpg",
+      "originalPrice": 24500,
+      "salePrice": 19600,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p167",
@@ -525,10 +525,10 @@
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p178",
-      "name": "가시없는고등어(600g/노르웨이)",
+      "id": "p177",
+      "name": "순살고등어(1kg)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54843C.jpg",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20237C.jpg",
       "originalPrice": 19900,
       "salePrice": 15920,
       "couponPrice": null,
@@ -541,10 +541,10 @@
       "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p177",
-      "name": "순살고등어(1kg)",
+      "id": "p178",
+      "name": "가시없는고등어(600g/노르웨이)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20237C.jpg",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54843C.jpg",
       "originalPrice": 19900,
       "salePrice": 15920,
       "couponPrice": null,
@@ -573,22 +573,6 @@
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p184",
-      "name": "자연산백합(800g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/30159C.jpg",
-      "originalPrice": 19500,
-      "salePrice": 15600,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 조개류, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p183",
       "name": "바지락살(250g)",
       "icon": "🐟",
@@ -603,6 +587,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 바지락, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p184",
+      "name": "자연산백합(800g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/30159C.jpg",
+      "originalPrice": 19500,
+      "salePrice": 15600,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 조개류, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p182",
@@ -701,22 +701,6 @@
       "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p197",
-      "name": "수제손질민어살(400g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57975C.jpg",
-      "originalPrice": 17000,
-      "salePrice": 13600,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 민어, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p198",
       "name": "남해안 바지락살(250g)",
       "icon": "🐟",
@@ -747,6 +731,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 문어, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p197",
+      "name": "수제손질민어살(400g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57975C.jpg",
+      "originalPrice": 17000,
+      "salePrice": 13600,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 민어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p199",
@@ -861,22 +861,6 @@
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p212",
-      "name": "다짐 참돔살(120g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59267C.jpg",
-      "originalPrice": 15200,
-      "salePrice": 12160,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 참돔, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p211",
       "name": "채썬오징어몸통살(400g)",
       "icon": "🐟",
@@ -891,6 +875,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p212",
+      "name": "다짐 참돔살(120g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59267C.jpg",
+      "originalPrice": 15200,
+      "salePrice": 12160,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 참돔, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p214",
@@ -973,22 +973,6 @@
       "description": "신선한 국내산 명태, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p221",
-      "name": "구운곱창김10g*5봉",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48515C.jpg",
-      "originalPrice": 14100,
-      "salePrice": 11280,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 김, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p222",
       "name": "손질 아귀&오만둥이(700g)",
       "icon": "🐟",
@@ -1003,6 +987,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 혼합, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p221",
+      "name": "구운곱창김10g*5봉",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48515C.jpg",
+      "originalPrice": 14100,
+      "salePrice": 11280,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 김, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p223",
@@ -1149,22 +1149,6 @@
       "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p238",
-      "name": "대삼치살(500g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54376C.jpg",
-      "originalPrice": 12400,
-      "salePrice": 9920,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p237",
       "name": "자연산돌다시마(200g)",
       "icon": "🐟",
@@ -1181,6 +1165,22 @@
       "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
+      "id": "p238",
+      "name": "대삼치살(500g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54376C.jpg",
+      "originalPrice": 12400,
+      "salePrice": 9920,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
       "id": "p241",
       "name": "구이용삼치(400g)",
       "icon": "🐟",
@@ -1195,22 +1195,6 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p243",
-      "name": "다짐 대구살(120g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59265C.jpg",
-      "originalPrice": 11900,
-      "salePrice": 9520,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 대구, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p242",
@@ -1245,6 +1229,22 @@
       "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
+      "id": "p243",
+      "name": "다짐 대구살(120g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59265C.jpg",
+      "originalPrice": 11900,
+      "salePrice": 9520,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 대구, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
       "id": "p246",
       "name": "손질오징어채(원양산/400g)",
       "icon": "🐟",
@@ -1277,10 +1277,10 @@
       "description": "신선한 국내산 명태, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p252",
-      "name": "볶음멸치(200g)",
+      "id": "p251",
+      "name": "지리멸치(잔멸치/200g)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/19543C.jpg",
+      "image": "images/19542.jpg",
       "originalPrice": 11000,
       "salePrice": 8800,
       "couponPrice": null,
@@ -1293,10 +1293,10 @@
       "description": "신선한 국내산 마른멸치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p251",
-      "name": "지리멸치(잔멸치/200g)",
+      "id": "p252",
+      "name": "볶음멸치(200g)",
       "icon": "🐟",
-      "image": "images/19542.jpg",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/19543C.jpg",
       "originalPrice": 11000,
       "salePrice": 8800,
       "couponPrice": null,
@@ -1405,6 +1405,22 @@
       "description": "신선한 국내산 새우, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
+      "id": "p320",
+      "name": "자숙골뱅이살(냉동/160g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/415C.jpg",
+      "originalPrice": 8100,
+      "salePrice": 6480,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 골뱅이, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
       "id": "p281",
       "name": "국물멸치(200g)",
       "icon": "🐟",
@@ -1469,22 +1485,6 @@
       "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p288",
-      "name": "다짐대게살(80g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/19994C.jpg",
-      "originalPrice": 7000,
-      "salePrice": 5600,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 대게, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p289",
       "name": "동태토막(400g)",
       "icon": "🐟",
@@ -1499,6 +1499,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 명태, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p288",
+      "name": "다짐대게살(80g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/19994C.jpg",
+      "originalPrice": 7000,
+      "salePrice": 5600,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 대게, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p290",
@@ -1549,22 +1565,6 @@
       "description": "신선한 국내산 명태, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p294",
-      "name": "건다시마(200g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/8020C.jpg",
-      "originalPrice": 6200,
-      "salePrice": 4960,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p295",
       "name": "가리비살(150g)",
       "icon": "🐟",
@@ -1579,6 +1579,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 조개류, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p294",
+      "name": "건다시마(200g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/8020C.jpg",
+      "originalPrice": 6200,
+      "salePrice": 4960,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p296",
@@ -1661,22 +1677,6 @@
       "description": "신선한 국내산 가자미, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p310",
-      "name": "미역(100g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/8360C.jpg",
-      "originalPrice": 4400,
-      "salePrice": 3520,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p312",
       "name": "삼치구이(90g)",
       "icon": "🐟",
@@ -1693,12 +1693,44 @@
       "description": "신선한 국내산 삼치, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
+      "id": "p310",
+      "name": "미역(100g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/8360C.jpg",
+      "originalPrice": 4400,
+      "salePrice": 3520,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
       "id": "p314",
       "name": "구운장봉재래김",
       "icon": "🐟",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56352C.jpg",
       "originalPrice": 3800,
       "salePrice": 3040,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 김, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p316",
+      "name": "(임)구운김밥김(15매/유기)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20402C.jpg",
+      "originalPrice": 3700,
+      "salePrice": 2960,
       "couponPrice": null,
       "discountRate": 20,
       "hasCoupon": false,
@@ -1725,26 +1757,10 @@
       "description": "신선한 국내산 고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p316",
-      "name": "(임)구운김밥김(15매/유기)",
+      "id": "p317",
+      "name": "미역줄기(300g)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20402C.jpg",
-      "originalPrice": 3700,
-      "salePrice": 2960,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 김, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p318",
-      "name": "염장 미역줄기(300g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58827C.jpg",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42172C.png",
       "originalPrice": 3100,
       "salePrice": 2480,
       "couponPrice": null,
@@ -1757,10 +1773,10 @@
       "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p317",
-      "name": "미역줄기(300g)",
+      "id": "p318",
+      "name": "염장 미역줄기(300g)",
       "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42172C.png",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58827C.jpg",
       "originalPrice": 3100,
       "salePrice": 2480,
       "couponPrice": null,
@@ -1789,22 +1805,6 @@
       "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p320",
-      "name": "다시마(쌈용/300g/냉장)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42173C.png",
-      "originalPrice": 2800,
-      "salePrice": 2240,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p321",
       "name": "자른미역(45g)",
       "icon": "🐟",
@@ -1819,6 +1819,22 @@
       "note": "",
       "hideFromAll": true,
       "description": "신선한 국내산 미역, 이번 주 수산쿠폰 특가로 만나보세요."
+    },
+    {
+      "id": "p320",
+      "name": "다시마(쌈용/300g/냉장)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42173C.png",
+      "originalPrice": 2800,
+      "salePrice": 2240,
+      "couponPrice": null,
+      "discountRate": 20,
+      "hasCoupon": false,
+      "category": "seafood_coupon",
+      "itemType": "소비촉진",
+      "note": "",
+      "hideFromAll": true,
+      "description": "신선한 국내산 다시마, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p006",
@@ -1964,19 +1980,6 @@
       "description": "국산 닭 한마리를 수삼과 한방재료로 푹 고아내 진하고 담백해요"
     },
     {
-      "id": "p045",
-      "name": "통닭다리 누룽지삼계탕(600g)",
-      "icon": "🍗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54730C.jpg",
-      "originalPrice": 8300,
-      "salePrice": 7500,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "description": "국내산 생 통닭다리에 구수한 누룽지 국물을 더해 향미증진제 없이 건강한 맛이에요"
-    },
-    {
       "id": "p034",
       "name": "장어탕(500g)",
       "icon": "🐟",
@@ -1990,17 +1993,17 @@
       "description": "자연산 바닷장어와 국산 채소를 오래 끓여 만든 첨가물 없는 든든한 장어탕이에요."
     },
     {
-      "id": "p031",
-      "name": "추어탕(냉동)(500g)",
-      "icon": "🍲",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/23246C.png",
-      "originalPrice": 6900,
-      "salePrice": 6200,
+      "id": "p045",
+      "name": "통닭다리 누룽지삼계탕(600g)",
+      "icon": "🍗",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54730C.jpg",
+      "originalPrice": 8300,
+      "salePrice": 7500,
       "discountRate": 10,
       "category": "processed",
       "itemType": "소비촉진",
       "note": "",
-      "description": "국산 미꾸라지와 무농약 채소로 끓여낸 진한 추어탕으로, 데우기만 하면 바로 즐길 수 있어요."
+      "description": "국내산 생 통닭다리에 구수한 누룽지 국물을 더해 향미증진제 없이 건강한 맛이에요"
     },
     {
       "id": "p041",
@@ -2014,6 +2017,19 @@
       "itemType": "소비촉진",
       "note": "",
       "description": "국산 미꾸라지를 뼈째 갈아 넣어 칼슘이 풍부하고 든든해요"
+    },
+    {
+      "id": "p031",
+      "name": "추어탕(냉동)(500g)",
+      "icon": "🍲",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/23246C.png",
+      "originalPrice": 6900,
+      "salePrice": 6200,
+      "discountRate": 10,
+      "category": "processed",
+      "itemType": "소비촉진",
+      "note": "",
+      "description": "국산 미꾸라지와 무농약 채소로 끓여낸 진한 추어탕으로, 데우기만 하면 바로 즐길 수 있어요."
     },
     {
       "id": "p067",
@@ -2198,19 +2214,6 @@
       "description": "무항생제 오리를 참나무로 은은하게 훈연해서 향긋하고 담백해요"
     },
     {
-      "id": "p018",
-      "name": "닭가슴살블랙페퍼(550g)",
-      "icon": "🍗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48764C.png",
-      "originalPrice": 15800,
-      "salePrice": 13400,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "",
-      "note": "",
-      "description": "무항생제 닭가슴살에 후추 향을 더해 담백하게 즐기는 간편식이에요"
-    },
-    {
       "id": "p019",
       "name": "닭가슴살허브(550g)",
       "icon": "🌿",
@@ -2222,6 +2225,19 @@
       "itemType": "소비촉진",
       "note": "",
       "description": "무항생제 닭가슴살에 허브 향을 더해 산뜻하고 담백해요"
+    },
+    {
+      "id": "p018",
+      "name": "닭가슴살블랙페퍼(550g)",
+      "icon": "🍗",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48764C.png",
+      "originalPrice": 15800,
+      "salePrice": 13400,
+      "discountRate": 15,
+      "category": "processed",
+      "itemType": "",
+      "note": "",
+      "description": "무항생제 닭가슴살에 후추 향을 더해 담백하게 즐기는 간편식이에요"
     },
     {
       "id": "p027",
@@ -2302,17 +2318,17 @@
       "description": "국산 우리밀로 만든 고소하고 달콤한 아이들 간식이에요."
     },
     {
-      "id": "p008",
-      "name": "유기농팝짱자색고구마(30g)",
-      "icon": "🍠",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/44218C.png",
+      "id": "p010",
+      "name": "유기농팝짱단호박(30g)",
+      "icon": "🎃",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/44221C.png",
       "originalPrice": 2100,
       "salePrice": 1700,
       "discountRate": 19,
       "category": "snack",
       "itemType": "소비촉진",
       "note": "",
-      "description": "유기농 자색고구마로 만든 글루텐프리 핑거푸드 과자예요."
+      "description": "유기농 단호박으로 만든 글루텐프리 핑거푸드 과자예요."
     },
     {
       "id": "p009",
@@ -2328,17 +2344,17 @@
       "description": "유기농 쌀 100%로 만든 바삭한 글루텐프리 과자예요."
     },
     {
-      "id": "p010",
-      "name": "유기농팝짱단호박(30g)",
-      "icon": "🎃",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/44221C.png",
+      "id": "p008",
+      "name": "유기농팝짱자색고구마(30g)",
+      "icon": "🍠",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/44218C.png",
       "originalPrice": 2100,
       "salePrice": 1700,
       "discountRate": 19,
       "category": "snack",
       "itemType": "소비촉진",
       "note": "",
-      "description": "유기농 단호박으로 만든 글루텐프리 핑거푸드 과자예요."
+      "description": "유기농 자색고구마로 만든 글루텐프리 핑거푸드 과자예요."
     },
     {
       "id": "p014",
@@ -2367,19 +2383,6 @@
       "description": "발아검정콩과 발아현미 등 무농약 이상 국산 곡물만 담아 감미료 없이 고소해요"
     },
     {
-      "id": "p021",
-      "name": "요거트 젤라또(370ml)",
-      "icon": "🍦",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55804C.jpg",
-      "originalPrice": 9900,
-      "salePrice": 8400,
-      "discountRate": 15,
-      "category": "snack",
-      "itemType": "소비촉진",
-      "note": "",
-      "description": "제주 유기농 우유와 요거트로 만들어 새콤달콤하면서도 진한 맛이 매력적인 젤라또예요."
-    },
-    {
       "id": "p022",
       "name": "초코 젤라또(370ml)",
       "icon": "🍫",
@@ -2391,6 +2394,19 @@
       "itemType": "소비촉진",
       "note": "",
       "description": "유기농 우유에 진한 카카오 향을 더해 꾸덕하고 부드럽게 즐기는 초코 젤라또예요."
+    },
+    {
+      "id": "p021",
+      "name": "요거트 젤라또(370ml)",
+      "icon": "🍦",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55804C.jpg",
+      "originalPrice": 9900,
+      "salePrice": 8400,
+      "discountRate": 15,
+      "category": "snack",
+      "itemType": "소비촉진",
+      "note": "",
+      "description": "제주 유기농 우유와 요거트로 만들어 새콤달콤하면서도 진한 맛이 매력적인 젤라또예요."
     },
     {
       "id": "p024",
@@ -2653,19 +2669,6 @@
       "description": "국산 밀간장과 조청으로 달콤짭짤하게 무친 김 장아찌라 남녀노소 누구나 좋아해요."
     },
     {
-      "id": "p072",
-      "name": "죽순볶음(100g)",
-      "icon": "🎍",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58031C.png",
-      "originalPrice": 6300,
-      "salePrice": 6300,
-      "discountRate": 0,
-      "category": "snack_side",
-      "itemType": "맛찬",
-      "note": "골라서 3개→20%할인",
-      "description": "아삭한 국산 죽순에 채소를 더해 주문 즉시 신선하게 만들어요."
-    },
-    {
       "id": "p074",
       "name": "깻잎순들깨볶음(100g)",
       "icon": "🌱",
@@ -2679,30 +2682,17 @@
       "description": "여린 깻잎 순을 들깨가루와 볶아 향긋하고 고소해요."
     },
     {
-      "id": "p087",
-      "name": "머우대나물(100g)",
-      "icon": "🌱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59888C.jpg",
-      "originalPrice": 6200,
-      "salePrice": 6200,
-      "discountRate": 0,
-      "category": "snack_side",
-      "itemType": "소비촉진",
-      "note": "골라서 3개→20%할인",
-      "description": "머위줄기를 들깨가루에 무쳐 쌉싸름함과 고소함이 조화롭게 어우러진 여름철 별미예요"
-    },
-    {
-      "id": "p078",
-      "name": "곤드레나물(100g)",
-      "icon": "🌾",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58068C.png",
-      "originalPrice": 6200,
-      "salePrice": 6200,
+      "id": "p072",
+      "name": "죽순볶음(100g)",
+      "icon": "🎍",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58031C.png",
+      "originalPrice": 6300,
+      "salePrice": 6300,
       "discountRate": 0,
       "category": "snack_side",
       "itemType": "맛찬",
       "note": "골라서 3개→20%할인",
-      "description": "강원도 영월 청정지역에서 자란 곤드레나물을 삶아 냉동했더니, 밥에 올리기만 하면 바로 곤드레 영양밥을 즐길 수 있어요"
+      "description": "아삭한 국산 죽순에 채소를 더해 주문 즉시 신선하게 만들어요."
     },
     {
       "id": "p077",
@@ -2718,6 +2708,32 @@
       "description": "울릉도 부지깽이나물을 들기름으로 슴슴하게 무쳤어요."
     },
     {
+      "id": "p078",
+      "name": "곤드레나물(100g)",
+      "icon": "🌾",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58068C.png",
+      "originalPrice": 6200,
+      "salePrice": 6200,
+      "discountRate": 0,
+      "category": "snack_side",
+      "itemType": "맛찬",
+      "note": "골라서 3개→20%할인",
+      "description": "강원도 영월 청정지역에서 자란 곤드레나물을 삶아 냉동했더니, 밥에 올리기만 하면 바로 곤드레 영양밥을 즐길 수 있어요"
+    },
+    {
+      "id": "p087",
+      "name": "머우대나물(100g)",
+      "icon": "🌱",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59888C.jpg",
+      "originalPrice": 6200,
+      "salePrice": 6200,
+      "discountRate": 0,
+      "category": "snack_side",
+      "itemType": "소비촉진",
+      "note": "골라서 3개→20%할인",
+      "description": "머위줄기를 들깨가루에 무쳐 쌉싸름함과 고소함이 조화롭게 어우러진 여름철 별미예요"
+    },
+    {
       "id": "p081",
       "name": "생깻잎무침(120g)",
       "icon": "🥬",
@@ -2731,19 +2747,6 @@
       "description": "국산 깻잎을 친정 어머니 비법 양념으로 무쳐 삼겹살이나 수육과 함께 먹으면 더 개운해요"
     },
     {
-      "id": "p075",
-      "name": "도라지초무침(110g)",
-      "icon": "🥗",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58065C.png",
-      "originalPrice": 5900,
-      "salePrice": 5900,
-      "discountRate": 0,
-      "category": "snack_side",
-      "itemType": "맛찬",
-      "note": "골라서 3개→20%할인",
-      "description": "순 국산 도라지와 오이를 새콤하게 무쳐 입맛을 돋워줘요."
-    },
-    {
       "id": "p086",
       "name": "고구마순나물(90g)",
       "icon": "🍠",
@@ -2755,6 +2758,19 @@
       "itemType": "소비촉진",
       "note": "골라서 3개→20%할인",
       "description": "햇고구마순을 아삭하게 데쳐 국산 들깨가루로 고소하게 볶아낸 여름철 별미예요"
+    },
+    {
+      "id": "p075",
+      "name": "도라지초무침(110g)",
+      "icon": "🥗",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58065C.png",
+      "originalPrice": 5900,
+      "salePrice": 5900,
+      "discountRate": 0,
+      "category": "snack_side",
+      "itemType": "맛찬",
+      "note": "골라서 3개→20%할인",
+      "description": "순 국산 도라지와 오이를 새콤하게 무쳐 입맛을 돋워줘요."
     },
     {
       "id": "p085",
@@ -2809,19 +2825,6 @@
       "description": "어머니의 정성 담긴 손맛으로 비름나물 고유의 담백한 맛을 살려 조물조물 무쳤어요"
     },
     {
-      "id": "p080",
-      "name": "취나물(100g)",
-      "icon": "🍃",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58071C.png",
-      "originalPrice": 5000,
-      "salePrice": 5000,
-      "discountRate": 0,
-      "category": "snack_side",
-      "itemType": "맛찬",
-      "note": "골라서 3개→20%할인",
-      "description": "제주도와 고흥에서 자란 신선한 생취를 국산 들기름으로 짜지 않게 무쳐 향긋하고 구수한 맛이 제대로예요"
-    },
-    {
       "id": "p076",
       "name": "오미자미역초무침(200g)",
       "icon": "🍲",
@@ -2835,17 +2838,30 @@
       "description": "문경 오미자청과 미역을 새콤달콤하게 무친 반찬이에요."
     },
     {
-      "id": "p089",
-      "name": "얼갈이나물(100g)",
-      "icon": "🥣",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59890C.jpg",
+      "id": "p080",
+      "name": "취나물(100g)",
+      "icon": "🍃",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58071C.png",
+      "originalPrice": 5000,
+      "salePrice": 5000,
+      "discountRate": 0,
+      "category": "snack_side",
+      "itemType": "맛찬",
+      "note": "골라서 3개→20%할인",
+      "description": "제주도와 고흥에서 자란 신선한 생취를 국산 들기름으로 짜지 않게 무쳐 향긋하고 구수한 맛이 제대로예요"
+    },
+    {
+      "id": "p091",
+      "name": "고추장멸치볶음(80g)",
+      "icon": "🐟",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59893C.jpg",
       "originalPrice": 4800,
       "salePrice": 4800,
       "discountRate": 0,
       "category": "snack_side",
       "itemType": "소비촉진",
       "note": "골라서 3개→20%할인",
-      "description": "어린 배추잎을 구수한 된장 양념으로 무쳐 아이부터 어르신까지 편하게 드실 수 있어요"
+      "description": "청정 남해안 멸치를 특제 고추장 양념으로 볶아 비린내 없이 매콤달콤하고 감칠맛 나요"
     },
     {
       "id": "p084",
@@ -2861,17 +2877,17 @@
       "description": "오독오독한 오이 식감과 새콤짭짤한 양념이 어우러져 더운 여름 입맛을 시원하게 살려줘요"
     },
     {
-      "id": "p091",
-      "name": "고추장멸치볶음(80g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59893C.jpg",
+      "id": "p089",
+      "name": "얼갈이나물(100g)",
+      "icon": "🥣",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59890C.jpg",
       "originalPrice": 4800,
       "salePrice": 4800,
       "discountRate": 0,
       "category": "snack_side",
       "itemType": "소비촉진",
       "note": "골라서 3개→20%할인",
-      "description": "청정 남해안 멸치를 특제 고추장 양념으로 볶아 비린내 없이 매콤달콤하고 감칠맛 나요"
+      "description": "어린 배추잎을 구수한 된장 양념으로 무쳐 아이부터 어르신까지 편하게 드실 수 있어요"
     },
     {
       "id": "p071",
@@ -2900,19 +2916,6 @@
       "description": "감자채를 야채와 함께 현미유로 볶아 소화가 잘되고 부담 없이 즐길 수 있는 반찬이에요"
     },
     {
-      "id": "p100",
-      "name": "아임오뉴 소형(12P)",
-      "icon": "🌸",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/40567C.jpg",
-      "originalPrice": 4500,
-      "salePrice": 3800,
-      "discountRate": 16,
-      "category": "sanitary",
-      "itemType": "소비촉진",
-      "note": "4+1증정",
-      "description": "얇으면서도 편안한 착용감을 주는 소형 사이즈의 울트라슬림 날개형 생리대예요."
-    },
-    {
       "id": "p101",
       "name": "아임오뉴 대형(10P)",
       "icon": "🌸",
@@ -2924,6 +2927,19 @@
       "itemType": "소비촉진",
       "note": "4+1증정",
       "description": "넉넉한 흡수력으로 안심하고 사용할 수 있는 대형 사이즈의 울트라슬림 날개형 생리대예요."
+    },
+    {
+      "id": "p100",
+      "name": "아임오뉴 소형(12P)",
+      "icon": "🌸",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/40567C.jpg",
+      "originalPrice": 4500,
+      "salePrice": 3800,
+      "discountRate": 16,
+      "category": "sanitary",
+      "itemType": "소비촉진",
+      "note": "4+1증정",
+      "description": "얇으면서도 편안한 착용감을 주는 소형 사이즈의 울트라슬림 날개형 생리대예요."
     },
     {
       "id": "p102",
@@ -3056,17 +3072,17 @@
       "description": "병풀잎수와 히알루론산 유도체로 얼굴에 산뜻한 수분을 더해줘요."
     },
     {
-      "id": "p105",
-      "name": "진정 마스크팩(알로에)5개(25ml x 5개)",
-      "icon": "🌵",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56621C.jpg",
+      "id": "p104",
+      "name": "탄력 마스크팩(콜라겐)5개(25ml x 5개)",
+      "icon": "✨",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56620C.jpg",
       "originalPrice": 7500,
       "salePrice": 6300,
       "discountRate": 16,
       "category": "living",
       "itemType": "소비촉진",
       "note": "",
-      "description": "거제 유기농 알로에잎 추출물이 예민한 피부를 편안하게 진정시켜줘요."
+      "description": "가수분해콜라겐과 펩타이드 성분으로 피부에 탄력과 광채를 더해줘요."
     },
     {
       "id": "p106",
@@ -3082,17 +3098,17 @@
       "description": "쌀겨부터 쌀알까지 2단계 발효한 쌀 성분으로 칙칙한 피부를 환하게 밝혀줘요."
     },
     {
-      "id": "p104",
-      "name": "탄력 마스크팩(콜라겐)5개(25ml x 5개)",
-      "icon": "✨",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56620C.jpg",
+      "id": "p105",
+      "name": "진정 마스크팩(알로에)5개(25ml x 5개)",
+      "icon": "🌵",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56621C.jpg",
       "originalPrice": 7500,
       "salePrice": 6300,
       "discountRate": 16,
       "category": "living",
       "itemType": "소비촉진",
       "note": "",
-      "description": "가수분해콜라겐과 펩타이드 성분으로 피부에 탄력과 광채를 더해줘요."
+      "description": "거제 유기농 알로에잎 추출물이 예민한 피부를 편안하게 진정시켜줘요."
     },
     {
       "id": "p111",
