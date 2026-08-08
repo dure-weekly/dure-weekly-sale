@@ -75,33 +75,21 @@ function renderDday(period) {
 // 쇼핑몰에 사진이 등록되지 않은 상품(향후 매주 자동 갱신 시 발생 가능)은 <img> 없이
 // 사진 카드와 똑같은 구조(아이콘 원형 + 그라데이션 배경)로 그려서, 빈칸처럼 보이지 않고
 // "의도된 아이콘 카드"로 자연스럽게 섞이게 한다.
-function buildProductCard(product) {
-  const card = document.createElement("article");
-  card.className = "product-card";
+// 주간할인 상품은 reservations.json과 달리 별도 code 필드가 없다 — 이미지 파일명(예: "54984C.jpg",
+// "images/52927.jpg")에서 생활재코드를 뽑아낸다. PowerShell 정렬 스크립트가 쓰는 것과 같은 규칙.
+function extractGoodsCode(imagePath) {
+  if (!imagePath) return null;
+  const match = imagePath.match(/(\d+)[A-Za-z]?\.(jpg|jpeg|png|gif)$/i);
+  return match ? match[1] : null;
+}
+
+// 주간할인 가격 블록(정가→할인가, 수산쿠폰 3단 체인, 햇출하 등)을 만든다.
+// 카드와 상세페이지 오버레이 양쪽에서 재사용한다.
+function buildProductPriceHtml(product) {
   const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
-
-  // 상품 이미지는 ecoop 원본 이미지를 fetch로 그려주되, 외부 서버 이미지라 로드 실패 가능성이
-  // 있으므로 onerror 시 자기 자신을 숨기고 뒤에 깔린 이모지 플레이스홀더가 드러나게 한다.
-  const imageHtml = product.image
-    ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
-    : "";
-
-  // itemType이 "햇출하"면 할인이 아니라 "이번 주 새로 들어온 생활재"라는 뜻 —
-  // %대신 전용 배지를 쓰고, 정가/할인가가 같으므로 취소선·절약문구 없이 가격 한 줄만 보여준다.
-  // discountRate가 0이어도 햇출하가 아닌 경우(예: "3개이상 구매시 할인" 같은 조건부 할인)가 있으므로
-  // itemType으로 구분한다 — note(특이사항)가 있으면 별도 배지로 그 조건을 보여준다.
-  const isNewArrival = product.itemType === "햇출하";
-  const badgeHtml = isNewArrival
-    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
-    : product.discountRate > 0
-    ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
-    : "";
-  // 수산쿠폰 주간: 이미 주간할인가가 있던 품목은 정가→주간할인가→쿠폰최종가 3단으로,
-  // 나머지(쿠폰으로만 할인되는 품목)는 정가→최종가 2단으로 보여주되 둘 다 쿠폰 태그를 단다
-  // (사전예약 수산쿠폰 카드와 동일한 톤 — coupon-tag + price-chain-arrow 재사용).
   const couponTagHtml = product.category === "seafood_coupon" ? `<span class="coupon-tag">🐟 수산쿠폰</span>` : "";
-  const priceHtml = product.hasCoupon && product.couponPrice != null
-    ? `<div class="price-block">
+  if (product.hasCoupon && product.couponPrice != null) {
+    return `<div class="price-block">
         ${couponTagHtml}
         <div class="price-row price-row-chain">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
@@ -111,36 +99,60 @@ function buildProductCard(product) {
           <span class="price-sale">${formatPrice(product.couponPrice)}</span>
         </div>
         <span class="price-save">${formatPrice(Math.max(product.originalPrice - product.couponPrice, 0))} 절약</span>
-      </div>`
-    : product.discountRate > 0
-    ? `<div class="price-block">
+      </div>`;
+  }
+  if (product.discountRate > 0) {
+    return `<div class="price-block">
         ${couponTagHtml}
         <div class="price-row">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
           <span class="price-sale">${formatPrice(product.salePrice)}</span>
         </div>
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
-      </div>`
-    : `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`;
-  // 특이사항 문구 길이가 제각각이라(예: "4+1증정" vs "2개 구매시 육수 증정") 고정 폰트 크기로는
-  // 짧은 건 헐렁하고 긴 건 줄임표(...)로 잘린다 — 글자 수 구간별로 폰트를 줄여 한 줄에 맞춘다.
-  const noteText = product.note && product.note.trim() !== "" ? product.note.trim() : "";
-  let noteHtml = "";
-  if (noteText) {
-    const displayLen = noteText.length;
-    let noteFontRem = 1.37;
-    if (displayLen > 6) noteFontRem = 1.05;
-    if (displayLen > 10) noteFontRem = 0.86;
-    if (displayLen > 14) noteFontRem = 0.72;
-    // 즉석반찬(맛찬)의 "3개이상 구매 20%할인" 같은 문구는 다른 분류보다 길어서
-    // 말줄임(...)으로 잘리면 내용을 알 수 없다 — 맛찬만 줄바꿈을 허용한다.
-    const noteWrapClass = product.category === "snack_side" ? " note-badge-thumb-wrap" : "";
-    noteHtml = `<span class="note-badge note-badge-thumb${noteWrapClass}" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
+      </div>`;
   }
+  return `<div class="price-block"><div class="price-row"><span class="price-sale">${formatPrice(product.salePrice)}</span></div></div>`;
+}
+
+// 특이사항 배지(💡)도 카드/상세 양쪽에서 재사용한다.
+function buildProductNoteHtml(product) {
+  const noteText = product.note && product.note.trim() !== "" ? product.note.trim() : "";
+  if (!noteText) return "";
+  // 문구 길이가 제각각이라(예: "4+1증정" vs "2개 구매시 육수 증정") 고정 폰트 크기로는
+  // 짧은 건 헐렁하고 긴 건 줄임표(...)로 잘린다 — 글자 수 구간별로 폰트를 줄여 한 줄에 맞춘다.
+  const displayLen = noteText.length;
+  let noteFontRem = 1.37;
+  if (displayLen > 6) noteFontRem = 1.05;
+  if (displayLen > 10) noteFontRem = 0.86;
+  if (displayLen > 14) noteFontRem = 0.72;
+  // 즉석반찬(맛찬)의 "3개이상 구매 20%할인" 같은 문구는 다른 분류보다 길어서
+  // 말줄임(...)으로 잘리면 내용을 알 수 없다 — 맛찬만 줄바꿈을 허용한다.
+  const noteWrapClass = product.category === "snack_side" ? " note-badge-thumb-wrap" : "";
+  return `<span class="note-badge note-badge-thumb${noteWrapClass}" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
+}
+
+function buildProductCard(product) {
+  const card = document.createElement("article");
+  card.className = "product-card";
+
+  // 상품 이미지는 ecoop 원본 이미지를 fetch로 그려주되, 외부 서버 이미지라 로드 실패 가능성이
+  // 있으므로 onerror 시 자기 자신을 숨기고 뒤에 깔린 이모지 플레이스홀더가 드러나게 한다.
+  const imageHtml = product.image
+    ? `<img class="product-image" src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.remove();" />`
+    : "";
+
+  // itemType이 "햇출하"면 할인이 아니라 "이번 주 새로 들어온 생활재"라는 뜻 —
+  // %대신 전용 배지를 쓴다.
+  const isNewArrival = product.itemType === "햇출하";
+  const badgeHtml = isNewArrival
+    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
+    : product.discountRate > 0
+    ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
+    : "";
 
   card.innerHTML = `
     <div class="product-thumb">
-      ${noteHtml}
+      ${buildProductNoteHtml(product)}
       ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${product.icon || "🥬"}</span>
@@ -148,9 +160,22 @@ function buildProductCard(product) {
     <div class="product-body">
       <p class="product-name">${product.name}</p>
       <p class="product-desc">${product.description}</p>
-      ${priceHtml}
+      ${buildProductPriceHtml(product)}
     </div>
   `;
+
+  // 사전예약과 동일하게, 카드를 누르면 상세페이지(오버레이)가 열린다.
+  card.classList.add("is-clickable");
+  card.setAttribute("role", "button");
+  card.tabIndex = 0;
+  card.addEventListener("click", () => openDetailOverlay(product));
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openDetailOverlay(product);
+    }
+  });
+
   return card;
 }
 
@@ -473,7 +498,193 @@ function buildReservationCard(item) {
       ${item.directShip ? `<span class="reservation-date-badge">🚚 직송</span>` : item.supplyDate ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>` : ""}
     </div>
   `;
+
+  // 카드를 누르면 상세페이지(오버레이)를 연다. 자세히 보기 버튼 없이 카드 전체를 누르게 해서
+  // 모바일에서도 누르기 쉽게 한다.
+  card.classList.add("is-clickable");
+  card.setAttribute("role", "button");
+  card.tabIndex = 0;
+  card.addEventListener("click", () => openDetailOverlay(item));
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openDetailOverlay(item);
+    }
+  });
+
   return card;
+}
+
+/* ------------------------------------------------------- 상세페이지(오버레이) */
+// 카드 클릭 시 오버레이로 상세 정보를 보여준다. 별도 페이지 이동이 아니라 오버레이라서
+// "돌아가기"를 누르면 그리드의 스크롤·필터·검색 상태가 그대로 남아있다(다시 그릴 필요가 없음).
+
+// 상세정보는 "이번 주 상품 id"가 아니라 "생활재코드"를 키로 저장해서, 같은 생활재가
+// 다음 주 다시 할인/예약 목록에 들어와도 다시 조사하지 않고 그대로 재사용한다.
+// 코드가 없는 극소수 품목만 예외적으로 id를 키로 쓴다(goodsDetails.json 생성 시 처리).
+let goodsDetailsCache = null;
+
+async function loadGoodsDetails() {
+  if (goodsDetailsCache) return goodsDetailsCache;
+  try {
+    goodsDetailsCache = await fetchJSON("data/goodsDetails.json");
+  } catch (err) {
+    goodsDetailsCache = {};
+  }
+  return goodsDetailsCache;
+}
+
+// recipes는 두 가지 형태를 지원한다: 예전 형태(문장 배열)와 새 카드 형태
+// ({icon,name,steps:[],tagline}). 아직 카드로 안 바뀐 항목도 안 깨지게 둘 다 처리한다.
+function buildDetailRecipesHtml(recipes) {
+  if (!recipes || recipes.length === 0) return "";
+  const isCardFormat = typeof recipes[0] === "object";
+  if (!isCardFormat) {
+    return `<div class="detail-section"><h3>🍳 이렇게 즐겨보세요</h3><ul class="detail-recipe-list">${recipes.map((r) => `<li>${r}</li>`).join("")}</ul></div>`;
+  }
+  const cards = recipes
+    .map((r, idx) => {
+      const stepsHtml = r.steps && r.steps.length ? `<ol class="recipe-card-steps">${r.steps.map((s) => `<li>${s}</li>`).join("")}</ol>` : "";
+      return `
+        <div class="recipe-card">
+          <span class="recipe-card-num">${idx + 1}</span>
+          <span class="recipe-card-icon" aria-hidden="true">${r.icon || "🍽"}</span>
+          <p class="recipe-card-name">${r.name || ""}</p>
+          ${stepsHtml}
+          ${r.tagline ? `<p class="recipe-card-tagline">${r.tagline}</p>` : ""}
+        </div>
+      `;
+    })
+    .join("");
+  return `<div class="detail-section"><h3>🍳 요리 tip</h3><div class="recipe-card-grid">${cards}</div></div>`;
+}
+
+function buildDetailSpecsHtml(specs) {
+  if (!specs || Object.keys(specs).length === 0) return "";
+  const rows = Object.entries(specs)
+    .map(([k, v]) => `<div class="detail-spec-row"><span class="detail-spec-key">${k}</span><span class="detail-spec-val">${v}</span></div>`)
+    .join("");
+  return `
+    <div class="detail-section">
+      <h3>📋 사양정보</h3>
+      <div class="detail-specs">${rows}</div>
+    </div>
+  `;
+}
+
+function buildDetailReviewsHtml(reviews) {
+  if (!reviews || reviews.length === 0) return "";
+  const items = reviews
+    .map((r) => {
+      const stars = r.rating ? "⭐".repeat(Math.round(r.rating)) : "";
+      const yearsTag = r.years != null ? `<span class="detail-review-years">${r.years}년차</span>` : "";
+      const author = r.author ? `<span class="detail-review-author">${yearsTag}${r.author} 조합원</span>` : "";
+      return `<li class="detail-review">${stars ? `<span class="detail-review-stars">${stars}</span>` : ""}<p>${r.text}</p>${author}</li>`;
+    })
+    .join("");
+  return `
+    <div class="detail-section">
+      <h3>💬 조합원 이용후기</h3>
+      <ul class="detail-review-list">${items}</ul>
+    </div>
+  `;
+}
+
+// 돌아가기/닫기 버튼은 항상 이벤트 위임(content 자체에 리스너를 한 번만 걸어둠)으로 처리한다.
+// innerHTML을 여러 번 갈아끼우는 구조라, 매번 querySelector로 새 버튼을 찾아 addEventListener를
+// 붙이면 그 시점에 버튼이 없거나 타이밍이 어긋날 때 완전히 막혀버릴 위험이 있어 피한다.
+const LOADING_HTML = `<p class="product-grid-status">불러오는 중...</p><button type="button" class="btn btn-outline detail-back-btn" style="margin-top:16px;">← 돌아가기</button>`;
+
+async function openDetailOverlay(item) {
+  const overlay = document.getElementById("detail-overlay");
+  const content = document.getElementById("detail-content");
+  if (!overlay || !content) return;
+
+  content.innerHTML = LOADING_HTML;
+  overlay.hidden = false;
+  overlay.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+  overlay.scrollTop = 0;
+
+  try {
+    const details = await loadGoodsDetails();
+    const code = item.code || extractGoodsCode(item.image);
+    const d = (code && details[code]) || details[item.id] || null;
+
+    // 사전예약 항목은 code/supplyDate/directShip 필드로, 주간할인 항목은 그런 필드가 없는 것으로
+    // 구분한다 — 가격 블록과 뱃지(공급일/직송 vs 특이사항/할인율)를 서로 다르게 그려야 한다.
+    const isReservationItem = item.reservationType != null || item.supplyDate != null || item.directShip != null;
+    const priceHtml = isReservationItem ? buildReservationPriceBlock(item) : buildProductPriceHtml(item);
+    const supplyHtml = item.directShip
+      ? `<span class="reservation-date-badge">🚚 직송</span>`
+      : item.supplyDate
+      ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>`
+      : !isReservationItem
+      ? buildProductNoteHtml(item)
+      : "";
+
+    const galleryHtml = item.image
+      ? `<div class="detail-gallery"><img src="${item.image}" alt="${item.name}" onerror="this.closest('.detail-gallery').remove();" /></div>`
+      : "";
+
+    const bodyHtml = d
+      ? `
+        ${d.urgency ? `<div class="detail-urgency">⏰ ${d.urgency}</div>` : ""}
+        ${d.features && d.features.length ? `<div class="detail-section"><h3>✨ 특징</h3><ul class="detail-feature-list">${d.features.map((f) => `<li>${f}</li>`).join("")}</ul></div>` : ""}
+        ${d.differentiation ? `<div class="detail-section"><h3>🌟 이런 점이 달라요</h3><p>${d.differentiation}</p></div>` : ""}
+        ${d.tip ? `<div class="detail-section"><h3>💡 이용팁</h3><p>${d.tip}</p></div>` : ""}
+        ${buildDetailRecipesHtml(d.recipes)}
+        ${buildDetailSpecsHtml(d.specs)}
+        ${buildDetailReviewsHtml(d.reviews)}
+      `
+      : `<div class="detail-section"><p class="detail-empty">상세 정보를 준비 중이에요. 매장에서 직접 확인해보세요!</p></div>`;
+
+    content.innerHTML = `
+      ${galleryHtml}
+      <div class="detail-body">
+        <h2 id="detail-title" class="detail-title">${item.name}</h2>
+        <p class="detail-desc">${item.description || ""}</p>
+        ${priceHtml}
+        ${supplyHtml}
+        ${bodyHtml}
+        <button type="button" class="btn btn-primary detail-back-btn">← 돌아가기</button>
+      </div>
+    `;
+  } catch (err) {
+    console.error(err);
+    content.innerHTML = `<div class="detail-body"><p class="detail-empty">상세 정보를 불러오지 못했어요.</p><button type="button" class="btn btn-primary detail-back-btn">← 돌아가기</button></div>`;
+  }
+}
+
+function closeDetailOverlay() {
+  const overlay = document.getElementById("detail-overlay");
+  if (!overlay) return;
+  overlay.hidden = true;
+  overlay.classList.remove("is-open");
+  document.body.style.overflow = "";
+}
+
+function initDetailOverlay() {
+  const overlay = document.getElementById("detail-overlay");
+  const closeBtn = document.getElementById("detail-close-btn");
+  const content = document.getElementById("detail-content");
+  if (closeBtn) closeBtn.addEventListener("click", closeDetailOverlay);
+  // 안쪽 콘텐츠는 매번 새로 그려지므로, content 자체(고정 요소)에 한 번만 리스너를 걸고
+  // 실제로 눌린 게 .detail-back-btn인지는 그때그때 확인한다(이벤트 위임).
+  if (content) {
+    content.addEventListener("click", (e) => {
+      if (e.target.closest(".detail-back-btn")) closeDetailOverlay();
+    });
+  }
+  if (overlay) {
+    // 패널(흰 카드) 바깥의 어두운 배경 어디를 눌러도 닫히게 한다.
+    overlay.addEventListener("click", (e) => {
+      if (!e.target.closest(".detail-panel")) closeDetailOverlay();
+    });
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDetailOverlay();
+  });
 }
 
 const RESERVATION_PAGE_SIZE = 12;
@@ -802,4 +1013,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initReservations();
   initStoreFinder();
   initAllStoresList();
+  initDetailOverlay();
 });
