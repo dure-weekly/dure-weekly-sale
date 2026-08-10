@@ -92,13 +92,19 @@ function buildProductPriceHtml(product) {
     ? `<span class="coupon-tag">${product.couponLabel || "🐟 수산쿠폰"}</span>`
     : "";
   if (product.hasCoupon && product.couponPrice != null) {
+    // 정상가와 자체할인가가 같으면(자체 할인 없이 쿠폰만 적용되는 경우) 같은 숫자를 두 번
+    // 보여주지 않고 정상가→쿠폰가 2단으로 축약한다.
+    const isSelfDiscountSame = product.originalPrice === product.salePrice;
+    const midRowHtml = isSelfDiscountSame
+      ? ""
+      : `<span class="price-mid">${formatNumberOnly(product.salePrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>`;
     return `<div class="price-block">
         ${couponTagHtml}
         <div class="price-row price-row-chain">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
-          <span class="price-mid">${formatNumberOnly(product.salePrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          ${midRowHtml}
           <span class="price-sale">${formatPrice(product.couponPrice)}</span>
         </div>
         <span class="price-save">${formatPrice(Math.max(product.originalPrice - product.couponPrice, 0))} 절약</span>
@@ -164,6 +170,7 @@ function buildProductCard(product) {
       <p class="product-name">${product.name}</p>
       <p class="product-desc">${product.description}</p>
       ${buildProductPriceHtml(product)}
+      ${product.couponPeriod ? `<span class="reservation-date-badge">🗓 ${product.couponPeriod}</span>` : ""}
     </div>
   `;
 
@@ -259,6 +266,7 @@ const CATEGORY_LABELS = [
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "snack", label: "간식", icon: "🍪" },
   { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
+  { value: "nonghal_coupon", label: "농할쿠폰", icon: "🌾" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
@@ -295,6 +303,9 @@ function matchesSearchQuery(product, rawQuery) {
   const q = normalizeText(rawQuery).toLowerCase();
   if (!q) return true;
   if (normalizeText(product.name).toLowerCase().includes(q)) return true;
+  // 농할쿠폰처럼 단일 카테고리 안에 여러 대분류(쌀/정육/채소 등)가 섞여 있는 경우,
+  // theme 필드(대분류 원문)로도 검색되게 해서 "정육" 검색 시 카테고리와 무관하게 찾을 수 있게 한다.
+  if (product.theme && normalizeText(product.theme).toLowerCase().includes(q)) return true;
 
   const synonym = SEARCH_SYNONYMS[rawQuery.trim()];
   if (!synonym) return false;
@@ -444,14 +455,19 @@ function buildReservationPriceBlock(item) {
 
   if (item.hasCoupon && item.couponPrice != null) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
+    // 정상가와 자체할인가가 같으면 같은 숫자를 두 번 보여주지 않고 정상가→쿠폰가 2단으로 축약한다.
+    const isSelfDiscountSame = item.originalPrice === item.salePrice;
+    const midRowHtml = isSelfDiscountSame
+      ? ""
+      : `<span class="price-mid">${formatNumberOnly(item.salePrice)}</span>
+          <span class="price-chain-arrow" aria-hidden="true">→</span>`;
     return `
       <div class="price-block">
         <span class="coupon-tag">${item.couponLabel || "🐟 수산쿠폰"}</span>
         <div class="price-row price-row-chain">
           <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
-          <span class="price-mid">${formatNumberOnly(item.salePrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>
+          ${midRowHtml}
           <span class="price-sale">${formatPrice(item.couponPrice)}</span>
         </div>
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
