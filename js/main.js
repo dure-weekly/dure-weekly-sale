@@ -87,7 +87,10 @@ function extractGoodsCode(imagePath) {
 // 카드와 상세페이지 오버레이 양쪽에서 재사용한다.
 function buildProductPriceHtml(product) {
   const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
-  const couponTagHtml = product.category === "seafood_coupon" ? `<span class="coupon-tag">🐟 수산쿠폰</span>` : "";
+  // couponLabel이 없으면 기존 수산쿠폰 문구를 기본값으로 쓴다(과거 수산쿠폰 데이터 호환).
+  const couponTagHtml = (product.hasCoupon || product.category === "seafood_coupon")
+    ? `<span class="coupon-tag">${product.couponLabel || "🐟 수산쿠폰"}</span>`
+    : "";
   if (product.hasCoupon && product.couponPrice != null) {
     return `<div class="price-block">
         ${couponTagHtml}
@@ -443,7 +446,7 @@ function buildReservationPriceBlock(item) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
     return `
       <div class="price-block">
-        <span class="coupon-tag">🐟 수산쿠폰</span>
+        <span class="coupon-tag">${item.couponLabel || "🐟 수산쿠폰"}</span>
         <div class="price-row price-row-chain">
           <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
           <span class="price-chain-arrow" aria-hidden="true">→</span>
@@ -459,7 +462,7 @@ function buildReservationPriceBlock(item) {
   // hasCoupon인데 couponPrice가 따로 없는 경우(수산쿠폰 2단: 정상가→할인가만 있음) —
   // 체인 표시 대신 일반 2단 가격에 쿠폰 태그만 붙여서 "왜 이 가격인지" 알려준다.
   const saveAmount = Math.max(item.originalPrice - item.salePrice, 0);
-  const couponTagHtml = item.hasCoupon ? `<span class="coupon-tag">🐟 수산쿠폰</span>` : "";
+  const couponTagHtml = item.hasCoupon ? `<span class="coupon-tag">${item.couponLabel || "🐟 수산쿠폰"}</span>` : "";
   return `
     <div class="price-block">
       ${couponTagHtml}
