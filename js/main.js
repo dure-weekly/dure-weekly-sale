@@ -760,7 +760,7 @@ const RESERVATION_CATEGORY_LABELS = [
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
-function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
+function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap, searchInput) {
   if (!filterWrap) return;
 
   const presentCategories = new Set(allItems.map((it) => it.category));
@@ -769,13 +769,19 @@ function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
     ...RESERVATION_CATEGORY_LABELS.filter((c) => presentCategories.has(c.value)),
   ];
 
-  const state = { category: null };
+  const state = { category: null, query: "" };
 
+  // 검색어가 있으면 카테고리 칩을 무시하고 이름/테마로 전체 사전예약 범위에서 찾는다
+  // (주간할인 검색창과 동일한 패턴, matchesSearchQuery 재사용).
   function applyFilter() {
-    const filtered = state.category == null ? allItems : allItems.filter((it) => it.category === state.category);
+    const filtered = state.query.trim()
+      ? allItems.filter((it) => matchesSearchQuery(it, state.query))
+      : state.category == null
+      ? allItems
+      : allItems.filter((it) => it.category === state.category);
     grid.innerHTML = "";
     if (filtered.length === 0) {
-      grid.innerHTML = `<p class="product-grid-status">해당 분류의 사전예약 생활재가 없습니다.</p>`;
+      grid.innerHTML = `<p class="product-grid-status">조건에 맞는 사전예약 생활재가 없습니다.</p>`;
       if (loadMoreWrap) loadMoreWrap.innerHTML = "";
       return;
     }
@@ -799,12 +805,20 @@ function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap) {
     });
     filterWrap.appendChild(btn);
   });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      state.query = searchInput.value;
+      applyFilter();
+    });
+  }
 }
 
 async function initReservations() {
   const grid = document.getElementById("reservation-grid");
   const loadMoreWrap = document.getElementById("reservation-grid-loadmore");
   const filterWrap = document.getElementById("reservation-filter");
+  const searchInput = document.getElementById("reservation-search-input");
   if (!grid) return;
 
   grid.innerHTML = `<p class="product-grid-status">사전예약 생활재를 불러오는 중입니다...</p>`;
@@ -818,7 +832,7 @@ async function initReservations() {
       return;
     }
 
-    renderReservationFilter(items, grid, loadMoreWrap, filterWrap);
+    renderReservationFilter(items, grid, loadMoreWrap, filterWrap, searchInput);
     renderNextReservationBatch(items, grid, loadMoreWrap);
   } catch (err) {
     console.error(err);
