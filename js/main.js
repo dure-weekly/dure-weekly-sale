@@ -479,6 +479,17 @@ function buildReservationPriceBlock(item) {
     `;
   }
 
+  // 정상가와 할인가가 같으면(=할인 없음) 0%/0원 절약 같은 무의미한 표기를 하지 않고 정가만 보여준다.
+  if (item.originalPrice === item.salePrice) {
+    return `
+      <div class="price-block">
+        <div class="price-row">
+          <span class="price-sale">${formatPrice(item.salePrice)}</span>
+        </div>
+      </div>
+    `;
+  }
+
   // hasCoupon인데 couponPrice가 따로 없는 경우(수산쿠폰 2단: 정상가→할인가만 있음) —
   // 체인 표시 대신 일반 2단 가격에 쿠폰 태그만 붙여서 "왜 이 가격인지" 알려준다.
   const saveAmount = Math.max(item.originalPrice - item.salePrice, 0);
