@@ -7,8 +7,10 @@ $dataPath = Join-Path $root "data\products.json"
 $dir = Join-Path $root "scripts\_last_run"
 
 $csvRows = Import-Csv (Join-Path $dir "nonghal_coupon_list.csv")
+$csvRows29 = Import-Csv (Join-Path $dir "nonghal29_coupon_list.csv")
 $middleCategoryByCode = @{}
 foreach ($r in $csvRows) { $middleCategoryByCode[$r.코드] = $r.중분류 }
+foreach ($r in $csvRows29) { $middleCategoryByCode[$r.코드] = $r.중분류 }
 
 $brokenLines = Get-Content (Join-Path $dir "nonghal_truly_broken.txt") -Encoding UTF8
 $brokenIds = @{}

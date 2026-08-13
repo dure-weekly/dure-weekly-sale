@@ -504,7 +504,8 @@ function buildReservationCard(item) {
     : "";
 
   // 할인율은 주간할인과 완전히 동일한 discount-badge(오른쪽 상단, 같은 크기)로 표시한다.
-  const badgeHtml = item.discountRate != null
+  // 0%(정상가=자체할인가, 쿠폰만 적용되는 경우)는 배지를 안 보여준다 — 가격 블록의 쿠폰 태그로 충분.
+  const badgeHtml = item.discountRate > 0
     ? `<span class="discount-badge" aria-hidden="true"><strong>${item.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
     : "";
 
@@ -743,6 +744,8 @@ const RESERVATION_CATEGORY_LABELS = [
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "health", label: "면역·건강보조", icon: "🍯" },
+  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
+  { value: "lacquerware", label: "옻칠주방용품", icon: "🥢" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
