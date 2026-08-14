@@ -2739,22 +2739,6 @@
       "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
-      "id": "p745",
-      "name": "다짐 오징어살(120g)",
-      "icon": "🦑",
-      "image": null,
-      "originalPrice": 10600,
-      "salePrice": 8480,
-      "couponPrice": null,
-      "discountRate": 20,
-      "hasCoupon": false,
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": true,
-      "description": "신선한 국내산 오징어, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
       "id": "p746",
       "name": "채썬오징어몸통살(400g)",
       "icon": "🦑",
