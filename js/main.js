@@ -259,14 +259,14 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 // 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
+  { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
+  { value: "nonghal_coupon", label: "농할쿠폰", icon: "🌾" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "snack", label: "간식", icon: "🍪" },
-  { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
-  { value: "nonghal_coupon", label: "농할쿠폰", icon: "🌾" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
@@ -522,6 +522,7 @@ function buildReservationCard(item) {
 
   card.innerHTML = `
     <div class="product-thumb">
+      ${buildProductNoteHtml(item)}
       ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${item.icon || "📦"}</span>
@@ -728,7 +729,8 @@ function renderNextReservationBatch(items, grid, loadMoreWrap) {
   const start = grid.querySelectorAll(".product-card").length;
   const end = Math.min(start + RESERVATION_PAGE_SIZE, items.length);
   for (let i = start; i < end; i++) {
-    grid.appendChild(buildReservationCard(items[i]));
+    const item = items[i];
+    grid.appendChild(item.__isProduct ? buildProductCard(item) : buildReservationCard(item));
   }
   renderReservationLoadMoreButton(items, grid, loadMoreWrap);
 }
@@ -750,9 +752,9 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
 
 // 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
 const RESERVATION_CATEGORY_LABELS = [
-  { value: "jeju_pork", label: "제주흑돼지", icon: "🐖" },
-  { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
+  { value: "meat", label: "정육", icon: "🥩" },
+  { value: "jeju_pork", label: "제주흑돼지", icon: "🐖" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "health", label: "면역·건강보조", icon: "🍯" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
@@ -760,7 +762,16 @@ const RESERVATION_CATEGORY_LABELS = [
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
-function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap, searchInput) {
+// 공급일 문자열("8/19(수)", "~8/31", "8/27(목)~29(토)")에서 정렬용 숫자(월*100+일)를 뽑는다.
+// 직송(directShip)은 날짜 제약이 없어 가장 빠른 것으로 취급한다.
+function parseSupplyDateSortKey(item) {
+  if (item.directShip) return 0;
+  const m = (item.supplyDate || "").match(/(\d+)\/(\d+)/);
+  if (!m) return 9999;
+  return parseInt(m[1], 10) * 100 + parseInt(m[2], 10);
+}
+
+function renderReservationFilter(allItems, allProducts, grid, loadMoreWrap, filterWrap, searchInput) {
   if (!filterWrap) return;
 
   const presentCategories = new Set(allItems.map((it) => it.category));
@@ -768,16 +779,35 @@ function renderReservationFilter(allItems, grid, loadMoreWrap, filterWrap, searc
     { value: null, label: "전체", icon: "🏷️" },
     ...RESERVATION_CATEGORY_LABELS.filter((c) => presentCategories.has(c.value)),
   ];
+  const categoryOrderIndex = (cat) => {
+    const idx = RESERVATION_CATEGORY_LABELS.findIndex((c) => c.value === cat);
+    return idx === -1 ? 999 : idx;
+  };
 
   const state = { category: null, query: "" };
 
-  // 검색어가 있으면 카테고리 칩을 무시하고 이름/테마로 전체 사전예약 범위에서 찾는다
-  // (주간할인 검색창과 동일한 패턴, matchesSearchQuery 재사용).
+  // 검색어가 있으면 카테고리 칩을 무시하고 사전예약+주간할인 전체 범위에서 찾는다
+  // (주간할인 검색창과 동일한 패턴, matchesSearchQuery 재사용) — 어느 검색창에서 찾든
+  // 통합된 결과가 나오도록 한다.
+  // "전체" 칩(카테고리 미선택)일 때는 데이터 배열의 물리적 순서(카테고리→공급일→할인율)
+  // 대신 날짜→부류→할인율 순으로 다시 정렬해서, 곧 받을 수 있는 것부터 한눈에 보이게 한다.
   function applyFilter() {
     const filtered = state.query.trim()
-      ? allItems.filter((it) => matchesSearchQuery(it, state.query))
+      ? [
+          ...allItems.filter((it) => matchesSearchQuery(it, state.query)),
+          ...allProducts.filter((p) => matchesSearchQuery(p, state.query)).map((p) => ({ ...p, __isProduct: true })),
+        ]
       : state.category == null
-      ? allItems
+      ? allItems.slice().sort((a, b) => {
+          // featured(이번 주 주력 상품)는 날짜/카테고리 정렬과 무관하게 항상 맨 앞에 고정한다.
+          const featuredDiff = (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+          if (featuredDiff !== 0) return featuredDiff;
+          const dateDiff = parseSupplyDateSortKey(a) - parseSupplyDateSortKey(b);
+          if (dateDiff !== 0) return dateDiff;
+          const catDiff = categoryOrderIndex(a.category) - categoryOrderIndex(b.category);
+          if (catDiff !== 0) return catDiff;
+          return (b.discountRate || 0) - (a.discountRate || 0);
+        })
       : allItems.filter((it) => it.category === state.category);
     grid.innerHTML = "";
     if (filtered.length === 0) {
@@ -832,7 +862,17 @@ async function initReservations() {
       return;
     }
 
-    renderReservationFilter(items, grid, loadMoreWrap, filterWrap, searchInput);
+    // 검색어를 입력하면 카테고리 구분 없이 사전예약+주간할인 전체 범위에서 찾아야 하므로
+    // 주간할인 데이터도 미리 받아둔다(검색 안 할 땐 안 쓰이는 데이터라 실패해도 무시).
+    let products = [];
+    try {
+      const productData = await fetchJSON("data/products.json");
+      products = productData.products || [];
+    } catch (err) {
+      console.error(err);
+    }
+
+    renderReservationFilter(items, products, grid, loadMoreWrap, filterWrap, searchInput);
     renderNextReservationBatch(items, grid, loadMoreWrap);
   } catch (err) {
     console.error(err);
