@@ -135,6 +135,13 @@ ul {
   color: var(--color-text-muted);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .period-badge {
   display: inline-flex;
   align-items: center;
@@ -146,6 +153,36 @@ ul {
   padding: 8px 14px;
   border-radius: 999px;
   white-space: nowrap;
+}
+
+/* 외부 공식 홈페이지로 나가는 링크 — period-badge(꽉 찬 초록)와 짝을 이루되,
+   "이번 주 정보"보다는 낮은 우선순위임을 아웃라인 스타일로 구분해 시각적으로 경쟁하지 않게 한다. */
+.header-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+  border: 1.5px solid var(--color-primary-light);
+  padding: 7px 14px 7px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.header-link-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* 외부 사이트로 나간다는 걸 한눈에 알 수 있도록 화살표를 살짝 옅게 붙여둔다 */
+.header-link-btn-ext {
+  font-size: 0.95em;
+  opacity: 0.6;
+  margin-left: 1px;
 }
 
 /* ------------------------------------------------------------------ Hero */
