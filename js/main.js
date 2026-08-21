@@ -140,6 +140,14 @@ function buildProductNoteHtml(product) {
   return `<span class="note-badge note-badge-thumb${noteWrapClass}" style="font-size: ${noteFontRem}rem;">${noteText}</span>`;
 }
 
+// "5만원 이상 구매시 장수홍삼 15개 증정"처럼 여러 상품에 공통으로 붙는 프로모션 문구.
+// 좌상단(note-badge-thumb)은 원형 할인배지와 자리다툼이 나고 글자수도 길어 잘리므로
+// 썸네일 하단에 리본으로 따로 뺀다.
+function buildPromoRibbonHtml(product) {
+  if (!product.promoBadge) return "";
+  return `<span class="promo-ribbon"><span class="promo-ribbon-icon" aria-hidden="true">🎁</span>${product.promoBadge}</span>`;
+}
+
 function buildProductCard(product) {
   const card = document.createElement("article");
   card.className = "product-card";
@@ -165,6 +173,7 @@ function buildProductCard(product) {
       ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${product.icon || "🥬"}</span>
+      ${buildPromoRibbonHtml(product)}
     </div>
     <div class="product-body">
       <p class="product-name">${product.name}</p>
@@ -268,6 +277,9 @@ const CATEGORY_LABELS = [
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "snack", label: "간식", icon: "🍪" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
+  { value: "health_gift", label: "장수건강", icon: "🧧" },
+  { value: "cosmetics", label: "스킨케어", icon: "💄" },
+  { value: "gift_set", label: "추석선물세트", icon: "🎁" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
@@ -301,6 +313,15 @@ const SEARCH_SYNONYMS = {
   쿠폰: { category: "seafood_coupon" },
   간식: { category: "snack" },
   디저트: { category: "snack" },
+  선물세트: { category: "gift_set" },
+  추석: { category: "gift_set" },
+  화장품: { category: "cosmetics" },
+  스킨케어: { category: "cosmetics" },
+  홍삼: { category: "health_gift" },
+  장수이야기: { category: "health_gift" },
+  침구: { category: "bedding" },
+  이불: { category: "bedding" },
+  주방용품: { category: "kitchen" },
 };
 
 function matchesSearchQuery(product, rawQuery) {
@@ -759,6 +780,8 @@ const RESERVATION_CATEGORY_LABELS = [
   { value: "health", label: "면역·건강보조", icon: "🍯" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "lacquerware", label: "옻칠주방용품", icon: "🥢" },
+  { value: "kitchen", label: "주방용품", icon: "🍳" },
+  { value: "bedding", label: "가을침구", icon: "🛏️" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
