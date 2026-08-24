@@ -285,6 +285,104 @@ ul {
   flex-shrink: 0;
 }
 
+/* --------------------------------------------------------- 추석 카다로그 배너 */
+.chuseok-promo {
+  padding: 22px 0;
+  background: linear-gradient(120deg, #362a52 0%, #6b4a7a 50%, #c9814a 100%);
+  color: #fff;
+}
+
+.chuseok-promo-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.chuseok-promo-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.chuseok-promo-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+.chuseok-promo-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  opacity: 0.92;
+  margin: 0;
+}
+
+.chuseok-promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.chuseok-promo-btn {
+  font-size: 0.88rem;
+  padding: 12px 18px;
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+.chuseok-promo-btn-primary {
+  background: #fff;
+  color: #4a3a6b;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.chuseok-promo-btn-primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.chuseok-promo-btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.chuseok-promo-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 640px) {
+  .chuseok-promo-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chuseok-promo-title {
+    font-size: 1.3rem;
+  }
+
+  .chuseok-promo-actions {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .chuseok-promo-btn {
+    flex: 0 0 auto;
+  }
+}
+
 /* --------------------------------------------------------------- Buttons */
 .btn {
   display: inline-flex;
