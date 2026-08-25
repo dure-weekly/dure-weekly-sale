@@ -374,6 +374,20 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           return a.hasCoupon ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
         });
       }
+      // "농할쿠폰" 칩에서는 복숭아 품종(황도/백도)이 섞여 나오면 훑어보기 어려워서,
+      // 같은 품종끼리 묶어서 먼저 보여주고 그 안에서는 기존처럼 할인율 높은 순으로 정렬한다.
+      if (state.category === "nonghal_coupon") {
+        const peachGroupIndex = (name) => {
+          if (name.includes("황도")) return 0;
+          if (name.includes("백도")) return 1;
+          return 2;
+        };
+        filtered = filtered.slice().sort((a, b) => {
+          const groupDiff = peachGroupIndex(a.name) - peachGroupIndex(b.name);
+          if (groupDiff !== 0) return groupDiff;
+          return b.discountRate - a.discountRate;
+        });
+      }
     }
     grid.innerHTML = "";
     if (filtered.length === 0) {
