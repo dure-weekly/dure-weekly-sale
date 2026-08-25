@@ -332,14 +332,28 @@ ul {
 }
 
 .chuseok-promo-btn {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  padding: 12px 14px;
+  letter-spacing: -0.03em;
+  padding: 12px 12px;
   flex: 1 1 100%;
   white-space: normal;
   text-align: center;
-  line-height: 1.2;
-  gap: 8px;
+  line-height: 1.15;
+  gap: 6px;
+}
+
+.chuseok-promo-btn-label {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.15em;
+}
+
+.chuseok-promo-btn-emphasis {
+  font-size: 2em;
+  font-weight: 900;
 }
 
 .chuseok-promo-btn-primary {
@@ -355,14 +369,15 @@ ul {
 }
 
 .chuseok-promo-btn-outline {
-  background: transparent;
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.65);
+  background: #ffe8c2;
+  color: #7a3b1e;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
 .chuseok-promo-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: #fff;
+  background: #fff0d9;
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
@@ -384,8 +399,9 @@ ul {
 
   .chuseok-promo-btn {
     flex: 0 0 auto;
-    font-size: 1.6rem;
-    padding: 14px 22px;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    padding: 14px 20px;
     white-space: nowrap;
   }
 }
