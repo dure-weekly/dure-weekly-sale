@@ -354,6 +354,23 @@ ul {
 .chuseok-promo-btn-emphasis {
   font-size: 2em;
   font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.chuseok-promo-dot {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.62em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff 0%, #ffd9a0 22%, #e8963a 55%, #8a4a12 100%);
+  box-shadow: inset -2px -3px 4px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chuseok-promo-dot-alt {
+  background: radial-gradient(circle at 32% 28%, #fff 0%, #ffb3a0 22%, #d1483a 55%, #6e1f16 100%);
 }
 
 .chuseok-promo-btn-primary {
