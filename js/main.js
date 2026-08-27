@@ -88,7 +88,10 @@ function extractGoodsCode(imagePath) {
 function buildProductPriceHtml(product) {
   const saveAmount = Math.max(product.originalPrice - product.salePrice, 0);
   // couponLabel이 없으면 기존 수산쿠폰 문구를 기본값으로 쓴다(과거 수산쿠폰 데이터 호환).
-  const couponTagHtml = (product.hasCoupon || product.category === "seafood_coupon")
+  // (2026-08-27, 36주 한정) category만으로 태그를 강제하면 seafood_coupon 카테고리에
+  // 임시로 옮겨온 비쿠폰 상품(순살삼치·손질오징어채)에도 "수산쿠폰" 태그가 잘못 붙으므로 hasCoupon만 본다.
+  // 37주 갱신 시 이 두 상품을 다시 seafood로 되돌리면 category 조건을 복원해도 무방하다.
+  const couponTagHtml = product.hasCoupon
     ? `<span class="coupon-tag">${product.couponLabel || "🐟 수산쿠폰"}</span>`
     : "";
   if (product.hasCoupon && product.couponPrice != null) {
@@ -268,8 +271,9 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 // 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
-  { value: "seafood_coupon", label: "수산쿠폰", icon: "🎟️" },
-  { value: "nonghal_coupon", label: "농할쿠폰", icon: "🌾" },
+  { value: "seafood_coupon", label: "수산", icon: "🎟️" },
+  { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
+  { value: "nonghal_meat", label: "농할-유정란/닭/오리", icon: "🍗" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
@@ -277,9 +281,10 @@ const CATEGORY_LABELS = [
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "snack", label: "간식", icon: "🍪" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
-  { value: "health_gift", label: "장수건강", icon: "🧧" },
+  { value: "health_gift", label: "장수·건강", icon: "🧧" },
   { value: "cosmetics", label: "스킨케어", icon: "💄" },
   { value: "gift_set", label: "추석선물세트", icon: "🎁" },
+  { value: "chuseok_treat", label: "추석 별미", icon: "🍡" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
@@ -315,6 +320,10 @@ const SEARCH_SYNONYMS = {
   디저트: { category: "snack" },
   선물세트: { category: "gift_set" },
   추석: { category: "gift_set" },
+  송편: { category: "chuseok_treat" },
+  식혜: { category: "chuseok_treat" },
+  수정과: { category: "chuseok_treat" },
+  강정: { category: "chuseok_treat" },
   화장품: { category: "cosmetics" },
   스킨케어: { category: "cosmetics" },
   홍삼: { category: "health_gift" },
@@ -362,7 +371,22 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     } else if (state.category === "all") {
       // hideFromAll(예: 수산쿠폰 중 "정가→최종가" 2단만 있는 품목)은 전체 목록엔 안 보이고
       // 해당 카테고리 칩을 직접 눌렀을 때만 노출한다.
-      filtered = allProducts.filter((p) => !p.hideFromAll);
+      // "전체" 탭 노출 순서: 지혜님 요청(2026-08-27)으로 그 주 목록에 "백미"가 있으면 맨 앞에,
+      // 그다음 가공·반찬(processed) 카테고리 전체를 보여준다. 쌀·잡곡의 다른 품목들은 빼지 않고 원래 자리(3순위)에 그대로 둔다.
+      // id를 하드코딩하지 않고 이름으로 매칭 — 백미가 공급중단으로 빠지거나 다음 주 다시 들어와도 자동으로 반영되게 함.
+      // "이번주만"이라고 명시하셨으므로 37주 이후 이 규칙이 더 필요 없다고 하시면 이 우선순위 정렬 자체를 제거할 것(원래는 그냥 filter만 했음).
+      // 분류 칩(CATEGORY_LABELS) 순서는 그대로 두고, 카드 나열 순서만 바꾸는 것 — 우선순위 안에서는 등록 순서를 유지한다.
+      filtered = allProducts
+        .filter((p) => !p.hideFromAll)
+        .map((p, idx) => ({ p, idx }))
+        .sort((a, b) => {
+          const rank = (p) => (p.name.includes("백미") ? 0 : p.category === "processed" ? 1 : 2);
+          const aPri = rank(a.p);
+          const bPri = rank(b.p);
+          if (aPri !== bPri) return aPri - bPri;
+          return a.idx - b.idx;
+        })
+        .map(({ p }) => p);
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
       // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가, hasCoupon)
@@ -387,6 +411,19 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           if (groupDiff !== 0) return groupDiff;
           return b.discountRate - a.discountRate;
         });
+      }
+      // "즉석반찬(맛찬)" 칩에서는 특정 이틀만 공급되는(품절되기 쉬운) 품목을
+      // note에 "공급"이 적힌 것으로 판별해 먼저 보여준다. 나머지는 기존 순서 유지.
+      if (state.category === "snack_side") {
+        filtered = filtered
+          .map((p, idx) => ({ p, idx }))
+          .sort((a, b) => {
+            const aLimited = (a.p.note || "").includes("공급") ? 0 : 1;
+            const bLimited = (b.p.note || "").includes("공급") ? 0 : 1;
+            if (aLimited !== bLimited) return aLimited - bLimited;
+            return a.idx - b.idx;
+          })
+          .map(({ p }) => p);
       }
     }
     grid.innerHTML = "";
@@ -566,7 +603,7 @@ function buildReservationCard(item) {
       <p class="product-name">${item.name}</p>
       <p class="product-desc">${item.description || ""}</p>
       ${buildReservationPriceBlock(item)}
-      ${item.directShip ? `<span class="reservation-date-badge">🚚 직송</span>` : item.supplyDate ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>` : ""}
+      ${item.directShip ? `<span class="reservation-date-badge">🚚 직송</span>` : item.supplyDate ? `<span class="reservation-date-badge">${item.supplyLabel || "공급"}: ${item.supplyDate}</span>` : ""}
     </div>
   `;
 
@@ -689,7 +726,7 @@ async function openDetailOverlay(item) {
     const supplyHtml = item.directShip
       ? `<span class="reservation-date-badge">🚚 직송</span>`
       : item.supplyDate
-      ? `<span class="reservation-date-badge">공급: ${item.supplyDate}</span>`
+      ? `<span class="reservation-date-badge">${item.supplyLabel || "공급"}: ${item.supplyDate}</span>`
       : !isReservationItem
       ? buildProductNoteHtml(item)
       : "";
