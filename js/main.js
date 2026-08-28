@@ -1044,10 +1044,17 @@ function buildStoreResultCard(store, matchedKeyword) {
     <div>
       <p class="store-result-name">${store.name}${label ? `<span class="match-tag">${label}</span>` : ""}</p>
       <p class="store-result-info">📞 <a href="tel:${store.phone}">${store.phone}</a></p>
-      <p class="store-result-info">📍 ${store.address}</p>
+      <p class="store-result-info">📍 <a href="${buildNaverMapUrl(store)}" target="_blank" rel="noopener noreferrer">${store.address}</a></p>
     </div>
   `;
   return card;
+}
+
+// 네이버맵에는 매장이 "두레생협 OO점"으로 등록돼 있어, 주소만으로 검색하는 것보다
+// 이름을 붙여서 검색해야 정확한 매장이 나온다(2026-08-28 지혜님 확인).
+function buildNaverMapUrl(store) {
+  const query = `두레생협 ${store.name}`;
+  return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 }
 
 async function initStoreFinder() {
@@ -1126,7 +1133,7 @@ function buildStoreListCard(store) {
   card.innerHTML = `
     <p class="store-result-name">🏪 ${store.name}</p>
     <p class="store-result-info">📞 <a href="tel:${store.phone}">${store.phone}</a></p>
-    <p class="store-result-info">📍 ${store.address}</p>
+    <p class="store-result-info">📍 <a href="${buildNaverMapUrl(store)}" target="_blank" rel="noopener noreferrer">${store.address}</a></p>
   `;
   return card;
 }

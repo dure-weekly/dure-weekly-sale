@@ -1778,3 +1778,19 @@ main section[id] {
   left: 10px;
   top: 10px;
 }
+
+/* -------------------------------------------------- PDF 안내책자 뷰어 */
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.pdf-page-canvas {
+  max-width: 100%;
+  height: auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}

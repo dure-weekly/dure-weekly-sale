@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>생활재 안내책자 | 경기두레생협</title>
+<meta name="description" content="경기두레생협 생활재 안내책자를 앱 설치 없이 화면에서 바로 볼 수 있어요." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>" />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="css/style.css?v=20260828b" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="brand-logo" aria-hidden="true">🌱</span>
+      <span>
+        경기두레생협
+        <small>주간할인 생활재</small>
+      </span>
+    </a>
+    <span class="period-badge">📅 <span data-period-badge>이번 주 월~일</span></span>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="container">
+    <div class="stores-page-head">
+      <h1>📖 생활재 안내책자</h1>
+      <p>앱 설치 없이 이 화면에서 바로 넘겨보실 수 있어요. 아래로 스크롤하면 다음 장이 이어집니다.</p>
+      <a class="back-link" href="index.html">← 메인으로 돌아가기</a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p id="pdf-status" class="product-grid-status">안내책자를 불러오는 중입니다...</p>
+      <div id="pdf-viewer" class="pdf-viewer"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-title">경기두레생협</p>
+    <p class="footer-line">지역과 함께하는 친환경 생활협동조합, 건강한 먹거리와 지속가능한 소비를 실천합니다.</p>
+    <p class="footer-line">경기두레생협 사무국: <a href="tel:032-664-0072" class="footer-link">032-664-0072</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs" type="module">
+</script>
+<script type="module">
+  import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs";
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs";
+
+  const statusEl = document.getElementById("pdf-status");
+  const viewerEl = document.getElementById("pdf-viewer");
+
+  async function renderGuide() {
+    try {
+      // cMapUrl/standardFontDataUrl이 없으면 한글처럼 임베딩 서브셋 폰트를 쓰는 PDF에서
+      // 도형·배경만 그려지고 글자는 안 그려지는 문제가 생긴다(2026-08-28 실제로 겪음).
+      const pdf = await pdfjsLib.getDocument({
+        url: "dure-guide-2023.pdf",
+        cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/",
+        cMapPacked: true,
+        standardFontDataUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/standard_fonts/",
+      }).promise;
+      statusEl.remove();
+
+      // 화면 폭(여백 제외)에 맞춰 각 페이지 배율을 계산 — 모바일에서도 한 화면에 꽉 차게 보이도록.
+      const containerWidth = Math.min(viewerEl.clientWidth || document.documentElement.clientWidth, 900);
+      // 레티나 화면에서도 선명하게 보이도록 devicePixelRatio만큼 실제 캔버스 해상도를 올린다.
+      const pixelRatio = window.devicePixelRatio || 1;
+
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+        const baseViewport = page.getViewport({ scale: 1 });
+        const scale = containerWidth / baseViewport.width;
+        const viewport = page.getViewport({ scale: scale * pixelRatio });
+
+        const canvas = document.createElement("canvas");
+        canvas.className = "pdf-page-canvas";
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        canvas.style.width = `${viewport.width / pixelRatio}px`;
+        canvas.style.height = `${viewport.height / pixelRatio}px`;
+        viewerEl.appendChild(canvas);
+
+        const context = canvas.getContext("2d");
+        await page.render({ canvasContext: context, viewport }).promise;
+      }
+    } catch (err) {
+      statusEl.textContent = "안내책자를 불러오지 못했습니다. 새로고침해보시거나 잠시 후 다시 시도해주세요.";
+      console.error(err);
+    }
+  }
+
+  renderGuide();
+</script>
+</body>
+</html>
