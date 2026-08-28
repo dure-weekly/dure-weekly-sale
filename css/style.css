@@ -121,11 +121,18 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 38px;
   height: 38px;
   border-radius: 50%;
   background: var(--color-primary-light);
   font-size: 1.2rem;
+}
+
+.brand-logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .brand small {
@@ -1355,6 +1362,14 @@ main section[id] {
   color: #fff;
 }
 
+.footer-logo {
+  height: 34px;
+  width: auto;
+  /* .site-footer .container가 flex-direction: column이라 align-items 기본값(stretch)에
+     의해 이미지가 가로로 늘어나 찌그러져 보이는 문제가 있었음 — 이 항목만 늘어남 해제 */
+  align-self: flex-start;
+}
+
 .footer-line {
   font-size: 0.85rem;
   color: #cfe0c9;
@@ -1381,6 +1396,26 @@ main section[id] {
 
 .footer-link:hover {
   color: var(--color-primary-light);
+}
+
+.footer-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: var(--color-surface);
+  color: var(--color-primary-dark);
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.footer-guide-btn:hover {
+  background: var(--color-primary-light);
 }
 
 /* --------------------------------------------------------- Mobile tuning */
