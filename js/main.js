@@ -274,6 +274,7 @@ const CATEGORY_LABELS = [
   { value: "seafood_coupon", label: "수산", icon: "🎟️" },
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
   { value: "nonghal_meat", label: "농할-유정란/닭/오리", icon: "🍗" },
+  { value: "kongmil_coupon", label: "콩밀쿠폰", icon: "🫘" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
@@ -389,13 +390,18 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
         .map(({ p }) => p);
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
-      // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가, hasCoupon)
-      // 품목을 먼저 할인율 높은 순으로, 그다음 2단(정상가→할인가) 품목을 할인가 높은 순으로 배치한다.
+      // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가)
+      // 품목을 먼저 할인율 높은 순으로, 그다음 2단(정상가→할인가만) 품목을 할인가 높은 순으로 배치한다.
       // (전체 목록에서의 노출 순서는 그대로 두고 이 칩 안에서만 다르게 정렬)
+      // 주의(2026-09-02 수정): hasCoupon은 수산쿠폰 카테고리 전 품목이 true라서 3단/2단 구분 신호가
+      // 못 됨(예전엔 구분됐다고 가정한 주석이 있었으나 실제 데이터는 그렇지 않았음) — 대신 진짜 3단 여부인
+      // "salePrice가 originalPrice와 다른가"(=주간할인가가 별도로 있는가)로 판정한다.
       if (state.category === "seafood_coupon") {
         filtered = filtered.slice().sort((a, b) => {
-          if (a.hasCoupon !== b.hasCoupon) return a.hasCoupon ? -1 : 1;
-          return a.hasCoupon ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
+          const aTier3 = a.salePrice !== a.originalPrice;
+          const bTier3 = b.salePrice !== b.originalPrice;
+          if (aTier3 !== bTier3) return aTier3 ? -1 : 1;
+          return aTier3 ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
         });
       }
       // "농할쿠폰" 칩에서는 복숭아 품종(황도/백도)이 섞여 나오면 훑어보기 어려워서,
