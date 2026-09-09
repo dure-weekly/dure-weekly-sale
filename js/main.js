@@ -271,6 +271,7 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 // 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
+  { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "seafood_coupon", label: "수산", icon: "🎟️" },
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
   { value: "nonghal_meat", label: "농할-유정란/닭/오리", icon: "🍗" },
@@ -279,7 +280,6 @@ const CATEGORY_LABELS = [
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
-  { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "snack", label: "간식", icon: "🍪" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "health_gift", label: "장수·건강", icon: "🧧" },
