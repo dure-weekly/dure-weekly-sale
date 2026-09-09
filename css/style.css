@@ -1829,3 +1829,441 @@ main section[id] {
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
 }
+
+/* =====================================================
+   추석 선물 금액대별 추천 페이지 (chuseok-gift-guide.html)
+   ===================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+.gg-page {
+  --gg-gold: #a6803f;
+  --gg-gold-dark: #7c5f2c;
+  --gg-gold-soft: #f5ecd8;
+  --gg-ink: #201d17;
+  --gg-serif: "Noto Serif KR", "Nanum Myeongjo", serif;
+  background: var(--color-bg);
+}
+
+/* ---------- 상단 바 ---------- */
+.gg-topbar {
+  background: var(--gg-ink);
+  padding: 14px 0;
+}
+
+.gg-back-link {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+  font-size: 0.86rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.gg-back-link:hover {
+  color: #fff;
+}
+
+/* ---------- 히어로 ---------- */
+.gg-hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 160% at 15% 0%, #24422f 0%, var(--gg-ink) 62%);
+  padding: 64px 0 44px;
+  text-align: center;
+  color: #f4efe4;
+}
+
+.gg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(212, 178, 116, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.gg-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.gg-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gg-gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.gg-hero-kicker::before,
+.gg-hero-kicker::after {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--gg-gold);
+  opacity: 0.7;
+}
+
+.gg-hero-title {
+  font-family: var(--gg-serif);
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.gg-hero-desc {
+  color: rgba(244, 239, 228, 0.86);
+  font-size: 1rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.gg-hero-note {
+  color: var(--gg-gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(212, 178, 116, 0.28);
+  display: inline-block;
+}
+
+/* ---------- 금액대 탭 ---------- */
+.gg-tabbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(248, 246, 239, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gg-tabbar-inner {
+  display: flex;
+  gap: 4px;
+  padding: 0 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+.gg-tab {
+  flex-shrink: 0;
+  position: relative;
+  padding: 16px 16px 13px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.gg-tab::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: -1px;
+  height: 2px;
+  background: var(--gg-gold);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.gg-tab:hover {
+  color: var(--gg-ink);
+}
+
+.gg-tab:hover::after {
+  transform: scaleX(1);
+}
+
+.gg-tab.is-active {
+  color: var(--gg-ink);
+}
+
+.gg-tab.is-active::after {
+  transform: scaleX(1);
+}
+
+.gg-tab-count {
+  color: inherit;
+  opacity: 0.55;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+/* ---------- 본문 ---------- */
+.gg-main {
+  padding: 52px 16px 40px;
+}
+
+.gg-band-section {
+  margin-bottom: 60px;
+  scroll-margin-top: 58px;
+}
+
+.gg-band-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.gg-band-index {
+  font-family: var(--gg-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gg-gold);
+  border: 1px solid var(--gg-gold);
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gg-band-heading h2 {
+  font-family: var(--gg-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gg-ink);
+  margin: 0;
+}
+
+.gg-band-count {
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.gg-band-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-border) 0%, transparent 100%);
+}
+
+.gg-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px 22px;
+}
+
+@media (min-width: 640px) {
+  .gg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 860px) {
+  .gg-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gg-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gg-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.gg-card-media {
+  aspect-ratio: 4 / 5;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gg-card:hover .gg-card-media {
+  border-color: var(--gg-gold);
+  box-shadow: 0 10px 24px rgba(32, 29, 23, 0.1);
+}
+
+.gg-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.gg-card:hover .gg-card-media img {
+  transform: scale(1.035);
+}
+
+.gg-card-body {
+  padding: 16px 2px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: 1;
+}
+
+.gg-card-name {
+  font-family: var(--gg-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gg-ink);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gg-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gg-benefit-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gg-gold-dark);
+  background: var(--gg-gold-soft);
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
+  align-self: flex-start;
+}
+
+.gg-price-original {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+  white-space: nowrap;
+}
+
+.gg-price-sale {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-accent-dark);
+  letter-spacing: -0.01em;
+}
+
+.gg-unit {
+  font-size: 0.5em;
+  font-weight: 600;
+  margin-left: 1px;
+}
+
+/* 상세설명(제품 이야기)이 메인 포인트 — 위쪽에 크고 진하게 */
+.gg-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gg-ink);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 포장설명(구성/규격)은 부가정보 — 아래쪽에 작고 옅게, 금색 얇은 선으로 분리 */
+.gg-card-spec {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--gg-gold-soft);
+}
+
+/* ---------- 밴드 첫 상품 스포트라이트 카드 ---------- */
+.gg-card-feature {
+  grid-column: span 1;
+}
+
+@media (min-width: 640px) {
+  .gg-card-feature {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+
+  .gg-card-feature .gg-card-media {
+    aspect-ratio: auto;
+  }
+
+  .gg-card-feature .gg-card-body {
+    padding: 4px 4px 4px 0;
+    justify-content: center;
+  }
+
+  .gg-card-feature .gg-card-name {
+    font-size: 1.3rem;
+  }
+
+  .gg-card-feature .gg-card-desc {
+    font-size: 0.98rem;
+  }
+
+  .gg-card-feature .gg-price-sale {
+    font-size: 1.7rem;
+  }
+}
+
+/* ---------- 맨 위로 ---------- */
+.gg-fab-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gg-ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 18px rgba(32, 29, 23, 0.28);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.gg-fab-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ---------- 푸터 ---------- */
+.gg-footer {
+  text-align: center;
+  padding: 40px 16px 54px;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--color-border);
+}
+

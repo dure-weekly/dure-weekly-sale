@@ -48,11 +48,11 @@
       "category": "seafood",
       "reservationType": "예약",
       "originalPrice": 37800,
-      "salePrice": 34000,
-      "couponPrice": null,
-      "discountRate": 10,
-      "hasCoupon": false,
-      "supplyDate": "9/17(금)",
+      "salePrice": 37800,
+      "couponPrice": 30240,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "9/18(금)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/19019C.png",
       "icon": "🦐",
       "description": "전남 신안 친환경새우농장에서 키운 무항생제 왕새우(1kg/35~40미)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
@@ -64,29 +64,16 @@
       "theme": "",
       "category": "seafood",
       "reservationType": "예약",
-      "originalPrice": 67400,
-      "salePrice": 60600,
-      "couponPrice": null,
-      "discountRate": 10,
-      "hasCoupon": false,
-      "supplyDate": "9/17(금)",
+      "originalPrice": 67000,
+      "salePrice": 67000,
+      "couponPrice": 53600,
+      "discountRate": 20,
+      "hasCoupon": true,
+      "supplyDate": "9/18(금)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21239C.png",
       "icon": "🦐",
       "description": "전남 신안 친환경새우농장에서 키운 무항생제 왕새우(2kg/70~80미)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     {
       "id": "r076",
       "code": "57183",
@@ -295,12 +282,6 @@
       "icon": "🥢",
       "description": "나무젓가락(어른/옻칠9회) 입니다."
     },
-    
-    
-    
-    
-    
-    
     {
       "id": "r101",
       "code": "60040",
@@ -1722,6 +1703,91 @@
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57433C.jpg",
       "icon": "🦀",
       "description": "명인 양념게장(1kg(5미~6미)), 이번 주 특가로 만나보세요."
+    },
+    {
+      "id": "r191",
+      "code": "38326",
+      "name": "오가굴비(1.3kg/10미)",
+      "theme": "[예약_39주]추석 차례상 준비, 오가굴비 산지직송",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 245000,
+      "salePrice": 220500,
+      "couponPrice": 200500,
+      "discountRate": 18,
+      "hasCoupon": true,
+      "supplyDate": "9/21(월)~9/23(수)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/38326C.jpg",
+      "icon": "🐟",
+      "description": "청정 해역에서 잡아 만든 오가굴비 10미(1.3kg)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
+    },
+    {
+      "id": "r192",
+      "code": "33625",
+      "name": "오가굴비(1.5kg/10미)",
+      "theme": "[예약_39주]추석 차례상 준비, 오가굴비 산지직송",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 310000,
+      "salePrice": 279000,
+      "couponPrice": 259000,
+      "discountRate": 16,
+      "hasCoupon": true,
+      "supplyDate": "9/21(월)~9/23(수)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/33625C.jpg",
+      "icon": "🐟",
+      "description": "조금 더 넉넉한 크기로 만든 오가굴비 10미(1.5kg)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
+    },
+    {
+      "id": "r193",
+      "code": "34108",
+      "name": "오가굴비(2.0kg/10미)",
+      "theme": "[예약_39주]추석 차례상 준비, 오가굴비 산지직송",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 410000,
+      "salePrice": 369000,
+      "couponPrice": 349000,
+      "discountRate": 15,
+      "hasCoupon": true,
+      "supplyDate": "9/21(월)~9/23(수)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/34108C.jpg",
+      "icon": "🐟",
+      "description": "가장 넉넉한 크기로 만든 오가굴비 10미(2.0kg)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
+    },
+    {
+      "id": "r194",
+      "code": "55923",
+      "name": "손질민물장어(600g/2~3미)",
+      "theme": "[예약_39주]보양식 준비, 민물장어 산지직송",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 52500,
+      "salePrice": 36700,
+      "couponPrice": 29360,
+      "discountRate": 44,
+      "hasCoupon": true,
+      "supplyDate": "9/22(화)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55923C.jpg",
+      "icon": "🐟",
+      "description": "손질까지 마친 민물장어 2~3미(600g)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
+    },
+    {
+      "id": "r195",
+      "code": "55924",
+      "name": "초벌장어(470g/2~3미)",
+      "theme": "[예약_39주]보양식 준비, 민물장어 산지직송",
+      "category": "seafood",
+      "reservationType": "예약",
+      "originalPrice": 55600,
+      "salePrice": 38900,
+      "couponPrice": 31120,
+      "discountRate": 44,
+      "hasCoupon": true,
+      "supplyDate": "9/22(화)",
+      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55924C.jpg",
+      "icon": "🐟",
+      "description": "초벌구이까지 마쳐 데우기만 하면 되는 장어 2~3미(470g)예요. 예약하신 공급일에 맞춰 받아보실 수 있어요."
     }
   ]
 }
