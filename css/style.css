@@ -1900,6 +1900,26 @@ main section[id] {
   margin: 0;
 }
 
+.gg-band-count {
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.gg-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 22px 0 4px;
+}
+
+.gg-pagination .gg-page-btn {
+  min-width: 40px;
+  padding: 8px 10px;
+  justify-content: center;
+}
+
 /* 포장설명(브랜드/용량/보관법)은 부가정보 — 상품설명보다 작고 옅게, 점선으로 분리 */
 .gg-spec-line {
   font-size: 0.74rem;
@@ -1918,6 +1938,7 @@ main section[id] {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  border: none;
   background: var(--color-primary);
   color: #fff;
   display: flex;
@@ -1925,6 +1946,7 @@ main section[id] {
   justify-content: center;
   text-decoration: none;
   font-size: 1.1rem;
+  cursor: pointer;
   box-shadow: 0 6px 16px rgba(38, 38, 32, 0.25);
   opacity: 0;
   transform: translateY(8px);
