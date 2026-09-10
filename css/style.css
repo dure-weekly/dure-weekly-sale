@@ -1900,6 +1900,11 @@ main section[id] {
   margin: 0;
 }
 
+.hero-divider-icon-lg {
+  font-size: 2.2rem;
+  opacity: 1;
+}
+
 .gg-band-count {
   color: var(--color-text-muted);
   font-size: 0.86rem;
