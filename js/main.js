@@ -162,12 +162,22 @@ function buildProductCard(product) {
     : "";
 
   // itemType이 "햇출하"면 할인이 아니라 "이번 주 새로 들어온 생활재"라는 뜻 —
-  // %대신 전용 배지를 쓴다.
+  // %대신 전용 배지를 쓴다. 할인율이 0%인데 기획일람표에 올라온 품목(정상가로 소개만 하는
+  // 특별기획/차례상 구성품 등)도 빈 자리로 두지 않고 사유를 담은 배지를 보여준다.
+  const NEW_ARRIVAL_BADGE = { icon: "🌱", label: "햇출하" };
+  const NO_DISCOUNT_BADGE_BY_TYPE = {
+    특별기획: { icon: "🎊", label: "명절맞이" },
+    신규: { icon: "🆕", label: "신규출시" },
+    연계기획: { icon: "🎊", label: "명절맞이" },
+  };
   const isNewArrival = product.itemType === "햇출하";
+  const noDiscountBadge = NO_DISCOUNT_BADGE_BY_TYPE[product.itemType] || (product.itemType ? { icon: "🎊", label: "명절맞이" } : null);
   const badgeHtml = isNewArrival
-    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>🌱</strong><span class="badge-sub">햇출하</span></span>`
+    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${NEW_ARRIVAL_BADGE.icon}</strong><span class="badge-sub">${NEW_ARRIVAL_BADGE.label}</span></span>`
     : product.discountRate > 0
     ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
+    : noDiscountBadge
+    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${noDiscountBadge.icon}</strong><span class="badge-sub">${noDiscountBadge.label}</span></span>`
     : "";
 
   card.innerHTML = `
@@ -417,6 +427,10 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           if (groupDiff !== 0) return groupDiff;
           return b.discountRate - a.discountRate;
         });
+      }
+      // "콩밀쿠폰" 칩에서는 할인율 높은 순으로 정렬한다(2026-09-11 요청).
+      if (state.category === "kongmil_coupon") {
+        filtered = filtered.slice().sort((a, b) => b.discountRate - a.discountRate);
       }
       // "즉석반찬(맛찬)" 칩에서는 특정 이틀만 공급되는(품절되기 쉬운) 품목을
       // note에 "공급"이 적힌 것으로 판별해 먼저 보여준다. 나머지는 기존 순서 유지.
