@@ -375,16 +375,22 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     } else if (state.category === "all") {
       // hideFromAll(예: 수산쿠폰 중 "정가→최종가" 2단만 있는 품목)은 전체 목록엔 안 보이고
       // 해당 카테고리 칩을 직접 눌렀을 때만 노출한다.
-      // "전체" 탭 노출 순서: 지혜님 요청(2026-08-27)으로 그 주 목록에 "백미"가 있으면 맨 앞에,
-      // 그다음 가공·반찬(processed) 카테고리 전체를 보여준다. 쌀·잡곡의 다른 품목들은 빼지 않고 원래 자리(3순위)에 그대로 둔다.
-      // id를 하드코딩하지 않고 이름으로 매칭 — 백미가 공급중단으로 빠지거나 다음 주 다시 들어와도 자동으로 반영되게 함.
-      // "이번주만"이라고 명시하셨으므로 37주 이후 이 규칙이 더 필요 없다고 하시면 이 우선순위 정렬 자체를 제거할 것(원래는 그냥 filter만 했음).
+      // "전체" 탭 노출 순서: 지혜님 요청(2026-09-12, 38주 한정)으로 백미 → 김치류 → 송편 →
+      // 가공·반찬(processed) 나머지 → 그 외 순으로 보여준다(8/27 규칙을 이번 주 기준으로 갱신).
+      // id를 하드코딩하지 않고 이름으로 매칭 — 품목이 공급중단으로 빠지거나 다음 주 다시 들어와도 자동으로 반영되게 함.
+      // "이번주만"이라고 명시하셨으므로 39주 이후 이 규칙이 더 필요 없다고 하시면 이 우선순위 정렬 자체를 제거할 것(원래는 그냥 filter만 했음).
       // 분류 칩(CATEGORY_LABELS) 순서는 그대로 두고, 카드 나열 순서만 바꾸는 것 — 우선순위 안에서는 등록 순서를 유지한다.
       filtered = allProducts
         .filter((p) => !p.hideFromAll)
         .map((p, idx) => ({ p, idx }))
         .sort((a, b) => {
-          const rank = (p) => (p.name.includes("백미") ? 0 : p.category === "processed" ? 1 : 2);
+          const rank = (p) => {
+            if (p.name.includes("백미")) return 0;
+            if (/김치|깍두기|겉절이/.test(p.name)) return 1;
+            if (p.name.includes("송편")) return 2;
+            if (p.category === "processed") return 3;
+            return 4;
+          };
           const aPri = rank(a.p);
           const bPri = rank(b.p);
           if (aPri !== bPri) return aPri - bPri;
