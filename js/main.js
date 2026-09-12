@@ -158,19 +158,21 @@ function buildProductCard(product) {
   // %대신 전용 배지를 쓴다. 할인율이 0%인데 기획일람표에 올라온 품목(정상가로 소개만 하는
   // 특별기획/차례상 구성품 등)도 빈 자리로 두지 않고 사유를 담은 배지를 보여준다.
   const NEW_ARRIVAL_BADGE = { icon: "🌱", label: "햇출하" };
+  // "명절맞이"/"신규출시"처럼 4글자 라벨은 원형 배지 한 줄에 다 안 들어가고 잘려서,
+  // 2글자씩 두 줄로 줄바꿈해 보여준다(badge-sub-2line, 2026-09-12 지혜님 피드백).
   const NO_DISCOUNT_BADGE_BY_TYPE = {
-    특별기획: { icon: "🎊", label: "명절맞이" },
-    신규: { icon: "🆕", label: "신규출시" },
-    연계기획: { icon: "🎊", label: "명절맞이" },
+    특별기획: { icon: "🎊", line1: "명절", line2: "맞이" },
+    신규: { icon: "🆕", line1: "신규", line2: "출시" },
+    연계기획: { icon: "🎊", line1: "명절", line2: "맞이" },
   };
   const isNewArrival = product.itemType === "햇출하";
-  const noDiscountBadge = NO_DISCOUNT_BADGE_BY_TYPE[product.itemType] || (product.itemType ? { icon: "🎊", label: "명절맞이" } : null);
+  const noDiscountBadge = NO_DISCOUNT_BADGE_BY_TYPE[product.itemType] || (product.itemType ? { icon: "🎊", line1: "명절", line2: "맞이" } : null);
   const badgeHtml = isNewArrival
     ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${NEW_ARRIVAL_BADGE.icon}</strong><span class="badge-sub">${NEW_ARRIVAL_BADGE.label}</span></span>`
     : product.discountRate > 0
     ? `<span class="discount-badge" aria-hidden="true"><strong>${product.discountRate}<span class="unit">%</span></strong><span class="badge-sub">할인</span></span>`
     : noDiscountBadge
-    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${noDiscountBadge.icon}</strong><span class="badge-sub">${noDiscountBadge.label}</span></span>`
+    ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${noDiscountBadge.icon}</strong><span class="badge-sub badge-sub-2line">${noDiscountBadge.line1}<br>${noDiscountBadge.line2}</span></span>`
     : "";
 
   card.innerHTML = `
@@ -274,7 +276,14 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 // 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
+  // "명절맞이"는 실제 category가 아니라 theme:"명절밥상"으로 태그된 품목(농산/축수산/가공 등
+  // 여러 카테고리에 걸쳐 있음)을 모아 보여주는 가상 칩이다 — 쿠폰가/카테고리별 정렬 로직을
+  // 그대로 유지해야 해서 원래 category는 바꾸지 않고 theme만으로 별도 필터링한다.
+  // presentCategories/칩 개수/필터링 세 군데에서 "myeongjeol"을 특별 취급하는 코드와 짝을 이룬다.
+  { value: "myeongjeol", label: "명절맞이", icon: "🎊" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
+  // 추석이 다가와 선물세트 칩도 앞쪽으로 올린다(2026-09-12, 이번 시즌 한정).
+  { value: "gift_set", label: "추석선물세트", icon: "🎁" },
   { value: "seafood_coupon", label: "수산", icon: "🎟️" },
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
   { value: "nonghal_meat", label: "농할-유정란/닭/오리", icon: "🍗" },
@@ -287,7 +296,6 @@ const CATEGORY_LABELS = [
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
   { value: "health_gift", label: "장수·건강", icon: "🧧" },
   { value: "cosmetics", label: "스킨케어", icon: "💄" },
-  { value: "gift_set", label: "추석선물세트", icon: "🎁" },
   { value: "chuseok_treat", label: "추석 별미", icon: "🍡" },
   { value: "sanitary", label: "생리대", icon: "🌸" },
   { value: "living", label: "생활용품", icon: "🧴" },
@@ -360,6 +368,7 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
   if (!filterWrap) return;
 
   const presentCategories = new Set(allProducts.map((p) => p.category));
+  if (allProducts.some((p) => p.theme === "명절밥상")) presentCategories.add("myeongjeol");
   const chips = CATEGORY_LABELS.filter((c) => c.value === "all" || presentCategories.has(c.value));
 
   const state = { category: "all", query: "" };
@@ -400,6 +409,9 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           return a.idx - b.idx;
         })
         .map(({ p }) => p);
+    } else if (state.category === "myeongjeol") {
+      // 가상 칩: 실제 category가 아니라 theme:"명절밥상" 태그로 모은다(원래 category 유지).
+      filtered = allProducts.filter((p) => p.theme === "명절밥상");
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
       // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가)
@@ -468,6 +480,9 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     // 나머지 카테고리 칩은 그 분류 실제 개수를 그대로 보여준다.
     if (c.value === "all") {
       btn.textContent = `${c.icon} ${c.label}`;
+    } else if (c.value === "myeongjeol") {
+      const count = allProducts.filter((p) => p.theme === "명절밥상").length;
+      btn.textContent = `${c.icon} ${c.label} (${count})`;
     } else {
       const count = allProducts.filter((p) => p.category === c.value).length;
       btn.textContent = `${c.icon} ${c.label} (${count})`;
