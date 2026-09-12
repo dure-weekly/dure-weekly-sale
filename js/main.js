@@ -385,8 +385,11 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
         .map((p, idx) => ({ p, idx }))
         .sort((a, b) => {
           const rank = (p) => {
+            // "김치손만두"처럼 이름에 "김치"가 들어가도 실제로는 만두류인 경우를 걸러내기 위해,
+            // 규격 괄호를 뗀 이름 "끝"이 김치류 단어로 끝나는지로 판단한다(포함 여부가 아니라).
+            const base = p.name.replace(/\(.*/, "").trim();
             if (p.name.includes("백미")) return 0;
-            if (/김치|깍두기|겉절이/.test(p.name)) return 1;
+            if (/(김치|깍두기|겉절이)$/.test(base)) return 1;
             if (p.name.includes("송편")) return 2;
             if (p.category === "processed") return 3;
             return 4;
