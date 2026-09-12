@@ -95,19 +95,12 @@ function buildProductPriceHtml(product) {
     ? `<span class="coupon-tag">${product.couponLabel || "🐟 수산쿠폰"}</span>`
     : "";
   if (product.hasCoupon && product.couponPrice != null) {
-    // 정상가와 자체할인가가 같으면(자체 할인 없이 쿠폰만 적용되는 경우) 같은 숫자를 두 번
-    // 보여주지 않고 정상가→쿠폰가 2단으로 축약한다.
-    const isSelfDiscountSame = product.originalPrice === product.salePrice;
-    const midRowHtml = isSelfDiscountSame
-      ? ""
-      : `<span class="price-mid">${formatNumberOnly(product.salePrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>`;
+    // 쿠폰 적용 시에는 중간의 자체할인가는 보여주지 않고, 정상가(취소선)→최종 쿠폰적용가
+    // 2단으로만 표시한다(2026-09-11 요청: 정상→할인→최종 3단 표기 금지).
     return `<div class="price-block">
         ${couponTagHtml}
-        <div class="price-row price-row-chain">
+        <div class="price-row">
           <span class="price-original">${formatNumberOnly(product.originalPrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>
-          ${midRowHtml}
           <span class="price-sale">${formatPrice(product.couponPrice)}</span>
         </div>
         <span class="price-save">${formatPrice(Math.max(product.originalPrice - product.couponPrice, 0))} 절약</span>
@@ -551,19 +544,13 @@ function buildReservationPriceBlock(item) {
 
   if (item.hasCoupon && item.couponPrice != null) {
     const saveAmount = Math.max(item.originalPrice - item.couponPrice, 0);
-    // 정상가와 자체할인가가 같으면 같은 숫자를 두 번 보여주지 않고 정상가→쿠폰가 2단으로 축약한다.
-    const isSelfDiscountSame = item.originalPrice === item.salePrice;
-    const midRowHtml = isSelfDiscountSame
-      ? ""
-      : `<span class="price-mid">${formatNumberOnly(item.salePrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>`;
+    // 쿠폰 적용 시에는 중간의 자체할인가는 보여주지 않고, 정상가(취소선)→최종 쿠폰적용가
+    // 2단으로만 표시한다(2026-09-11 요청: 정상→할인→최종 3단 표기 금지).
     return `
       <div class="price-block">
         <span class="coupon-tag">${item.couponLabel || "🐟 수산쿠폰"}</span>
-        <div class="price-row price-row-chain">
+        <div class="price-row">
           <span class="price-original">${formatNumberOnly(item.originalPrice)}</span>
-          <span class="price-chain-arrow" aria-hidden="true">→</span>
-          ${midRowHtml}
           <span class="price-sale">${formatPrice(item.couponPrice)}</span>
         </div>
         <span class="price-save">${formatPrice(saveAmount)} 절약</span>
