@@ -286,7 +286,10 @@ const CATEGORY_LABELS = [
   { value: "gift_set", label: "추석선물세트", icon: "🎁" },
   { value: "seafood_coupon", label: "수산", icon: "🎟️" },
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
-  { value: "nonghal_meat", label: "농할-유정란/닭/오리", icon: "🍗" },
+  // 33차 농할부터 돼지/한우가 새로 추가돼 "유정란/닭/오리"만으로는 라벨이 안 맞아서 넓혔다.
+  { value: "nonghal_meat", label: "농할-정육/유정란", icon: "🍗" },
+  { value: "nonghal_grain", label: "농할-쌀/잡곡", icon: "🌾" },
+  { value: "nonghal_fruit", label: "농할-과일/견과", icon: "🍎" },
   { value: "kongmil_coupon", label: "콩밀쿠폰", icon: "🫘" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
