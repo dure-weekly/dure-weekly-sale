@@ -290,7 +290,7 @@ const CATEGORY_LABELS = [
   { value: "nonghal_meat", label: "농할-정육/유정란", icon: "🍗" },
   { value: "nonghal_grain", label: "농할-쌀/잡곡", icon: "🌾" },
   { value: "nonghal_fruit", label: "농할-과일/견과", icon: "🍎" },
-  { value: "kongmil_coupon", label: "콩밀쿠폰", icon: "🫘" },
+  // 콩밀쿠폰은 예산 소진으로 2026-09-17 종료 — 카테고리 자체를 없앰(품목도 전부 삭제).
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
@@ -444,10 +444,6 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           if (groupDiff !== 0) return groupDiff;
           return b.discountRate - a.discountRate;
         });
-      }
-      // "콩밀쿠폰" 칩에서는 할인율 높은 순으로 정렬한다(2026-09-11 요청).
-      if (state.category === "kongmil_coupon") {
-        filtered = filtered.slice().sort((a, b) => b.discountRate - a.discountRate);
       }
       // "즉석반찬(맛찬)" 칩에서는 특정 이틀만 공급되는(품절되기 쉬운) 품목을
       // note에 "공급"이 적힌 것으로 판별해 먼저 보여준다. 나머지는 기존 순서 유지.
