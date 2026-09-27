@@ -158,15 +158,15 @@ function buildProductCard(product) {
   // %대신 전용 배지를 쓴다. 할인율이 0%인데 기획일람표에 올라온 품목(정상가로 소개만 하는
   // 특별기획/차례상 구성품 등)도 빈 자리로 두지 않고 사유를 담은 배지를 보여준다.
   const NEW_ARRIVAL_BADGE = { icon: "🌱", label: "햇출하" };
-  // "명절맞이"/"신규출시"처럼 4글자 라벨은 원형 배지 한 줄에 다 안 들어가고 잘려서,
+  // "신규출시"처럼 4글자 라벨은 원형 배지 한 줄에 다 안 들어가고 잘려서,
   // 2글자씩 두 줄로 줄바꿈해 보여준다(badge-sub-2line, 2026-09-12 지혜님 피드백).
   const NO_DISCOUNT_BADGE_BY_TYPE = {
-    특별기획: { icon: "🎊", line1: "명절", line2: "맞이" },
+    특별기획: { icon: "🎊", line1: "특별", line2: "기획" },
     신규: { icon: "🆕", line1: "신규", line2: "출시" },
-    연계기획: { icon: "🎊", line1: "명절", line2: "맞이" },
+    연계기획: { icon: "🎊", line1: "연계", line2: "기획" },
   };
   const isNewArrival = product.itemType === "햇출하";
-  const noDiscountBadge = NO_DISCOUNT_BADGE_BY_TYPE[product.itemType] || (product.itemType ? { icon: "🎊", line1: "명절", line2: "맞이" } : null);
+  const noDiscountBadge = NO_DISCOUNT_BADGE_BY_TYPE[product.itemType] || (product.itemType ? { icon: "🎊", line1: "특별", line2: "기획" } : null);
   const badgeHtml = isNewArrival
     ? `<span class="discount-badge discount-badge-new" aria-hidden="true"><strong>${NEW_ARRIVAL_BADGE.icon}</strong><span class="badge-sub">${NEW_ARRIVAL_BADGE.label}</span></span>`
     : product.discountRate > 0
@@ -283,18 +283,10 @@ const CATEGORY_LABELS = [
   { value: "nonghal_meat", label: "농할-정육/유정란", icon: "🍗" },
   { value: "nonghal_grain", label: "농할-쌀/잡곡", icon: "🌾" },
   { value: "nonghal_fruit", label: "농할-과일/견과", icon: "🍎" },
-  // 콩밀쿠폰은 예산 소진으로 2026-09-17 종료 — 카테고리 자체를 없앰(품목도 전부 삭제).
-  { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
-  { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "snack", label: "간식", icon: "🍪" },
   { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
-  { value: "health_gift", label: "장수·건강", icon: "🧧" },
-  { value: "cosmetics", label: "스킨케어", icon: "💄" },
-  { value: "chuseok_treat", label: "추석 별미", icon: "🍡" },
-  { value: "sanitary", label: "생리대", icon: "🌸" },
-  { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
 // 검색어가 상품명에 그대로 없어도("새우" 검색에 "자연산대하"가 걸리도록) 자주 쓰는 장보기 용어를
@@ -318,27 +310,10 @@ const SEARCH_SYNONYMS = {
   쌀: { category: "grain" },
   잡곡: { category: "grain" },
   반찬: { category: "processed" },
-  세제: { category: "living" },
-  생필품: { category: "living" },
-  생리대: { category: "sanitary" },
-  생리용품: { category: "sanitary" },
   수산쿠폰: { category: "seafood_coupon" },
   쿠폰: { category: "seafood_coupon" },
   간식: { category: "snack" },
   디저트: { category: "snack" },
-  선물세트: { category: "gift_set" },
-  추석: { category: "gift_set" },
-  송편: { category: "chuseok_treat" },
-  식혜: { category: "chuseok_treat" },
-  수정과: { category: "chuseok_treat" },
-  강정: { category: "chuseok_treat" },
-  화장품: { category: "cosmetics" },
-  스킨케어: { category: "cosmetics" },
-  홍삼: { category: "health_gift" },
-  장수이야기: { category: "health_gift" },
-  침구: { category: "bedding" },
-  이불: { category: "bedding" },
-  주방용품: { category: "kitchen" },
 };
 
 function matchesSearchQuery(product, rawQuery) {

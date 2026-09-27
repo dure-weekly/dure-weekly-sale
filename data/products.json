@@ -6,146 +6,6 @@
   "updatedAt": "2026-09-28",
   "products": [
     {
-      "id": "p1099",
-      "name": "한우찜갈비(800g/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/15785C.jpg",
-      "originalPrice": 77000,
-      "salePrice": 77000,
-      "discountRate": 0,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "15785",
-      "description": "1. 갈비뼈 사이 사이에 있는 살코기로 쫀득하고 식감이 좋아요. 2. 요리하기 좋도록 손질하여 찜으로 활용하기 좋아요."
-    },
-    {
-      "id": "p1107",
-      "name": "알탕용알곤이(500g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/14004C.jpg",
-      "originalPrice": 9800,
-      "salePrice": 8800,
-      "discountRate": 10,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "14004",
-      "description": "명태의 알과 곤이를 탕용으로 사용하기 용이하게 준비했습니다 간편하게 해동 후 국물요리에 추가하여 이용해보세요"
-    },
-    {
-      "id": "p1108",
-      "name": "바지락살(250g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32581C.jpg",
-      "originalPrice": 19500,
-      "salePrice": 15600,
-      "discountRate": 20,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32581",
-      "description": "남해연안에서 채취한 바지락 껍질을 벗겨 세척, 급속 냉동하여 공급"
-    },
-    {
-      "id": "p1109",
-      "name": "냉동동태알(탕용/400g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48773C.png",
-      "originalPrice": 8900,
-      "salePrice": 8000,
-      "discountRate": 10,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "48773",
-      "description": "러시아 청정해역에서 어획한 명태의 알만 분리해 급냉 깨끗이 세척 후 급냉해 조리가 간편함"
-    },
-    {
-      "id": "p1110",
-      "name": "동태곤이(300g)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48774C.png",
-      "originalPrice": 6500,
-      "salePrice": 5800,
-      "discountRate": 11,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "48774",
-      "description": "러시아 청정해역에서 어획한 명태의 곤이만 분리해 급냉 신선한 곤이만 선별해 탱글한 식감과 고소한 맛이 특징"
-    },
-    {
-      "id": "p1111",
-      "name": "돼지뒷다리살 불고기(600g/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/457C.jpg",
-      "originalPrice": 10000,
-      "salePrice": 9000,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "457",
-      "description": "안심하고 즐기는 무항생제 돼지 뒷다리살 불고기 담백한 맛과 풍성한 양을 냉동 보관으로 언제나 신선하게"
-    },
-    {
-      "id": "p1112",
-      "name": "돼지LA갈비(1kg/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/458C.jpg",
-      "originalPrice": 20000,
-      "salePrice": 18000,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "458",
-      "description": "살코기 속 지방이 있어 쫄깃하고 부드러운 맛의 LA갈비 굽기 좋은 두께로 슬라이스하여 구이용으로 좋아요!"
-    },
-    {
-      "id": "p1113",
-      "name": "돼지찜갈비(1kg/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/459C.jpg",
-      "originalPrice": 19200,
-      "salePrice": 17300,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "459",
-      "description": "살코기 속 적절한 지방과 뼈에서 우러나오는 감칠맛도 일품! 요리하기 좋도록 손질하여 찜으로 활용하기 좋아요."
-    },
-    {
-      "id": "p1115",
-      "name": "토종닭(1.4kg/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56259C.jpg",
-      "originalPrice": 15900,
-      "salePrice": 14300,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "56259",
-      "description": "일반 닭과는 다른 풍부한 고소함과 쫄깃한 식감. 90일 이상 키운 전통 토종닭, 씹는 맛이 살아있어요!"
-    },
-    {
-      "id": "p1116",
-      "name": "손질 참가자미(600g/2~3미)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58197C.png",
-      "originalPrice": 14000,
-      "salePrice": 11900,
-      "discountRate": 15,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58197",
-      "description": "국내 남해안에서 어획한 가자미를 먹기 좋게 손질 후 포장 품질인증과 수산물이력제를 통해 안심하고 먹을 수 있는 안심수산물"
-    },
-    {
       "id": "p1117",
       "name": "제주옥돔(180g)",
       "icon": "🐟",
@@ -158,244 +18,6 @@
       "note": "",
       "code": "58958",
       "description": "제주 특산물로도 유명한 제주옥돔 손질 후 간간하게 염지후 한마리씩 진공포장했습니다."
-    },
-    {
-      "id": "p1118",
-      "name": "돼지다짐육(300g/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/468C.jpg",
-      "originalPrice": 5200,
-      "salePrice": 4700,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "468",
-      "description": "잘게 다진 분쇄육으로 어디에나 넣기 좋아 활용도 만점! 동그랑땡, 떡갈비, 마파두부나 볶음밥으로 이용해 보세요."
-    },
-    {
-      "id": "p1119",
-      "name": "돼지뒷다리살(300g/잡채용/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/12395C.jpg",
-      "originalPrice": 5400,
-      "salePrice": 4900,
-      "discountRate": 9,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "12395",
-      "description": "살코기가 많고 담백해서 다양한 요리에 활용 가능 길게 채 썰어 잡채용으로 딱 좋게 손질했어요."
-    },
-    {
-      "id": "p1122",
-      "name": "한우잡채용(300g/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42152C.png",
-      "originalPrice": 27800,
-      "salePrice": 25000,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "42152",
-      "description": "살코기가 많은 우둔 부위, 씹는 맛이 좋고 고소해요. 잡채용으로 알맞게 손질하여 간편하게 요리"
-    },
-    {
-      "id": "p1123",
-      "name": "한우분쇄육(250g/냉동)",
-      "icon": "🥩",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55258C.png",
-      "originalPrice": 14200,
-      "salePrice": 12800,
-      "discountRate": 10,
-      "category": "meat",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "55258",
-      "description": "화천,홍천,원주의 두레축산 생산자가 직접 기른 한우 목심, 앞다리, 설도, 우둔살 부위를 다양하게! 이유식이나 햄버거 패티, 볶음밥 등 다양하게"
-    },
-    {
-      "id": "p1126",
-      "name": "쫄깃한 홍대구전(홍메기)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57974C.jpg",
-      "originalPrice": 14500,
-      "salePrice": 13000,
-      "discountRate": 10,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "57974",
-      "description": "담백 고소한 맛이 좋은 홍메기를  손질하여 포장 깔끔하게 손질되어 있어 간편하게 전으로 부쳐먹기 좋아요."
-    },
-    {
-      "id": "p1127",
-      "name": "손질대구(400g/전부침용)",
-      "icon": "🐟",
-      "image": "images/60328.png",
-      "originalPrice": 19600,
-      "salePrice": 17600,
-      "discountRate": 10,
-      "category": "seafood",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "60328",
-      "description": "국내산 대구를 전부침용으로 사용하기 용이하게끔 손질 간편하게 해동 후 이용 가능합니다"
-    },
-    {
-      "id": "p1129",
-      "name": "사골곰탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20316C.jpg",
-      "originalPrice": 6100,
-      "salePrice": 5200,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20316",
-      "description": "첨가물, 조미료 없이 전통방식 그대로 진하게 우려냈어요. 냄비에 부어 1분 정도만 간단하게 끓여내면 끝!"
-    },
-    {
-      "id": "p1130",
-      "name": "사골고기곰탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21051C.jpg",
-      "originalPrice": 9000,
-      "salePrice": 7700,
-      "discountRate": 14,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21051",
-      "description": "첨가물, 조미료 없이 전통방식 그대로 끓어냈어요. 두레축산의 건강한 원료육, 넉넉한 살코기의 맛"
-    },
-    {
-      "id": "p1131",
-      "name": "사골우족도가니탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21052C.jpg",
-      "originalPrice": 8700,
-      "salePrice": 7400,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21052",
-      "description": "전통방식 그대로 끓인 사골에 도가니, 스지, 우족을 한번에! 두레축산 생산자의 품에서 자란 건강한 원료육으로 생산"
-    },
-    {
-      "id": "p1132",
-      "name": "훈제오리",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/40549C.jpg",
-      "originalPrice": 13300,
-      "salePrice": 10000,
-      "discountRate": 25,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "40549",
-      "description": "무항생제 오리를 참나무 훈연으로 향긋하게 두레 양조간장과 국산 채소로 조미했어요."
-    },
-    {
-      "id": "p1133",
-      "name": "한우보양탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54638C.jpg",
-      "originalPrice": 13000,
-      "salePrice": 11900,
-      "discountRate": 8,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "54638",
-      "description": "한우 양지, 국내산 약재로 푹 삶아 진하고 넉넉하게! 구수한 된장과 사골액으로 깊이 있는 감칠맛"
-    },
-    {
-      "id": "p1134",
-      "name": "통닭다리 누룽지삼계탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54730C.jpg",
-      "originalPrice": 8300,
-      "salePrice": 7300,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "54730",
-      "description": "국산 통닭다리를 그대로 넣어 한끼 식사로 든든하게! 누룽지를 넣어 더욱 구수한 맛을 더했어요."
-    },
-    {
-      "id": "p1135",
-      "name": "부산진국 돼지국밥",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58167C.png",
-      "originalPrice": 9000,
-      "salePrice": 7900,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58167",
-      "description": "화학첨가물을 최소화한 부산식 진한 돼지국밥 돼지사골·잡뼈·전지에 동물복지 돼지고기 사용"
-    },
-    {
-      "id": "p1136",
-      "name": "한우설렁탕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58691C.jpg",
-      "originalPrice": 11700,
-      "salePrice": 10500,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58691",
-      "description": "두레축산 무항생제 한우 사골육수 화천 축산농가 직송 원료"
-    },
-    {
-      "id": "p1137",
-      "name": "감자전분(200g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/8255C.jpg",
-      "originalPrice": 3400,
-      "salePrice": 3100,
-      "discountRate": 9,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "8255",
-      "description": "국산 생감자 100%로 쫀득 쫀득 식감을 내고 싶을 때! 소포제를 사용하지 않고 만들어 더욱 깔끔"
-    },
-    {
-      "id": "p1138",
-      "name": "굴소스(250g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/11356C.jpg",
-      "originalPrice": 5900,
-      "salePrice": 5600,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "11356",
-      "description": "국산 대두 진간장과 굴농축액 등의 국산 원료 첨가물 없이 굴 특유의 향미와 짭쪼름한 맛이 일품!"
-    },
-    {
-      "id": "p1139",
-      "name": "발아참기름(300ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20708C.jpg",
-      "originalPrice": 36900,
-      "salePrice": 31400,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20708",
-      "description": "국산 통참깨를 발아시킨 뒤 압착공법으로 한 번만 추출 싹 틔우는 과정에서 5회 이상 세척해 깨끗함"
     },
     {
       "id": "p1140",
@@ -412,862 +34,6 @@
       "description": "압착공법으로 단 한 번 착유! 마지막 한 방울까지 고소해요. 발아 과정 중 3회 이상 세척한 국산 발아 들깨 100% 사용"
     },
     {
-      "id": "p1141",
-      "name": "발아볶은들깨가루",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21100C.jpg",
-      "originalPrice": 15000,
-      "salePrice": 12800,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21100",
-      "description": "국산 들깨를 발아시킨 뒤 볶아서 껍질을 까고 가루로 제조 약 170도에서 한 번만 볶아 향과 맛을 살린 방식"
-    },
-    {
-      "id": "p1142",
-      "name": "발아깐들깨가루",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21178C.jpg",
-      "originalPrice": 14800,
-      "salePrice": 12600,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21178",
-      "description": "국산 들깨를 발아시킨 뒤 볶지 않고 껍질만 까서 가루로 제조 발아 과정에서 3회 이상 세척해 이물질 제거"
-    },
-    {
-      "id": "p1143",
-      "name": "발아볶은참깨(120g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21180C.jpg",
-      "originalPrice": 9800,
-      "salePrice": 8300,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21180",
-      "description": "국산 참깨를 5회 이상 세척, 발아시켜 볶아냈어요. 맞춤 온도에 볶아 참깨의 풍부한 고소함 극대화 [TIP] 향긋한 봄나물과 함께 활용해보세요!"
-    },
-    {
-      "id": "p1144",
-      "name": "발아생들기름(160ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/21390C.jpg",
-      "originalPrice": 20700,
-      "salePrice": 17600,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "21390",
-      "description": "3회 이상 세척한 국산 발아 들깨를 딱 한 번 짜내 향긋해요. 특허받은 공법으로 마지막 한 방울까지 고소한 생들기름"
-    },
-    {
-      "id": "p1145",
-      "name": "유기농콩기름(1000ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/28853C.jpg",
-      "originalPrice": 12900,
-      "salePrice": 12300,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "28853",
-      "description": "유럽 생산 NON-GMO 유기농 대두를 압착하여 추출 유럽, 프랑스 등 유기인증 획득, 각종 튀김 및 전에 사용"
-    },
-    {
-      "id": "p1146",
-      "name": "유기농엿기름(400g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/36275C.png",
-      "originalPrice": 6300,
-      "salePrice": 5700,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "36275",
-      "description": "100% 국내산 유기농 보리, 5회 이상 꼼꼼하게 세척! 남은 밥만 있으면 집에서도 손쉽게 식혜를 만들 수 있어요."
-    },
-    {
-      "id": "p1147",
-      "name": "유기농엿기름(티백/12개입)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/36276C.png",
-      "originalPrice": 5100,
-      "salePrice": 4600,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "36276",
-      "description": "국내에서 친환경 유기농으로 재배된 보리 100%로 생산 20g씩 12개 티백으로 소분해 계량 없이 간편하게 사용"
-    },
-    {
-      "id": "p1148",
-      "name": "마요네즈(140g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/41219C.png",
-      "originalPrice": 4900,
-      "salePrice": 4500,
-      "discountRate": 8,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "41219",
-      "description": "유정란, 현미유, 토마토 식초 등 엄선한 재료로 제조 저속으로 천천히 저어 부드러운 식감과 풍미"
-    },
-    {
-      "id": "p1149",
-      "name": "불고기양념",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48811C.png",
-      "originalPrice": 5750,
-      "salePrice": 5500,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "48811",
-      "description": "유기원료 70% 인증을 획득한 생활재 엄선된 재료로 불고기 본연의 맛을 살리는 소스"
-    },
-    {
-      "id": "p1150",
-      "name": "알육수 해물(20알)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/51827C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 4600,
-      "discountRate": 21,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "51827",
-      "description": "국내산 멸치, 새우, 다시마, 굴로 우려내 깊은 풍미 초간단 3분, 물 500ml에 한 알이면 완성!"
-    },
-    {
-      "id": "p1151",
-      "name": "알육수 사골(20알)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/51828C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 4600,
-      "discountRate": 21,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "51828",
-      "description": "가마솥에서 푹 고아낸 사골의 맛을 그대로 재현! 초간단, 끓는 물에 3분으로 완성하는 요리의 풍미"
-    },
-    {
-      "id": "p1152",
-      "name": "알육수 한우(20알)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/51829C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 4600,
-      "discountRate": 21,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "51829",
-      "description": "국내산 소고기, 양파, 마늘, 대파 등 요리의 풍미를 깊게! 초간단 3분, 안심하고 먹을 수 있는 국산 재료"
-    },
-    {
-      "id": "p1153",
-      "name": "구례밀 부침가루(500g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52015C.jpg",
-      "originalPrice": 4000,
-      "salePrice": 3600,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "52015",
-      "description": "국내산 무농약 밀가루와 유기농 쌀가루 배합 쌀가루를 따로 준비할 필요 없이 바삭한 식감 구현"
-    },
-    {
-      "id": "p1154",
-      "name": "구례밀 튀김가루(500g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52016C.jpg",
-      "originalPrice": 4200,
-      "salePrice": 3800,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "52016",
-      "description": "유기농 쌀가루, 국산 옥수수 전분의 쫄깃 바삭 식감 밑간이 따로 필요 없어 조리가 간편해요!"
-    },
-    {
-      "id": "p1155",
-      "name": "알육수 야채(15알)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54969C.jpg",
-      "originalPrice": 4400,
-      "salePrice": 3500,
-      "discountRate": 20,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "54969",
-      "description": "국산 표고,양파 등 유기농 설탕 100% 채식 알육수 각종 국물 요리, 무침, 볶음 요리에 활용 가능합니다."
-    },
-    {
-      "id": "p1156",
-      "name": "알육수 멸치(20알)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57516C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 4600,
-      "discountRate": 21,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "57516",
-      "description": "멸치를 우려낸 기본 국물용 알육수 한 알씩 계량해 편리하게 사용"
-    },
-    {
-      "id": "p1157",
-      "name": "유기농 쌀가루(350g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58154C.jpg",
-      "originalPrice": 4000,
-      "salePrice": 3600,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58154",
-      "description": "100% 국내산 유기농 쌀로 만든 쌀가루 유기가공식품 인증 보유"
-    },
-    {
-      "id": "p1158",
-      "name": "무농약 찹쌀가루(500g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58155C.jpg",
-      "originalPrice": 7400,
-      "salePrice": 5800,
-      "discountRate": 22,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58155",
-      "description": "100% 국내산 생찹쌀로 만든 찹쌀가루 무농약 인증 원료 사용"
-    },
-    {
-      "id": "p1159",
-      "name": "쌀조청",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58722C.jpg",
-      "originalPrice": 8700,
-      "salePrice": 8000,
-      "discountRate": 8,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58722",
-      "description": "국내산 백미 91%와 엿기름 8%로 만든 전통 방식 조청 GMO 안전 효소(아밀라제) 사용으로 균일한 품질·맛·색상"
-    },
-    {
-      "id": "p1160",
-      "name": "올리브유(250ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58757C.jpg",
-      "originalPrice": 15000,
-      "salePrice": 12800,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58757",
-      "description": "산도 0.14%. 단, 1%의 프리미엄 올리브오일 엑스트라버진 수확부터 착유까지 2시간 이내 냉압추출로 신선함을 그대로 폴리페놀과 올레오칸탈이 "
-    },
-    {
-      "id": "p1161",
-      "name": "고추씨기름",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58859C.jpg",
-      "originalPrice": 23800,
-      "salePrice": 19500,
-      "discountRate": 18,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58859",
-      "description": "국산 고추씨 100%로 만든 압착유 매운 향과 맛을 더하는 특수 조미유"
-    },
-    {
-      "id": "p1162",
-      "name": "발아생들기름(스틱/20개)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58992C.jpg",
-      "originalPrice": 15000,
-      "salePrice": 12800,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58992",
-      "description": "국산 발아들깨 100%로 만든 생들기름 화학첨가물을 최소화한 제조"
-    },
-    {
-      "id": "p1163",
-      "name": "이로운 사과식초(420ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60229C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 5200,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "60229",
-      "description": "100% 국내산(경기 김포) 사과 농축액과 누룩·종초·정제수만 사용 인공 감미료·보존료 무첨가"
-    },
-    {
-      "id": "p1164",
-      "name": "건강한요리술900ml",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/43509C.png",
-      "originalPrice": 6500,
-      "salePrice": 5900,
-      "discountRate": 9,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "43509",
-      "description": "오산세마쌀과 공정무역 유기농 설탕 사용 당도를 낮추어 요리 본연의 맛을 해치지 않아요."
-    },
-    {
-      "id": "p1165",
-      "name": "유기농 마스코바도(500g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/3777C.jpg",
-      "originalPrice": 5000,
-      "salePrice": 4700,
-      "discountRate": 6,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "3777",
-      "description": "필리핀 전통방식 그대로 제조했어요. 설탕과는 다른 매력적인 자연스러운 단맛 화학정제나 당밀분리를 하지않아 사탕수수의 영양을 잘 보존하고있어요."
-    },
-    {
-      "id": "p1166",
-      "name": "유기농설탕(1kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57203C.jpg",
-      "originalPrice": 5800,
-      "salePrice": 5200,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "57203",
-      "description": "화학적 정제 없이 원심분리기로만 정제해 사탕수수 본연의 맛을 살린 유기농 설탕 색소·보존료 무첨가, 유기가공식품 인증"
-    },
-    {
-      "id": "p1167",
-      "name": "사이공쿱 현미유 1L",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58044C.jpg",
-      "originalPrice": 9000,
-      "salePrice": 8000,
-      "discountRate": 11,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58044",
-      "description": "협동조합 간 직거래로 합리적인 가격과 신뢰를 담은 사이공쿱 현미유 높은 발연점으로 튀김·볶음 요리에도 깔끔하고 담백한 맛 유지 현지 SGS 검사"
-    },
-    {
-      "id": "p1168",
-      "name": "김밥용햄",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/10581C.jpg",
-      "originalPrice": 5400,
-      "salePrice": 5000,
-      "discountRate": 7,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "10581",
-      "description": "국산 돼지고기, 한우의 최적 조합으로 완성된 맛 천연향신료와 참나무로 훈연, 맛과 풍미가 더욱 좋아요. 無합성보존제, 無발색제 김밥용햄으로, 맛"
-    },
-    {
-      "id": "p1169",
-      "name": "자른당면",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/14731C.jpg",
-      "originalPrice": 6300,
-      "salePrice": 6000,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "14731",
-      "description": "국산 고구마 전분 100%로 찰진 면발 방부제, 명반, 화학첨가물 없이 건강한 당면"
-    },
-    {
-      "id": "p1170",
-      "name": "김밥용단무지",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/571C.jpg",
-      "originalPrice": 4400,
-      "salePrice": 4200,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "571",
-      "description": "무농약, 유기농으로 재배한 무로 만든 단무지 발효 식초로 맛을 내어 시큼한 맛이 강하지 않아요. [TIP] 화학첨가물 없이 절여 색상 차이가 날"
-    },
-    {
-      "id": "p1171",
-      "name": "도토리묵(420g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/4136C.jpg",
-      "originalPrice": 4600,
-      "salePrice": 4400,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "4136",
-      "description": "경북의 야생 도토리 100%와 천일염으로 건강하게! 방부제, 색소등 첨가물을 전혀 사용하지 않았어요."
-    },
-    {
-      "id": "p1172",
-      "name": "열무김치(1kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/28224C.jpg",
-      "originalPrice": 7000,
-      "salePrice": 5800,
-      "discountRate": 17,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "28224",
-      "description": "국산 열무, 고춧가루, 양파, 대파 사용 새우젓, 멸치 액젓으로 간을 맞춰 한층 깔끔한 감칠맛! 無식품첨가물로 아삭하고 시원한 맛을 즐겨보세요!"
-    },
-    {
-      "id": "p1173",
-      "name": "양념더덕",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/28620C.jpg",
-      "originalPrice": 13500,
-      "salePrice": 12800,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "28620",
-      "description": "국산 깐더덕을 넓게 펴서 수제 양념으로 손질한 반찬 전 과정 수작업으로 제조, 고기보다 쫄깃한 식감"
-    },
-    {
-      "id": "p1174",
-      "name": "바로먹는간편잡채(400g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/30174C.jpg",
-      "originalPrice": 6600,
-      "salePrice": 6400,
-      "discountRate": 3,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "30174",
-      "description": "국산 고구마 전분, 국산 무항생제 돼지고기와 채소 간편하게 데우기만 하면 쫄깃한 잡채 완성!"
-    },
-    {
-      "id": "p1175",
-      "name": "포기김치(2kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32424C.jpg",
-      "originalPrice": 16500,
-      "salePrice": 14500,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32424",
-      "description": "無식품첨가물! 국산 농산물로 자극적이지 않은 맛 국산 새우젓, 멸치액젓으로 깔끔하고 시원한 풍미 [TIP] 김치의 익힘 상태에 따라 기호에 맞게"
-    },
-    {
-      "id": "p1176",
-      "name": "깍두기(국산/1kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32426C.png",
-      "originalPrice": 6100,
-      "salePrice": 5400,
-      "discountRate": 11,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32426",
-      "description": "국산 무 88.2% 사용 화학첨가물 미사용, HACCP 인증시설 생산"
-    },
-    {
-      "id": "p1177",
-      "name": "총각김치(1kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32427C.png",
-      "originalPrice": 10300,
-      "salePrice": 8500,
-      "discountRate": 17,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32427",
-      "description": "국산 총각무, 고춧가루, 천일염을 사용했어요. 새우젓과 멸치 액젓을 사용해 깔끔하고 시원한 양념! [Tip] 김치맛 유지를 위해 김치 전체를 국"
-    },
-    {
-      "id": "p1178",
-      "name": "포기김치(5kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32957C.jpg",
-      "originalPrice": 38300,
-      "salePrice": 33700,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32957",
-      "description": "국산 재료,새우젓과 멸치액젓으로 깔끔 시원한 풍미 자극적이지 않아 온 가족이 먹기 좋아요!",
-      "promoBadge": "매장할인 · 산지택배 무료(9/16,17)"
-    },
-    {
-      "id": "p1179",
-      "name": "포기김치(10kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32958C.jpg",
-      "originalPrice": 73000,
-      "salePrice": 64200,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "32958",
-      "description": "국산 배추(74.05%)와 무농약 고춧가루로 담근 비살균 포기김치 새우젓·멸치액젓만 사용하고 화학조미료를 넣지 않음",
-      "promoBadge": "매장할인 · 산지택배 무료(9/16,17)"
-    },
-    {
-      "id": "p1181",
-      "name": "햇살바다조미김(전장)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/36551C.jpg",
-      "originalPrice": 2900,
-      "salePrice": 2700,
-      "discountRate": 7,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "36551",
-      "description": "전남 진도군 지주식 재배 원초김 사용 현미유로 원초 맛을 살리고 참기름·들기름으로 고소함 더함"
-    },
-    {
-      "id": "p1182",
-      "name": "햇살바다조미김(도시락/9개입)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49694C.jpg",
-      "originalPrice": 3900,
-      "salePrice": 3700,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49694",
-      "description": "전남 진도군 지주식 재배 원초김을 소포장(4g×9봉)한 도시락김 플라스틱 트레이를 없애 환경 부담을 줄인 친환경 포장"
-    },
-    {
-      "id": "p1183",
-      "name": "바른공식 게맛살",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54750C.jpg",
-      "originalPrice": 4900,
-      "salePrice": 3800,
-      "discountRate": 22,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "54750",
-      "description": "밀가루, 합성착색료, 향미증진제, 보존료, 팽창제를 넣지 않은 게맛살 고급 알래스카 명태어육을 풍부하게 함유"
-    },
-    {
-      "id": "p1184",
-      "name": "나박김치(1kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56328C.jpg",
-      "originalPrice": 6200,
-      "salePrice": 5500,
-      "discountRate": 11,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "56328",
-      "description": "유기농 무·배추·양파 등으로 담근 나박김치 합성조미료·육수 없이 재료 본연의 맛으로 담금"
-    },
-    {
-      "id": "p1185",
-      "name": "열무배추맛김치(1.5kg)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/60114C.jpg",
-      "originalPrice": 12300,
-      "salePrice": 11000,
-      "discountRate": 11,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "60114",
-      "description": "배추+열무 조합의 시원한 물김치 스타일 건고추를 직접 갈아 넣은 깔끔한 맛"
-    },
-    {
-      "id": "p1193",
-      "name": "떡갈비1000(10개)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/57676C.jpg",
-      "originalPrice": 16500,
-      "salePrice": 13800,
-      "discountRate": 16,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "57676",
-      "description": "국산 돼지고기와 우리밀 등 국산 재료를 사용한 분쇄가공육 화학첨가물을 최소화한 제조"
-    },
-    {
-      "id": "p1194",
-      "name": "동그랑땡(300g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58116C.png",
-      "originalPrice": 6500,
-      "salePrice": 5900,
-      "discountRate": 9,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58116",
-      "description": "무항생제 국산 돼지고기(63.6%)와 표고버섯·양파·당근·부추 등 국산 야채로 속을 채움 국산 콩 간장양념을 사용해 감칠맛을 더함"
-    },
-    {
-      "id": "p1195",
-      "name": "녹두전",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20377C.jpg",
-      "originalPrice": 10700,
-      "salePrice": 10300,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20377",
-      "description": "국산 무항생제 돼지고기, 배추, 숙주나물, 찹쌀 사용! 현미유로 전통방식 그대로 구워 고소한 수제 녹두전"
-    },
-    {
-      "id": "p1196",
-      "name": "동태전(300g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20378C.jpg",
-      "originalPrice": 10500,
-      "salePrice": 10100,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20378",
-      "description": "러시아산 동태포를 사용한 가정식 전 화학 합성 첨가물을 사용하지 않은 담백한 맛"
-    },
-    {
-      "id": "p1197",
-      "name": "고기동그랑땡",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20379C.jpg",
-      "originalPrice": 9100,
-      "salePrice": 8800,
-      "discountRate": 3,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20379",
-      "description": "국산 무항생제 돼지고기, 정성으로 손수 빚었어요. 두부, 양파, 당근 등을 넣은 반죽, 노릇하게 익히면 끝!"
-    },
-    {
-      "id": "p1198",
-      "name": "깻잎전(300g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/29875C.jpg",
-      "originalPrice": 9700,
-      "salePrice": 9300,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "29875",
-      "description": "국산 무항생제 돼지고기와 무농약 들깻잎으로 풍성한 전 우리밀 부침가루와 빵가루로 바삭! 바로 익혀 즐기세요."
-    },
-    {
-      "id": "p1199",
-      "name": "꼬지산적",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/44614C.jpg",
-      "originalPrice": 10600,
-      "salePrice": 10300,
-      "discountRate": 3,
-      "category": "processed",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "44614",
-      "description": "무·새송이버섯·햄·게맛살·쪽파 다섯 가지 재료를 꼬치에 꿴 오색꼬지전 제주 무를 식초와 천일염으로 직접 절여 사용"
-    },
-    {
-      "id": "p1200",
-      "name": "무농약감자로만든감자전(390g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/46345C.jpg",
-      "originalPrice": 7200,
-      "salePrice": 6500,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "46345",
-      "description": "전통 방식대로 감자를 통째 갈아 넣어 고소해요! 無 보존료, 화학조미료, 색소! 무농약 감자 100% 2. 無 보존료, 화학조미료, 색소"
-    },
-    {
-      "id": "p1201",
-      "name": "돈육전",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/48447C.png",
-      "originalPrice": 8600,
-      "salePrice": 8300,
-      "discountRate": 3,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "48447",
-      "description": "100% 국내산 돼지고기! 부드러운 돼지 뒷다리살 수제로 정성껏 부쳐낸 전을 간편하게 데우기만 하세요!"
-    },
-    {
-      "id": "p1202",
-      "name": "제주바다해물동그랑땡",
-      "icon": "🧂",
-      "image": "images/60353.jpg",
-      "originalPrice": 11000,
-      "salePrice": 10500,
-      "discountRate": 5,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "60353",
-      "description": "국산 오징어와 명태연육이 반죽의 77%를 차지해 해물 풍미가 진함 제주산 당근·양파·대파로 채소 영양을 더함"
-    },
-    {
-      "id": "p1223",
-      "name": "(G)2겹둥근휴지(12롤)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49247C.jpg",
-      "originalPrice": 7600,
-      "salePrice": 6800,
-      "discountRate": 11,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49247",
-      "description": "1. 우유갑을 재활용하여 나무를 베지 않는 휴지 2. 먼지 날림이 적고 질기며 2겹 엠보싱처리로 흡수력도 UP! 3. 무형광, 무표백, 무향으로"
-    },
-    {
-      "id": "p1224",
-      "name": "(G)3겹둥근휴지(18롤)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49248C.jpg",
-      "originalPrice": 14900,
-      "salePrice": 13400,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49248",
-      "description": "1. 우유갑을 재활용하여 나무를 베지 않는 비데 겸용 휴지! 2. 먼지 날림이 적고 질기며 3겹 엠보싱처리로 흡수력도 UP! 3. 무형광, 무표"
-    },
-    {
-      "id": "p1225",
-      "name": "주방휴지(6롤)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49249C.jpg",
-      "originalPrice": 7100,
-      "salePrice": 6400,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49249",
-      "description": "우유갑을 재활용하여 나무를 베지 않은 키친타월! 먼지 날림이 적고 질겨 주방에 딱 좋아요! 1롤당 2겹 150매로 넉넉한 용량"
-    },
-    {
-      "id": "p1226",
-      "name": "뽑아쓰는 주방휴지(3상자)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49250C.jpg",
-      "originalPrice": 6100,
-      "salePrice": 5500,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49250",
-      "description": "우유갑을 재활용, 나무를 베지 않는 친환경 휴지 먼지 날림이 적고 질겨 주방에 딱 좋아요!"
-    },
-    {
-      "id": "p1227",
-      "name": "미용사각휴지(3상자)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49251C.jpg",
-      "originalPrice": 5000,
-      "salePrice": 4500,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49251",
-      "description": "우유갑을 재활용하여 나무를 베지 않는 친환경 휴지!"
-    },
-    {
-      "id": "p1228",
-      "name": "여행용화장지(4개)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/49252C.jpg",
-      "originalPrice": 2100,
-      "salePrice": 1900,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "49252",
-      "description": "우유갑을 재활용하여 만드는 친환경 휴지 無표백, 無잉크, 無향으로 안전하게!"
-    },
-    {
-      "id": "p1229",
-      "name": "절반미용 사각휴지(6개)",
-      "icon": "🧴",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52191C.jpg",
-      "originalPrice": 7300,
-      "salePrice": 6600,
-      "discountRate": 10,
-      "category": "living",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "52191",
-      "description": "우유갑의 변신, 친환경 휴지! 한 장씩 뽑아 쓰는 편리함 표백제, 형광증백제, 인공향無 1. 우유갑의 변신, 친환경 휴지!"
-    },
-    {
       "id": "p1241",
       "name": "열무얼갈이 물김치",
       "icon": "🍱",
@@ -1279,8 +45,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58072",
-      "description": "열무·얼갈이·쪽파를 황금비율로 담근 물김치 생산자만의 양념 비법으로 손수 담금",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "열무·얼갈이·쪽파를 황금비율로 담근 물김치 생산자만의 양념 비법으로 손수 담금"
     },
     {
       "id": "p1246",
@@ -1294,8 +59,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59414",
-      "description": "국산 재료로 담근 얼갈이보리 물김치 1.4kg 대용량 구성",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국산 재료로 담근 얼갈이보리 물김치 1.4kg 대용량 구성"
     },
     {
       "id": "p1252",
@@ -1309,8 +73,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "60037",
-      "description": "여름 채소 공심채(모닝글로리)로 만든 시원한 물김치 집안 대대로 내려오는 방식으로 담근 국산 재료 김치",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "여름 채소 공심채(모닝글로리)로 만든 시원한 물김치 집안 대대로 내려오는 방식으로 담근 국산 재료 김치"
     },
     {
       "id": "p1242",
@@ -1324,36 +87,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58425",
-      "description": "영월·울릉도·제주 등 각지 나물을 모아 만든 비빔 세트 인공조미료 없이 전통 방식으로 조리, 소고기 비빔장 포함",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
-    },
-    {
-      "id": "p1264",
-      "name": "도라지나물",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58070C.png",
-      "originalPrice": 7300,
-      "salePrice": 6700,
-      "discountRate": 8,
-      "category": "snack_side",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58070",
-      "description": "국산 도라지를 소금·마늘로 무친 나물, 100g 화학첨가물최소화 인증"
-    },
-    {
-      "id": "p1265",
-      "name": "고사리나물",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59016C.jpg",
-      "originalPrice": 7200,
-      "salePrice": 6600,
-      "discountRate": 8,
-      "category": "snack_side",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "59016",
-      "description": "제주도산 고사리를 들기름·참기름으로 무친 나물, 100g 화학첨가물최소화 인증"
+      "description": "영월·울릉도·제주 등 각지 나물을 모아 만든 비빔 세트 인공조미료 없이 전통 방식으로 조리, 소고기 비빔장 포함"
     },
     {
       "id": "p1239",
@@ -1367,8 +101,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58067",
-      "description": "울릉도 청정지역 부지깽이 어린잎만 사용 국산 들기름으로 맛을 더해 자극적이지 않음",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "울릉도 청정지역 부지깽이 어린잎만 사용 국산 들기름으로 맛을 더해 자극적이지 않음"
     },
     {
       "id": "p1266",
@@ -1396,8 +129,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58071",
-      "description": "제주·고흥산 취나물 새순을 사용 국산 들기름으로 깊은 맛을 더함",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "제주·고흥산 취나물 새순을 사용 국산 들기름으로 깊은 맛을 더함"
     },
     {
       "id": "p1247",
@@ -1411,8 +143,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59887",
-      "description": "국산 생고구마순으로 만든 나물반찬 90g 소포장",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국산 생고구마순으로 만든 나물반찬 90g 소포장"
     },
     {
       "id": "p1248",
@@ -1426,8 +157,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59888",
-      "description": "국산 머위줄기(85.1%)로 만든 볶음 반찬 100g 소포장",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국산 머위줄기(85.1%)로 만든 볶음 반찬 100g 소포장"
     },
     {
       "id": "p1249",
@@ -1441,8 +171,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59889",
-      "description": "어머니 손맛으로 조물조물 무쳐낸 정성 가득 밑반찬 비름나물 특유의 담백하고 고소한 풍미",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "어머니 손맛으로 조물조물 무쳐낸 정성 가득 밑반찬 비름나물 특유의 담백하고 고소한 풍미"
     },
     {
       "id": "p1235",
@@ -1456,8 +185,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58059",
-      "description": "반건조로 잘 말려 잡내 없고 쫄깃한 코다리 조림 칼칼하고 시원한 국물 맛",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "반건조로 잘 말려 잡내 없고 쫄깃한 코다리 조림 칼칼하고 시원한 국물 맛"
     },
     {
       "id": "p1234",
@@ -1471,8 +199,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58033",
-      "description": "국내산 우엉만을 사용한 슬로우푸드 조림 오랜 시간 은근히 조려 깊은 맛",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국내산 우엉만을 사용한 슬로우푸드 조림 오랜 시간 은근히 조려 깊은 맛"
     },
     {
       "id": "p1236",
@@ -1486,8 +213,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58064",
-      "description": "갓 자란 깻잎의 새순과 잎만 사용해 부드러운 식감과 향 껍질 벗긴 들깨가루를 더해 텁텁하지 않고 부드러운 맛",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "갓 자란 깻잎의 새순과 잎만 사용해 부드러운 식감과 향 껍질 벗긴 들깨가루를 더해 텁텁하지 않고 부드러운 맛"
     },
     {
       "id": "p1232",
@@ -1501,8 +227,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58030",
-      "description": "청정 남해안 지리멸치를 사용해 짜지 않고 고소함 견과류를 더해 영양 균형을 맞춤",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "청정 남해안 지리멸치를 사용해 짜지 않고 고소함 견과류를 더해 영양 균형을 맞춤"
     },
     {
       "id": "p1250",
@@ -1516,8 +241,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59893",
-      "description": "청정 남해안 멸치를 엄선해 비린내 없이 깔끔한 맛 고추장·마늘·참깨·참기름으로 매콤달콤하게 볶음",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "청정 남해안 멸치를 엄선해 비린내 없이 깔끔한 맛 고추장·마늘·참깨·참기름으로 매콤달콤하게 볶음"
     },
     {
       "id": "p1237",
@@ -1531,8 +255,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58065",
-      "description": "순 국산 도라지만을 손질해 사용 기관지에 좋은 도라지와 비타민C 풍부한 오이를 함께 무침",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "순 국산 도라지만을 손질해 사용 기관지에 좋은 도라지와 비타민C 풍부한 오이를 함께 무침"
     },
     {
       "id": "p1238",
@@ -1546,8 +269,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58066",
-      "description": "오미자로 새콤달콤한 맛을 낸 미역초무침 200g 소포장",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "오미자로 새콤달콤한 맛을 낸 미역초무침 200g 소포장"
     },
     {
       "id": "p1243",
@@ -1561,8 +283,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "58634",
-      "description": "신선한 생깻잎의 향을 살린 새콤달콤 깻잎무침 깻잎 한장 한장 특제 소스로 정성이 가득해요.",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "신선한 생깻잎의 향을 살린 새콤달콤 깻잎무침 깻잎 한장 한장 특제 소스로 정성이 가득해요."
     },
     {
       "id": "p1245",
@@ -1576,36 +297,7 @@
       "itemType": "소비촉진",
       "note": "",
       "code": "59167",
-      "description": "화학첨가물을 최소화한 오이지 무침 아삭한 식감의 여름 별미 반찬",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
-    },
-    {
-      "id": "p1268",
-      "name": "도라지나물(200g)",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59063C.jpg",
-      "originalPrice": 14600,
-      "salePrice": 12400,
-      "discountRate": 15,
-      "category": "snack_side",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "59063",
-      "description": "국산 도라지를 소금·마늘로 무친 나물, 200g 화학첨가물최소화 인증"
-    },
-    {
-      "id": "p1269",
-      "name": "고사리나물(200g)",
-      "icon": "🍱",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/59065C.jpg",
-      "originalPrice": 14400,
-      "salePrice": 12200,
-      "discountRate": 15,
-      "category": "snack_side",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "59065",
-      "description": "제주도산 고사리를 들기름·참기름으로 무친 나물, 200g 화학첨가물최소화 인증"
+      "description": "화학첨가물을 최소화한 오이지 무침 아삭한 식감의 여름 별미 반찬"
     },
     {
       "id": "p1257",
@@ -1619,8 +311,7 @@
       "itemType": "소비촉진",
       "note": "9/30(수)│10/2(금) 2일 공급",
       "code": "60117",
-      "description": "국산 고구마순과 고춧가루·젓갈 등 100% 국산 재료로 만든 김치 사과·매실액으로 은은한 단맛을 더함",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국산 고구마순과 고춧가루·젓갈 등 100% 국산 재료로 만든 김치 사과·매실액으로 은은한 단맛을 더함"
     },
     {
       "id": "p1254",
@@ -1634,8 +325,7 @@
       "itemType": "소비촉진",
       "note": "9/30(수)│10/2(금) 2일 공급",
       "code": "59059",
-      "description": "국내산 우엉만을 사용한 슬로우푸드 조림 오랜 시간 은근히 조려 깊은 맛",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "국내산 우엉만을 사용한 슬로우푸드 조림 오랜 시간 은근히 조려 깊은 맛"
     },
     {
       "id": "p1255",
@@ -1649,8 +339,7 @@
       "itemType": "소비촉진",
       "note": "9/30(수)│10/2(금) 2일 공급",
       "code": "59060",
-      "description": "순 국산 도라지만을 손질해 사용 기관지에 좋은 도라지와 비타민C 풍부한 오이를 함께 무침",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
+      "description": "순 국산 도라지만을 손질해 사용 기관지에 좋은 도라지와 비타민C 풍부한 오이를 함께 무침"
     },
     {
       "id": "p1256",
@@ -1664,218 +353,7 @@
       "itemType": "소비촉진",
       "note": "9/30(수)│10/2(금) 2일 공급",
       "code": "59061",
-      "description": "영양이 풍부한 생깻잎으로 만든 무침 반찬 MSG 등 첨가물이나 화학재료 없이 국산 재료만 사용",
-      "promoBadge": "3만원 이상 구매시 김장아찌 증정"
-    },
-    {
-      "id": "p1270",
-      "name": "데친문어(700g/1미)",
-      "icon": "🧂",
-      "image": "images/58200.jpg",
-      "originalPrice": 53200,
-      "salePrice": 47900,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "58200",
-      "description": "데친문어(700g/1미)"
-    },
-    {
-      "id": "p1271",
-      "name": "(농할 국산)동물복지 다짐육(300g/뒷다리살)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/56910C.jpg",
-      "originalPrice": 6000,
-      "salePrice": 5100,
-      "discountRate": 15,
-      "category": "processed",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "56910",
-      "description": "방목장에서 자유롭게 뛰놀며 자란 돼지 뒷다리살(다짐육) 국내 최초 저탄소, 동물복지, 무항생제 인증 돈육이에요"
-    },
-    {
-      "id": "p1272",
-      "name": "건목이버섯(20g/무농약)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20622C.jpg",
-      "originalPrice": 4300,
-      "salePrice": 3800,
-      "discountRate": 12,
-      "category": "processed",
-      "itemType": "특별기획",
-      "note": "",
-      "code": "20622",
-      "description": "불리면 탱글하게 살아나는 쫄깃한 식감이 일품! 저온 열풍 건조로 맛과 영양을 그대로 살렸어요."
-    },
-    {
-      "id": "p1273",
-      "name": "구례 백밀가루(800g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/11121C.jpg",
-      "originalPrice": 3400,
-      "salePrice": 3400,
-      "discountRate": 0,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "11121",
-      "description": "전남 구례의 무농약 밀로 담백한 풍미와 고소함 금강밀로 찰지고 부드러워 칼국수, 제빵용으로 적합"
-    },
-    {
-      "id": "p1274",
-      "name": "구례 통밀가루(800g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/11122C.jpg",
-      "originalPrice": 3700,
-      "salePrice": 3700,
-      "discountRate": 0,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "11122",
-      "description": "전남 구례군의 무농약 밀로 찰지고 부드러운 풍미 칼국수, 수제비, 제빵 등에 다양하게 활용"
-    },
-    {
-      "id": "p1275",
-      "name": "교자만두",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/34723C.png",
-      "originalPrice": 5700,
-      "salePrice": 4800,
-      "discountRate": 16,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "34723",
-      "description": "쫄깃한 피와 풍성한 소, 부드러운 육즙의 조화 국산 밀과 무항생제 돼지고기, 생채소가 듬뿍!"
-    },
-    {
-      "id": "p1276",
-      "name": "물만두",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/35417C.png",
-      "originalPrice": 6400,
-      "salePrice": 5600,
-      "discountRate": 13,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "35417",
-      "description": "무항생제 돼지고기와 야채로 알찬 속! 국산 밀로 만든 쫄깃한 만두피"
-    },
-    {
-      "id": "p1277",
-      "name": "메밀부침가루(500g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/20178C.jpg",
-      "originalPrice": 6000,
-      "salePrice": 5400,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "20178",
-      "description": "국산 재료에 메밀가루 15% 함유로 깊고 구수한 맛 우리 땅에서 자란 국산 재료로 깔끔하고 담백한 맛!"
-    },
-    {
-      "id": "p1278",
-      "name": "원액간장(480ml/양조)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/30480C.jpg",
-      "originalPrice": 6900,
-      "salePrice": 6600,
-      "discountRate": 4,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "30480",
-      "description": "6개월 이상 숙성과정을 거친 양조간장 국산 콩과 우리밀로 만들었어요!"
-    },
-    {
-      "id": "p1279",
-      "name": "유기농 생콩가루(180g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37187C.jpg",
-      "originalPrice": 4800,
-      "salePrice": 4200,
-      "discountRate": 13,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "37187",
-      "description": "유기농 생콩가루(180g)"
-    },
-    {
-      "id": "p1280",
-      "name": "심쿡액상조미료(480ml)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/54285C.jpg",
-      "originalPrice": 10500,
-      "salePrice": 9800,
-      "discountRate": 7,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "54285",
-      "description": "요리할 때 부족한 2%의 맛을 채워주는 비법! 국산 콩, 밀로 6개월 이상 숙성한 맛가마 양조간장 사용 마늘, 대파, 양파 등을 우린 베이스에 "
-    },
-    {
-      "id": "p1281",
-      "name": "우리콩찌개용두부(420g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/577C.jpg",
-      "originalPrice": 2500,
-      "salePrice": 2250,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "577",
-      "description": "탄력넘치고 고소한 맛이 좋은 우리콩찌개용두부 100% 국내산 콩으로 빚은 탱글탱글 찌개용 두부 소포제를 빼고 해수를 농축한 천연 응고제로 만들었"
-    },
-    {
-      "id": "p1282",
-      "name": "우리콩부침용두부(420g)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/589C.jpg",
-      "originalPrice": 2500,
-      "salePrice": 2250,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "589",
-      "description": "탄력넘치고 고소한 맛이 좋은 우리콩부침용두부를 만나보세요! 100% 국내산 콩으로 빚은 단단한 부침용 두부 소포제를 빼고 해수를 농축한 천연 응"
-    },
-    {
-      "id": "p1283",
-      "name": "콩세알두부(부침용)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/25652C.jpg",
-      "originalPrice": 2500,
-      "salePrice": 2300,
-      "discountRate": 8,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "25652",
-      "description": "100% 국산 콩으로 빚은 단단한 부침용 두부 無소포제, 無유화제! 오직 천연간수만을 사용했어요."
-    },
-    {
-      "id": "p1284",
-      "name": "콩세알두부(찌개용)",
-      "icon": "🧂",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/25656C.jpg",
-      "originalPrice": 2450,
-      "salePrice": 2200,
-      "discountRate": 10,
-      "category": "processed",
-      "itemType": "소비촉진",
-      "note": "",
-      "code": "25656",
-      "description": "100% 국산 콩으로 빚은 탱글탱글 찌개용 두부 無소포제, 無유화제! 오직 천연간수만을 사용했어요."
+      "description": "영양이 풍부한 생깻잎으로 만든 무침 반찬 MSG 등 첨가물이나 화학재료 없이 국산 재료만 사용"
     },
     {
       "id": "p1285",
@@ -2411,7 +889,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1355",
       "description": "양상추(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2431,7 +909,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "15888",
       "description": "상추(120g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2451,7 +929,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21195",
       "description": "시금치(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2471,7 +949,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35727",
       "description": "아욱(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2491,7 +969,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48973",
       "description": "쑥갓(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2511,7 +989,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48975",
       "description": "청경채(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2531,7 +1009,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48980",
       "description": "열무(400g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2551,7 +1029,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50435",
       "description": "쌈케일(100g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2571,7 +1049,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1287",
       "description": "적양배추(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2591,7 +1069,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1288",
       "description": "부추(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2611,7 +1089,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "2953",
       "description": "친환경 쌈배추(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2631,7 +1109,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "8520",
       "description": "아스파라거스(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2651,7 +1129,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14466",
       "description": "통양배추(1개/500g이상), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2671,7 +1149,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14468",
       "description": "적양배추(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2691,7 +1169,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "16653",
       "description": "부추(180g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2711,7 +1189,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20772",
       "description": "통양배추(1개/1kg이상), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2731,7 +1209,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20991",
       "description": "근대(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2751,7 +1229,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "33778",
       "description": "셀러리(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2771,7 +1249,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "36249",
       "description": "공심채(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2791,7 +1269,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "36575",
       "description": "깻잎(20장/20~30g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2811,7 +1289,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "37942",
       "description": "미나리(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2831,7 +1309,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38345",
       "description": "셀러리(200g/무농약/스틱), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2851,7 +1329,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48976",
       "description": "치커리(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2871,7 +1349,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48977",
       "description": "대파(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2891,7 +1369,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48979",
       "description": "대파(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2911,7 +1389,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49268",
       "description": "호박순(300g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2931,7 +1409,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50431",
       "description": "깻잎(300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2951,7 +1429,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "52927",
       "description": "고구마줄기(300g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2971,7 +1449,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "88",
       "description": "수수(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -2991,7 +1469,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "92",
       "description": "팥(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3011,7 +1489,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "4531",
       "description": "팥(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3031,7 +1509,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "11286",
       "description": "깐녹두(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3051,7 +1529,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "11884",
       "description": "수수(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3071,7 +1549,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "11947",
       "description": "기장(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3091,7 +1569,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "11976",
       "description": "흰콩(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3111,7 +1589,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14140",
       "description": "차조(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3131,7 +1609,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14142",
       "description": "서리콩(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3151,7 +1629,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14144",
       "description": "쥐눈이콩(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3171,7 +1649,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26301",
       "description": "깐녹두(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3191,7 +1669,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35944",
       "description": "서리콩(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3211,7 +1689,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35981",
       "description": "햇귀리(2kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3231,7 +1709,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38159",
       "description": "청차조(300g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3251,7 +1729,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55301",
       "description": "선비콩(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3271,7 +1749,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60023",
       "description": "햇찰보리(2kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3291,7 +1769,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60024",
       "description": "햇늘보리(2kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3311,7 +1789,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48972",
       "description": "비타민(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3331,7 +1809,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "30642",
       "description": "로메인(120g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3351,7 +1829,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "36226",
       "description": "포기상추(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3371,7 +1849,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "29725",
       "description": "건대추(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3391,7 +1869,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "295",
       "description": "건대추(200g/특초), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3411,7 +1889,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "3486",
       "description": "건대추(200g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3431,7 +1909,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21761",
       "description": "황잣(280g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3451,7 +1929,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21762",
       "description": "백잣(280g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3471,7 +1949,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "24738",
       "description": "황잣(140g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3491,7 +1969,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "24739",
       "description": "백잣(140g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3511,7 +1989,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47046",
       "description": "유기농 잣(100g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3531,7 +2009,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "297",
       "description": "깐호두(150g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3551,7 +2029,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "46300",
       "description": "무농약 조각호두(100g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3571,7 +2049,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54149",
       "description": "깐통호두(80g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3591,7 +2069,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "36970",
       "description": "밤(1kg/유기/단택), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3611,7 +2089,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "6684",
       "description": "햅쌀백미(4kg/유기/진옥), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3631,7 +2109,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "11917",
       "description": "햅쌀백미(2kg/유기/조영), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3651,7 +2129,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "40657",
       "description": "햅쌀백미(10kg/유기/진옥), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3671,7 +2149,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "13741",
       "description": "친환경 양상추(200g이상), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3691,7 +2169,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "23548",
       "description": "차례용 곶감(550g/10입), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3711,7 +2189,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "22043",
       "description": "상주골 곶감(1kg/실속형), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3731,7 +2209,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "30641",
       "description": "생채(120g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3751,7 +2229,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48378",
       "description": "닭다리(북채/500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3771,7 +2249,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57602",
       "description": "닭다리살꼬치(냉장/70g*4개), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3791,7 +2269,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48377",
       "description": "생토막닭(1kg/볶음탕), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3811,7 +2289,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48376",
       "description": "생통닭(1051g/11호), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3831,7 +2309,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48379",
       "description": "순살닭다리살(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3851,7 +2329,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57432",
       "description": "토막닭(1.1kg/11호), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3871,7 +2349,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "39884",
       "description": "토종닭(1.4kg/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3891,7 +2369,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55555",
       "description": "통오리(1.6kg/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3911,7 +2389,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56912",
       "description": "동물복지 등갈비(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3931,7 +2409,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59230",
       "description": "동물복지 목살(400g/구이), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3951,7 +2429,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59231",
       "description": "동물복지 보쌈목살(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3971,7 +2449,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56903",
       "description": "동물복지 보쌈삼겹(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -3991,7 +2469,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56909",
       "description": "동물복지 불고기(500g/뒷다리살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4011,7 +2489,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59229",
       "description": "동물복지 삼겹살(400g/구이), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4031,7 +2509,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56906",
       "description": "동물복지 찌개용(300g/앞다리살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4051,7 +2529,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59499",
       "description": "동물복지 찜갈비(1kg/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4071,7 +2549,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56911",
       "description": "동물복지 카레용(300g/뒷다리살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4091,7 +2569,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58322",
       "description": "돼지 목살(500g/구이/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4111,7 +2589,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58321",
       "description": "돼지 삼겹살(500g/구이/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4131,7 +2609,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58325",
       "description": "돼지 앞다리살(500g/제육/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4151,7 +2629,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "16637",
       "description": "돼지뒷다리살(500g/불고기용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4171,7 +2649,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47261",
       "description": "돼지뒷다리살(500g/제육), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4191,7 +2669,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49977",
       "description": "돼지등갈비(1kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4211,7 +2689,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35270",
       "description": "돼지등갈비(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4231,7 +2709,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34511",
       "description": "돼지등심(300g/카레용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4251,7 +2729,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34513",
       "description": "돼지등심(300g/탕수육용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4271,7 +2749,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10671",
       "description": "돼지등심(500g/돈가스용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4291,7 +2769,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55473",
       "description": "돼지등심잡채용(400g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4311,7 +2789,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42378",
       "description": "돼지목살(1kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4331,7 +2809,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58374",
       "description": "돼지목살(400g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4351,7 +2829,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10675",
       "description": "돼지사태(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4371,7 +2849,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58371",
       "description": "돼지삼겹살(400g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4391,7 +2869,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10674",
       "description": "돼지안심(500g/장조림용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4411,7 +2889,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56539",
       "description": "돼지앞다리살(1kg/보쌈용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4431,7 +2909,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42140",
       "description": "돼지앞다리살(1kg/불고기용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4451,7 +2929,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10673",
       "description": "돼지앞다리살(500g/보쌈용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4471,7 +2949,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48666",
       "description": "돼지찜갈비(1kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4491,7 +2969,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54947",
       "description": "등심덧살(500g/수육용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4511,7 +2989,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56786",
       "description": "벌집목살(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4531,7 +3009,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28157",
       "description": "벌집삼겹살(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4551,7 +3029,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "52933",
       "description": "육즙가득 삼겹살(500g/1.5cm), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4571,7 +3049,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60340",
       "description": "돼지앞다리살(500g/보쌈용/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4591,7 +3069,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "27156",
       "description": "강화유정란(780g/15구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4611,7 +3089,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "22620",
       "description": "달구네유정란(780g/15구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4631,7 +3109,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21188",
       "description": "산안유정란(600g 15구/초란), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4651,7 +3129,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "130",
       "description": "산안유정란(780g/15알), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4671,7 +3149,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21492",
       "description": "원삼유정란(520g/10구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4691,7 +3169,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55494",
       "description": "무항한우육전(300g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4711,7 +3189,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57857",
       "description": "채끝스테이크(200g/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4731,7 +3209,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "24697",
       "description": "한우부채살(250g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4751,7 +3229,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60166",
       "description": "한우 국거리(300g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4771,7 +3249,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26319",
       "description": "한우 등심스테이크(300g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4791,7 +3269,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26348",
       "description": "한우 불고기(300g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4811,7 +3289,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26322",
       "description": "한우 세절국거리(300g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4831,7 +3309,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59085",
       "description": "한우5초등심(200g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4851,7 +3329,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59105",
       "description": "한우국거리(200g/설도/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4871,7 +3349,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59089",
       "description": "한우국거리(200g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4891,7 +3369,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42161",
       "description": "한우국거리(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4911,7 +3389,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59098",
       "description": "한우국거리200g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4931,7 +3409,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59086",
       "description": "한우등심로스(200g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4951,7 +3429,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59093",
       "description": "한우등심로스200g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4971,7 +3449,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59087",
       "description": "한우등심불고기(250g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -4991,7 +3469,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59095",
       "description": "한우등심불고기250g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5011,7 +3489,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59088",
       "description": "한우등심스테이크(200g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5031,7 +3509,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59097",
       "description": "한우등심스테이크200g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5051,7 +3529,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59090",
       "description": "한우불고기(250g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5071,7 +3549,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42155",
       "description": "한우불고기(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5091,7 +3569,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59099",
       "description": "한우불고기250g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5111,7 +3589,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59092",
       "description": "한우사태(200g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5131,7 +3609,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42157",
       "description": "한우사태(500g/세절), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5151,7 +3629,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59102",
       "description": "한우사태200g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5171,7 +3649,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59101",
       "description": "한우세절국거리200g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5191,7 +3669,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59091",
       "description": "한우장조림(250g/암소), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5211,7 +3689,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42164",
       "description": "한우장조림(500g/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5231,7 +3709,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59100",
       "description": "한우장조림250g, 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5251,7 +3729,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60338",
       "description": "한우국거리(500g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5271,7 +3749,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60339",
       "description": "한우불고기(500g/미앤미), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5291,7 +3769,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1317",
       "description": "생표고버섯(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5311,7 +3789,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "3155",
       "description": "생표고버섯(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5331,7 +3809,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "9759",
       "description": "팽이버섯(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5351,7 +3829,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10376",
       "description": "팽이버섯(450g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5371,7 +3849,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47332",
       "description": "갈색양송이버섯(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5391,7 +3869,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50454",
       "description": "새송이버섯(300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5411,7 +3889,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50462",
       "description": "느타리버섯(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5431,7 +3909,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "51322",
       "description": "생목이버섯(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5451,7 +3929,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "143",
       "description": "실속감자(5kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5471,7 +3949,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "144",
       "description": "조림감자(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5491,7 +3969,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "205",
       "description": "적양파(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5511,7 +3989,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1321",
       "description": "당근(1kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5531,7 +4009,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1325",
       "description": "당근(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5551,7 +4029,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "13132",
       "description": "감자(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5571,7 +4049,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "15798",
       "description": "감자(1kg/소과/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5591,7 +4069,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19563",
       "description": "당근(1kg/무농약/쥬스용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5611,7 +4089,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20247",
       "description": "양파(1kg/중품), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5631,7 +4109,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "31221",
       "description": "알비트(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5651,7 +4129,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "39405",
       "description": "무우(700g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5671,7 +4149,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "40354",
       "description": "홍감자(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5691,7 +4169,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "46968",
       "description": "홍산마늘(2Kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5711,7 +4189,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50542",
       "description": "무우(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5731,7 +4209,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "3158",
       "description": "수삼(100g/삼계탕용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5751,7 +4229,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1225",
       "description": "깐마늘(120g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5771,7 +4249,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "31081",
       "description": "깐마늘(700g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5791,7 +4269,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "188",
       "description": "꽈리고추(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5811,7 +4289,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1278",
       "description": "풋고추(150g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5831,7 +4309,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "8929",
       "description": "오이맛고추(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5851,7 +4329,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "9422",
       "description": "둥근애호박(1개/500g내외/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5871,7 +4349,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "16652",
       "description": "애호박(3개/1000g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5891,7 +4369,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20728",
       "description": "브로콜리(250g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5911,7 +4389,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20939",
       "description": "노각오이(1개/1200g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5931,7 +4409,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60150",
       "description": "미흑찰옥수수(4개/1kg내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5951,7 +4429,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1228",
       "description": "찰옥수수(4개/1kg내외/미백/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5971,7 +4449,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "31223",
       "description": "장아찌용양파(1.5kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -5991,7 +4469,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "23294",
       "description": "미니단호박(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6011,7 +4489,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50448",
       "description": "미니단호박(1kg/2~3개/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6031,7 +4509,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56462",
       "description": "미니새송이버섯(300G), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6051,7 +4529,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "196",
       "description": "늙은호박(3kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6071,7 +4549,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "4109",
       "description": "늙은호박(4kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6091,7 +4569,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20797",
       "description": "가지(2입/250g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6111,7 +4589,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20818",
       "description": "청양고추(100g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6131,7 +4609,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "16226",
       "description": "피망(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6151,7 +4629,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49856",
       "description": "단호박(0.7~1.1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6171,7 +4649,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14437",
       "description": "오이(2개/300g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6191,7 +4669,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "230",
       "description": "단호박(1kg이상/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6211,7 +4689,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35729",
       "description": "가지(5입/600g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6231,7 +4709,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "40724",
       "description": "늙은호박(2kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6251,7 +4729,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26445",
       "description": "늙은호박(7kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6271,7 +4749,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26444",
       "description": "늙은호박(6kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6291,7 +4769,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26442",
       "description": "늙은호박(5kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6311,7 +4789,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "3851",
       "description": "홍고추(150g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6331,7 +4809,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38913",
       "description": "제주햇건고사리(50g/자연산), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6351,7 +4829,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42940",
       "description": "지리산햇건고사리(50g/자연산), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6371,7 +4849,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1369",
       "description": "건고사리(50g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6391,7 +4869,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21212",
       "description": "데친고사리(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6411,7 +4889,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1233",
       "description": "미니단호박(400g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6431,7 +4909,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50449",
       "description": "미니단호박(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6451,7 +4929,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "17124",
       "description": "안깐도라지(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6471,7 +4949,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34650",
       "description": "햇꿀고구마(800g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6491,7 +4969,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "22314",
       "description": "무우(1.5kg이상/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6511,7 +4989,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59768",
       "description": "깐토란(1kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6531,7 +5009,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "15544",
       "description": "깐더덕(200g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6551,7 +5029,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "5030",
       "description": "알토란(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6571,7 +5049,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10736",
       "description": "토마토(1kg/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6591,7 +5069,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49310",
       "description": "대추방울토마토(500g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6611,7 +5089,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49311",
       "description": "대추방울토마토(1.2kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6631,7 +5109,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1295",
       "description": "애호박(1개/350g내외/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6651,7 +5129,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59077",
       "description": "참송이버섯(300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6671,7 +5149,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "574",
       "description": "작은키 콩나물(무농약/300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6691,7 +5169,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "17548",
       "description": "콩나물(무농약/우리마을/300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6711,7 +5189,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34752",
       "description": "숙주나물(무농약/300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6731,7 +5209,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "35728",
       "description": "콩나물(무농약/300g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6751,7 +5229,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "7428",
       "description": "콩나물(급식용/1kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6771,7 +5249,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "23580",
       "description": "황도(2kg/원주/조생활도), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6791,7 +5269,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "168",
       "description": "친환경 무화과(550g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6811,7 +5289,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "3166",
       "description": "무농약 메론(2kg이상), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6831,7 +5309,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28929",
       "description": "친환경 풋귤(3kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6851,7 +5329,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55435",
       "description": "친환경 풋귤(1.5kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6871,7 +5349,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "29366",
       "description": "자두(800g/별빛/추희), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6891,7 +5369,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57670",
       "description": "황도(2kg/의성/황귀비), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6911,7 +5389,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "27056",
       "description": "사과(1.5kg/홍로/의성), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6931,7 +5409,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60318",
       "description": "사과(1.2kg/아리수/원주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6951,7 +5429,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "50006",
       "description": "유기사과(1.2kg/홍로), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6971,7 +5449,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47420",
       "description": "유기농 포도(캠벨/1kg/상주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -6991,7 +5469,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47393",
       "description": "무농약 포도(캠벨/1kg/상주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7011,7 +5489,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60366",
       "description": "사과(1.5kg/별빛촌/이지플), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7031,7 +5509,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "26204",
       "description": "(햇)생대추(300g/의성), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7051,7 +5529,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28922",
       "description": "청포도(2kg/샤인), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7071,7 +5549,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19116",
       "description": "머루포도(2kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7091,7 +5569,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1372",
       "description": "배(3개/제수용/원황), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7111,7 +5589,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "10105",
       "description": "사과(3개/제수용/홍로), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7131,7 +5609,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60401",
       "description": "유기사과(1.2kg/시나노골드), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7151,7 +5629,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "53308",
       "description": "사과(1.5kg/홍옥/별빛), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7171,7 +5649,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "69397",
       "description": "사과(1.2kg/홍로/원주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7191,7 +5669,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "53394",
       "description": "시나노골드(1.5kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7211,7 +5689,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "29312",
       "description": "머루포도(3kg), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7231,7 +5709,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "8139",
       "description": "가을 배(1.6kg/의성/원황), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7251,7 +5729,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "15722",
       "description": "포도(캠벨/2kg/상주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7271,7 +5749,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20925",
       "description": "포도(캠벨/3kg/상주), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7291,7 +5769,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "21166",
       "description": "원삼유정란(780g/15구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7311,7 +5789,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59256",
       "description": "자유방목 유정란(520g/10구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7331,7 +5809,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58687",
       "description": "청안마루 유정란(780g/15구), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7351,7 +5829,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "32215",
       "description": "돼지앞다리살(500g/불고기용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7371,7 +5849,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19330",
       "description": "돼지통삼겹살(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7391,7 +5869,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "37958",
       "description": "돼지산적(400g/목살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7411,7 +5889,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34519",
       "description": "돼지등심(300g/잡채용), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7431,7 +5909,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57431",
       "description": "생통닭(1kg/10호), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7451,7 +5929,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "49675",
       "description": "생통닭(551g/6호), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7471,7 +5949,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "23547",
       "description": "오리슬라이스(400g/냉장), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7491,7 +5969,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57259",
       "description": "푸짐한 토막닭(1.4kg/13호), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7511,7 +5989,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56908",
       "description": "동물복지 보쌈(500g/앞다리살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7531,7 +6009,7 @@
       "category": "nonghal_meat",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56907",
       "description": "동물복지 제육(500g/앞다리살), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7551,7 +6029,7 @@
       "category": "nonghal_fruit",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "33063",
       "description": "유기농 깐밤(200g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7571,7 +6049,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "44769",
       "description": "통양배추(1개/2kg이상/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7591,7 +6069,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38250",
       "description": "통양배추(1개/1.5kg이상/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7611,7 +6089,7 @@
       "category": "nonghal_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "186",
       "description": "쪽파(300g/무농약), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7631,7 +6109,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "52807",
       "description": "햇호라산밀(500g/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7651,7 +6129,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38655",
       "description": "햇귀리(1kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7671,7 +6149,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "37609",
       "description": "햇늘보리(1kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7691,7 +6169,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "24717",
       "description": "햇찰보리(1kg/유기), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7711,7 +6189,7 @@
       "category": "nonghal_grain",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "82",
       "description": "기장(500g), 이번 주 농할쿠폰 특가로 만나보세요."
     },
@@ -7731,7 +6209,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59763",
       "description": "품질인증 고등어(600g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7751,7 +6229,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "2871",
       "description": "안동간고등어(250g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7771,7 +6249,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "5649",
       "description": "순살고등어(350g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7791,7 +6269,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20237",
       "description": "순살고등어(1kg), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7811,7 +6289,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "52283",
       "description": "순살고등어(800g/노르웨이), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7831,7 +6309,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54842",
       "description": "가시없는고등어(600g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7851,7 +6329,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54843",
       "description": "가시없는고등어(600g/노르웨이), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7871,7 +6349,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54907",
       "description": "냉장 손질고등어(400g/가온), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7891,7 +6369,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54964",
       "description": "생물 손질고등어(650g/조림용/가온), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7911,7 +6389,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55747",
       "description": "고등어구이(90g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7931,7 +6409,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57972",
       "description": "순살간고등어 (500g/가온), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7951,7 +6429,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59264",
       "description": "맛있는손질고등어, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7971,7 +6449,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "360",
       "description": "황태(3마리), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -7991,7 +6469,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "493",
       "description": "명태코다리(800g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8011,7 +6489,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "498",
       "description": "동태(전부침용)(450g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8031,7 +6509,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1380",
       "description": "황태포(1미/제수용), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8051,7 +6529,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1432",
       "description": "황태채(200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8071,7 +6549,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1519",
       "description": "황태포(3미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8091,7 +6569,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "6782",
       "description": "동태토막(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8111,7 +6589,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "12230",
       "description": "황태머리(200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8131,7 +6609,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "14190",
       "description": "동태(전부침용)(1kg), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8151,7 +6629,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "24534",
       "description": "대관령 황태채(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8171,7 +6649,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "30140",
       "description": "손질동태토막(700g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8191,7 +6669,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38830",
       "description": "손질코다리토막(700g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8211,7 +6689,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42094",
       "description": "코다리4미(1.3kg), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8231,29 +6709,9 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58768",
       "description": "큰동태토막(600g), 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p1625",
-      "name": "황태포 선물세트1호",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/52903C.jpg",
-      "originalPrice": 62000,
-      "salePrice": 62000,
-      "couponPrice": 49600,
-      "discountRate": 20,
-      "hasCoupon": true,
-      "couponLabel": "🎟️ 수산 쿠폰",
-      "couponPeriod": "9/24(목)~9/30(수)",
-      "theme": "명태",
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": false,
-      "code": "52903",
-      "description": "황태포 선물세트1호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p1626",
@@ -8271,7 +6729,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "44984",
       "description": "동태전부침용(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8291,7 +6749,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "492",
       "description": "얼린오징어(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8311,7 +6769,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "23326",
       "description": "손질오징어채, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8331,7 +6789,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38114",
       "description": "손질갑오징어(300g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8351,7 +6809,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38115",
       "description": "채썬갑오징어(200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8371,7 +6829,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54966",
       "description": "냉장 손질갑오징어(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8391,7 +6849,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55176",
       "description": "두툼한오징어(600g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8411,7 +6869,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55876",
       "description": "반건오징어채(원양산/150g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8431,7 +6889,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55920",
       "description": "마른오징어(원양산/2미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8451,7 +6909,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56862",
       "description": "손질갑오징어(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8471,7 +6929,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57973",
       "description": "손질오징어채(원양산/400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8491,7 +6949,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58766",
       "description": "울릉도 건오징어(50g/1미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8511,7 +6969,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58767",
       "description": "울릉도 건오징어(60g/1미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8531,7 +6989,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58898",
       "description": "품질인증 오징어(900g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8551,7 +7009,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59269",
       "description": "다짐 오징어살(120g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8571,7 +7029,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59488",
       "description": "반건조 오징어(240g/2미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8591,7 +7049,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "60284",
       "description": "햇손질통오징어(500g/3미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8611,7 +7069,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "405",
       "description": "영광굴비(2kg/20미/신진), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8631,7 +7089,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "13422",
       "description": "영광굴비(2.2kg/20미/신진), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8651,7 +7109,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "22308",
       "description": "영광굴비(800g/신진), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8671,7 +7129,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "37778",
       "description": "영광굴비(1.8kg/20미/신진), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8691,7 +7149,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56751",
       "description": "황금굴비(260g/2미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8711,7 +7169,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58198",
       "description": "참굴비(1.6kg/20미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8731,7 +7189,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "33905",
       "description": "영광법성포굴비(1.8kg/20미/서풍), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8751,7 +7209,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48945",
       "description": "영광법성포굴비(2kg/20미/서풍), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8771,7 +7229,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42854",
       "description": "영광법성포굴비(2.2kg/20미/서풍), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8791,7 +7249,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58927",
       "description": "영광법성포굴비(1.1kg/10미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8811,7 +7269,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1563",
       "description": "영광법성포굴비1호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8831,7 +7289,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28832",
       "description": "영광법성포굴비2호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8851,7 +7309,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "1515",
       "description": "영광법성포굴비3호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8871,7 +7329,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "37849",
       "description": "영광법성포굴비4호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8891,7 +7349,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47195",
       "description": "영광법성포굴비특1호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8911,7 +7369,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "47196",
       "description": "영광법성포굴비특2호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8931,7 +7389,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "38326",
       "description": "오가굴비(1.3kg/10미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8951,7 +7409,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "33625",
       "description": "오가굴비(1.5kg/10미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8971,7 +7429,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "34108",
       "description": "오가굴비(2.0kg/10미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -8991,7 +7449,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "7436",
       "description": "국물멸치(1kg*급식용), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9011,7 +7469,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19542",
       "description": "지리멸치(잔멸치/200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9031,7 +7489,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19543",
       "description": "볶음멸치(200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9051,7 +7509,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "19545",
       "description": "국물멸치(200g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9071,7 +7529,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20108",
       "description": "볶음멸치(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9091,7 +7549,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20109",
       "description": "지리멸치(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9111,7 +7569,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20110",
       "description": "국물멸치(1kg), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9131,7 +7589,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28874",
       "description": "남해바다멸치1호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9151,7 +7609,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "28875",
       "description": "남해바다멸치2호, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9171,7 +7629,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "42255",
       "description": "제주은갈치(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9191,7 +7649,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54908",
       "description": "냉장 손질갈치(300g/1미/가온), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9211,49 +7669,9 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58644",
       "description": "제주은갈치(420g), 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p1674",
-      "name": "제주은갈치선물세트",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/32006C.jpg",
-      "originalPrice": 131000,
-      "salePrice": 131000,
-      "couponPrice": 111000,
-      "discountRate": 15,
-      "hasCoupon": true,
-      "couponLabel": "🎟️ 수산 쿠폰",
-      "couponPeriod": "9/24(목)~9/30(수)",
-      "theme": "갈치",
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": false,
-      "code": "32006",
-      "description": "제주은갈치선물세트, 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p1675",
-      "name": "제주은갈치골드세트",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/47210C.jpg",
-      "originalPrice": 192000,
-      "salePrice": 192000,
-      "couponPrice": 172000,
-      "discountRate": 10,
-      "hasCoupon": true,
-      "couponLabel": "🎟️ 수산 쿠폰",
-      "couponPeriod": "9/24(목)~9/30(수)",
-      "theme": "갈치",
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": false,
-      "code": "47210",
-      "description": "제주은갈치골드세트, 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p1676",
@@ -9271,7 +7689,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "348",
       "description": "돌김(50장), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9291,7 +7709,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "20402",
       "description": "구운김밥김(15매/유기), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9311,7 +7729,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48515",
       "description": "구운곱창김10g*5봉, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9331,7 +7749,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "56352",
       "description": "구운장봉재래김, 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9351,7 +7769,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "48727",
       "description": "자연산 순살광어(200g/3~4조각), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9371,7 +7789,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59268",
       "description": "다짐 광어살(120g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9391,7 +7809,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "32208",
       "description": "자연산전복(200g/2~3미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9411,7 +7829,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "46689",
       "description": "자숙 전복살(100g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9431,7 +7849,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54634",
       "description": "완도참전복700g(8~10미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9451,7 +7869,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57877",
       "description": "완도왕전복(5미/600g이상), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9471,7 +7889,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "58700",
       "description": "완도참전복(480g/6미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9491,49 +7909,9 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59398",
       "description": "완도참전복(냉동/280g내외), 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p1688",
-      "name": "완도참전복세트1호(특대)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55173C.jpg",
-      "originalPrice": 48500,
-      "salePrice": 48500,
-      "couponPrice": 38800,
-      "discountRate": 20,
-      "hasCoupon": true,
-      "couponLabel": "🎟️ 수산 쿠폰",
-      "couponPeriod": "9/24(목)~9/30(수)",
-      "theme": "전복",
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": false,
-      "code": "55173",
-      "description": "완도참전복세트1호(특대), 이번 주 수산쿠폰 특가로 만나보세요."
-    },
-    {
-      "id": "p1689",
-      "name": "완도참전복세트2호(대)",
-      "icon": "🐟",
-      "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/55174C.jpg",
-      "originalPrice": 43000,
-      "salePrice": 43000,
-      "couponPrice": 34400,
-      "discountRate": 20,
-      "hasCoupon": true,
-      "couponLabel": "🎟️ 수산 쿠폰",
-      "couponPeriod": "9/24(목)~9/30(수)",
-      "theme": "전복",
-      "category": "seafood_coupon",
-      "itemType": "소비촉진",
-      "note": "",
-      "hideFromAll": false,
-      "code": "55174",
-      "description": "완도참전복세트2호(대), 이번 주 수산쿠폰 특가로 만나보세요."
     },
     {
       "id": "p1691",
@@ -9551,7 +7929,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "57845",
       "description": "자연산 참돔(700g/1미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9571,7 +7949,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59267",
       "description": "다짐 참돔살(120g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9591,7 +7969,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "59323",
       "description": "생물 참돔(스테이크용/230g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9611,7 +7989,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55923",
       "description": "손질민물장어(600g/2~3미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9631,7 +8009,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55924",
       "description": "초벌장어(470g/2~3미), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9651,7 +8029,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "487",
       "description": "구이용삼치(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9671,7 +8049,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "7852",
       "description": "간삼치살(400g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9691,7 +8069,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "22957",
       "description": "순살삼치(1kg), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9711,7 +8089,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54376",
       "description": "대삼치살(500g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9731,7 +8109,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54844",
       "description": "가시없는삼치(600g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9751,7 +8129,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "55748",
       "description": "삼치구이(90g), 이번 주 수산쿠폰 특가로 만나보세요."
     },
@@ -9771,7 +8149,7 @@
       "category": "seafood_coupon",
       "itemType": "소비촉진",
       "note": "",
-      "hideFromAll": false,
+      "hideFromAll": true,
       "code": "54967",
       "description": "냉장 손질삼치(300g), 이번 주 수산쿠폰 특가로 만나보세요."
     }
