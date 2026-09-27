@@ -276,14 +276,7 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 // 실제 존재하는 category 값만 칩으로 만들고, 데이터에 없는 카테고리는 자동으로 건너뛴다.
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
-  // "명절맞이"는 실제 category가 아니라 theme:"명절밥상"으로 태그된 품목(농산/축수산/가공 등
-  // 여러 카테고리에 걸쳐 있음)을 모아 보여주는 가상 칩이다 — 쿠폰가/카테고리별 정렬 로직을
-  // 그대로 유지해야 해서 원래 category는 바꾸지 않고 theme만으로 별도 필터링한다.
-  // presentCategories/칩 개수/필터링 세 군데에서 "myeongjeol"을 특별 취급하는 코드와 짝을 이룬다.
-  { value: "myeongjeol", label: "명절맞이", icon: "🎊" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
-  // 추석이 다가와 선물세트 칩도 앞쪽으로 올린다(2026-09-12, 이번 시즌 한정).
-  { value: "gift_set", label: "추석선물세트", icon: "🎁" },
   { value: "seafood_coupon", label: "수산", icon: "🎟️" },
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
   // 33차 농할부터 돼지/한우가 새로 추가돼 "유정란/닭/오리"만으로는 라벨이 안 맞아서 넓혔다.
@@ -371,7 +364,6 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
   if (!filterWrap) return;
 
   const presentCategories = new Set(allProducts.map((p) => p.category));
-  if (allProducts.some((p) => p.theme === "명절밥상")) presentCategories.add("myeongjeol");
   const chips = CATEGORY_LABELS.filter((c) => c.value === "all" || presentCategories.has(c.value));
 
   const state = { category: "all", query: "" };
@@ -387,34 +379,7 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     } else if (state.category === "all") {
       // hideFromAll(예: 수산쿠폰 중 "정가→최종가" 2단만 있는 품목)은 전체 목록엔 안 보이고
       // 해당 카테고리 칩을 직접 눌렀을 때만 노출한다.
-      // "전체" 탭 노출 순서: 지혜님 요청(2026-09-12, 38주 한정)으로 백미 → 김치류 → 송편 →
-      // 가공·반찬(processed) 나머지 → 그 외 순으로 보여준다(8/27 규칙을 이번 주 기준으로 갱신).
-      // id를 하드코딩하지 않고 이름으로 매칭 — 품목이 공급중단으로 빠지거나 다음 주 다시 들어와도 자동으로 반영되게 함.
-      // "이번주만"이라고 명시하셨으므로 39주 이후 이 규칙이 더 필요 없다고 하시면 이 우선순위 정렬 자체를 제거할 것(원래는 그냥 filter만 했음).
-      // 분류 칩(CATEGORY_LABELS) 순서는 그대로 두고, 카드 나열 순서만 바꾸는 것 — 우선순위 안에서는 등록 순서를 유지한다.
-      filtered = allProducts
-        .filter((p) => !p.hideFromAll)
-        .map((p, idx) => ({ p, idx }))
-        .sort((a, b) => {
-          const rank = (p) => {
-            // "김치손만두"처럼 이름에 "김치"가 들어가도 실제로는 만두류인 경우를 걸러내기 위해,
-            // 규격 괄호를 뗀 이름 "끝"이 김치류 단어로 끝나는지로 판단한다(포함 여부가 아니라).
-            const base = p.name.replace(/\(.*/, "").trim();
-            if (p.name.includes("백미")) return 0;
-            if (/(김치|깍두기|겉절이)$/.test(base)) return 1;
-            if (p.name.includes("송편")) return 2;
-            if (p.category === "processed") return 3;
-            return 4;
-          };
-          const aPri = rank(a.p);
-          const bPri = rank(b.p);
-          if (aPri !== bPri) return aPri - bPri;
-          return a.idx - b.idx;
-        })
-        .map(({ p }) => p);
-    } else if (state.category === "myeongjeol") {
-      // 가상 칩: 실제 category가 아니라 theme:"명절밥상" 태그로 모은다(원래 category 유지).
-      filtered = allProducts.filter((p) => p.theme === "명절밥상");
+      filtered = allProducts.filter((p) => !p.hideFromAll);
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
       // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가)
@@ -479,9 +444,6 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     // 나머지 카테고리 칩은 그 분류 실제 개수를 그대로 보여준다.
     if (c.value === "all") {
       btn.textContent = `${c.icon} ${c.label}`;
-    } else if (c.value === "myeongjeol") {
-      const count = allProducts.filter((p) => p.theme === "명절밥상").length;
-      btn.textContent = `${c.icon} ${c.label} (${count})`;
     } else {
       const count = allProducts.filter((p) => p.category === c.value).length;
       btn.textContent = `${c.icon} ${c.label} (${count})`;
