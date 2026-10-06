@@ -807,6 +807,26 @@ main section[id] {
   font-size: 1rem;
 }
 
+/* 완성반찬(맛찬) 전용 브랜드 뱃지 — 생활재 이미지 위 좌하단에 달아 맛찬 상품임을 바로 알아보게 한다
+   (2026-10-01 지혜님 요청). promo-ribbon(하단 전체폭 리본)과 달리 모서리에 작게 붙는다. */
+.matchan-badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c9742e, #a85620);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
+}
+
 .product-grid-status {
   text-align: center;
   color: var(--color-text-muted);

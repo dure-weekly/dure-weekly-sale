@@ -92,7 +92,7 @@
       "code": "37970",
       "name": "제주흑돼지뒷다리살(불고기용/500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 7900,
       "salePrice": 7900,
@@ -101,7 +101,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37970C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지뒷다리살(불고기용/500g), 사전예약으로 만나보세요."
     },
     {
@@ -109,7 +109,7 @@
       "code": "37973",
       "name": "제주흑돼지목살(400g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 26500,
       "salePrice": 26500,
@@ -118,7 +118,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37973C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지목살(400g), 사전예약으로 만나보세요."
     },
     {
@@ -126,7 +126,7 @@
       "code": "37975",
       "name": "제주흑돼지삼겹살-구이용(400g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 26500,
       "salePrice": 26500,
@@ -135,7 +135,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37975C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지삼겹살-구이용(400g), 사전예약으로 만나보세요."
     },
     {
@@ -143,7 +143,7 @@
       "code": "37976",
       "name": "제주흑돼지삼겹살-수육용(400g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 26500,
       "salePrice": 26500,
@@ -152,7 +152,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37976C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지삼겹살-수육용(400g), 사전예약으로 만나보세요."
     },
     {
@@ -160,7 +160,7 @@
       "code": "37977",
       "name": "제주흑돼지안심(500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 10900,
       "salePrice": 10900,
@@ -169,7 +169,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37977C.png",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지안심(500g), 사전예약으로 만나보세요."
     },
     {
@@ -177,7 +177,7 @@
       "code": "37978",
       "name": "제주흑돼지찌개용(500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 15300,
       "salePrice": 15300,
@@ -186,7 +186,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37978C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지찌개용(500g), 사전예약으로 만나보세요."
     },
     {
@@ -194,7 +194,7 @@
       "code": "37979",
       "name": "제주흑돼지수육(500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 15300,
       "salePrice": 15300,
@@ -203,7 +203,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37979C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지수육(500g), 사전예약으로 만나보세요."
     },
     {
@@ -211,7 +211,7 @@
       "code": "37980",
       "name": "제주흑돼지특수부위모듬(300g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 21500,
       "salePrice": 21500,
@@ -220,7 +220,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/37980C.png",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지특수부위모듬(300g), 사전예약으로 만나보세요."
     },
     {
@@ -228,7 +228,7 @@
       "code": "38635",
       "name": "제주흑돼지찜갈비(500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 12100,
       "salePrice": 12100,
@@ -237,7 +237,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/38635C.png",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지찜갈비(500g), 사전예약으로 만나보세요."
     },
     {
@@ -245,7 +245,7 @@
       "code": "42508",
       "name": "제주흑돼지잡육(찌개용/500g)",
       "theme": "[축산예약] 무항생제 제주 흑돼지",
-      "category": "meat",
+      "category": "jeju_pork",
       "reservationType": "예약",
       "originalPrice": 6900,
       "salePrice": 6900,
@@ -254,7 +254,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/42508C.jpg",
-      "icon": "🥩",
+      "icon": "🐖",
       "description": "제주흑돼지잡육(찌개용/500g), 사전예약으로 만나보세요."
     },
     {

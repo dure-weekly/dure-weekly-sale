@@ -144,6 +144,13 @@ function buildPromoRibbonHtml(product) {
   return `<span class="promo-ribbon"><span class="promo-ribbon-icon" aria-hidden="true">🎁</span>${product.promoBadge}</span>`;
 }
 
+// "완성반찬(맛찬)"은 즉석조리식품과 구분되는 브랜드라, 생활재 이미지 위에 전용 뱃지를 달아
+// 어느 생활재가 맛찬 상품인지 바로 눈에 띄게 한다(2026-10-01 지혜님 요청).
+function buildMatchanBadgeHtml(product) {
+  if (product.category !== "snack_side") return "";
+  return `<span class="matchan-badge">🍱 맛찬</span>`;
+}
+
 function buildProductCard(product) {
   const card = document.createElement("article");
   card.className = "product-card";
@@ -181,6 +188,7 @@ function buildProductCard(product) {
       ${badgeHtml}
       ${imageHtml}
       <span class="product-icon-wrap" aria-hidden="true">${product.icon || "🥬"}</span>
+      ${buildMatchanBadgeHtml(product)}
       ${buildPromoRibbonHtml(product)}
     </div>
     <div class="product-body">
@@ -282,7 +290,7 @@ const CATEGORY_LABELS = [
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "snack", label: "간식", icon: "🍪" },
-  { value: "snack_side", label: "즉석반찬(맛찬)", icon: "🍱" },
+  { value: "snack_side", label: "맛찬(완성)", icon: "🍱" },
 ];
 
 // 검색어가 상품명에 그대로 없어도("새우" 검색에 "자연산대하"가 걸리도록) 자주 쓰는 장보기 용어를
