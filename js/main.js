@@ -288,9 +288,14 @@ const CATEGORY_LABELS = [
   { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
   { value: "nonghal_grain", label: "농할-쌀/잡곡", icon: "🌾" },
   { value: "seafood", label: "수산", icon: "🐟" },
-  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
+  { value: "meat", label: "정육", icon: "🥩" },
+  { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "snack", label: "간식", icon: "🍪" },
+  { value: "rice_cake", label: "두레방아", icon: "🍡" },
   { value: "snack_side", label: "맛찬(완성)", icon: "🍱" },
+  { value: "health_gift", label: "장수·건강", icon: "🧧" },
+  { value: "cosmetics", label: "스킨케어", icon: "💄" },
+  { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
 // 검색어가 상품명에 그대로 없어도("새우" 검색에 "자연산대하"가 걸리도록) 자주 쓰는 장보기 용어를
