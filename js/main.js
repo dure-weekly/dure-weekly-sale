@@ -285,8 +285,6 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
-  { value: "nonghal_coupon", label: "농할-채소", icon: "🌾" },
-  { value: "nonghal_grain", label: "농할-쌀/잡곡", icon: "🌾" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
@@ -348,7 +346,13 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
   if (!filterWrap) return;
 
   const presentCategories = new Set(allProducts.map((p) => p.category));
-  const chips = CATEGORY_LABELS.filter((c) => c.value === "all" || presentCategories.has(c.value));
+  const countOf = (value) => allProducts.filter((p) => p.category === value).length;
+  const PINNED_FRONT = ["processed", "rice_cake"];
+  const pinRank = (value) => (PINNED_FRONT.includes(value) ? PINNED_FRONT.indexOf(value) : PINNED_FRONT.length);
+  const chipItems = CATEGORY_LABELS.filter((c) => c.value !== "all" && presentCategories.has(c.value)).sort(
+    (a, b) => pinRank(a.value) - pinRank(b.value) || countOf(b.value) - countOf(a.value)
+  );
+  const chips = [CATEGORY_LABELS.find((c) => c.value === "all"), ...chipItems];
 
   const state = { category: "all", query: "" };
 
@@ -363,7 +367,12 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
     } else if (state.category === "all") {
       // hideFromAll(예: 수산쿠폰 중 "정가→최종가" 2단만 있는 품목)은 전체 목록엔 안 보이고
       // 해당 카테고리 칩을 직접 눌렀을 때만 노출한다.
-      filtered = allProducts.filter((p) => !p.hideFromAll);
+      // 전체 목록에서는 칩 맨 앞에 두는 분류(가공·반찬, 두레방아)를 먼저 보여준다.
+      filtered = allProducts
+        .filter((p) => !p.hideFromAll)
+        .map((p, idx) => ({ p, idx }))
+        .sort((a, b) => pinRank(a.p.category) - pinRank(b.p.category) || a.idx - b.idx)
+        .map(({ p }) => p);
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
       // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가)
@@ -378,20 +387,6 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
           const bTier3 = b.salePrice !== b.originalPrice;
           if (aTier3 !== bTier3) return aTier3 ? -1 : 1;
           return aTier3 ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
-        });
-      }
-      // "농할쿠폰" 칩에서는 복숭아 품종(황도/백도)이 섞여 나오면 훑어보기 어려워서,
-      // 같은 품종끼리 묶어서 먼저 보여주고 그 안에서는 기존처럼 할인율 높은 순으로 정렬한다.
-      if (state.category === "nonghal_coupon") {
-        const peachGroupIndex = (name) => {
-          if (name.includes("황도")) return 0;
-          if (name.includes("백도")) return 1;
-          return 2;
-        };
-        filtered = filtered.slice().sort((a, b) => {
-          const groupDiff = peachGroupIndex(a.name) - peachGroupIndex(b.name);
-          if (groupDiff !== 0) return groupDiff;
-          return b.discountRate - a.discountRate;
         });
       }
       // "즉석반찬(맛찬)" 칩에서는 특정 이틀만 공급되는(품절되기 쉬운) 품목을

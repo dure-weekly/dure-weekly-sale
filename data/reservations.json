@@ -330,7 +330,7 @@
       "code": "58803",
       "name": "고등어무조림(700g)",
       "theme": "[예약_42주]더신선 간편식단 간편식",
-      "category": "seafood",
+      "category": "processed",
       "reservationType": "예약",
       "originalPrice": 18500,
       "salePrice": 17200,
@@ -339,7 +339,7 @@
       "hasCoupon": false,
       "supplyDate": "10/15(목)",
       "image": "https://dureimg.ecoop.or.kr:9091/Delsys/DLOG/Goods/GoodsMaster/GoodsImage/58803C.jpg",
-      "icon": "🐟",
+      "icon": "🧂",
       "description": "고등어무조림(700g), 사전예약으로 만나보세요."
     },
     {
