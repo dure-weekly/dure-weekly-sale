@@ -288,7 +288,7 @@ const CATEGORY_LABELS = [
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
-  { value: "snack", label: "간식", icon: "🍪" },
+  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
   { value: "rice_cake", label: "두레방아", icon: "🍡" },
   { value: "snack_side", label: "맛찬(완성)", icon: "🍱" },
   { value: "health_gift", label: "장수·건강", icon: "🧧" },
@@ -317,8 +317,6 @@ const SEARCH_SYNONYMS = {
   쌀: { category: "grain" },
   잡곡: { category: "grain" },
   반찬: { category: "processed" },
-  수산쿠폰: { category: "seafood_coupon" },
-  쿠폰: { category: "seafood_coupon" },
   간식: { category: "snack" },
   디저트: { category: "snack" },
 };
@@ -375,20 +373,6 @@ function renderProductFilter(allProducts, allReservations, grid, loadMoreWrap, f
         .map(({ p }) => p);
     } else {
       filtered = allProducts.filter((p) => p.category === state.category);
-      // "수산쿠폰" 칩을 직접 눌렀을 때만 적용되는 전용 정렬: 3단(정상가→주간할인→쿠폰가)
-      // 품목을 먼저 할인율 높은 순으로, 그다음 2단(정상가→할인가만) 품목을 할인가 높은 순으로 배치한다.
-      // (전체 목록에서의 노출 순서는 그대로 두고 이 칩 안에서만 다르게 정렬)
-      // 주의(2026-09-02 수정): hasCoupon은 수산쿠폰 카테고리 전 품목이 true라서 3단/2단 구분 신호가
-      // 못 됨(예전엔 구분됐다고 가정한 주석이 있었으나 실제 데이터는 그렇지 않았음) — 대신 진짜 3단 여부인
-      // "salePrice가 originalPrice와 다른가"(=주간할인가가 별도로 있는가)로 판정한다.
-      if (state.category === "seafood_coupon") {
-        filtered = filtered.slice().sort((a, b) => {
-          const aTier3 = a.salePrice !== a.originalPrice;
-          const bTier3 = b.salePrice !== b.originalPrice;
-          if (aTier3 !== bTier3) return aTier3 ? -1 : 1;
-          return aTier3 ? b.discountRate - a.discountRate : b.salePrice - a.salePrice;
-        });
-      }
       // "즉석반찬(맛찬)" 칩에서는 특정 이틀만 공급되는(품절되기 쉬운) 품목을
       // note에 "공급"이 적힌 것으로 판별해 먼저 보여준다. 나머지는 기존 순서 유지.
       if (state.category === "snack_side") {
@@ -795,15 +779,10 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
 
 // 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
 const RESERVATION_CATEGORY_LABELS = [
-  { value: "seafood", label: "수산", icon: "🐟" },
   { value: "meat", label: "정육", icon: "🥩" },
-  { value: "jeju_pork", label: "제주흑돼지", icon: "🐖" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
   { value: "health", label: "면역·건강보조", icon: "🍯" },
-  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
-  { value: "lacquerware", label: "옻칠주방용품", icon: "🥢" },
   { value: "kitchen", label: "주방용품", icon: "🍳" },
-  { value: "bedding", label: "가을침구", icon: "🛏️" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
