@@ -285,14 +285,13 @@ function renderProductLoadMoreButton(products, grid, loadMoreWrap) {
 const CATEGORY_LABELS = [
   { value: "all", label: "전체", icon: "🏷️" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
-  { value: "seafood", label: "수산", icon: "🐟" },
+  { value: "seafood_coupon", label: "수산쿠폰", icon: "🐟" },
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
-  { value: "grain", label: "쌀·잡곡", icon: "🌾" },
+  { value: "snack", label: "간식", icon: "🍪" },
   { value: "rice_cake", label: "두레방아", icon: "🍡" },
   { value: "snack_side", label: "맛찬(완성)", icon: "🍱" },
   { value: "health_gift", label: "장수·건강", icon: "🧧" },
-  { value: "cosmetics", label: "스킨케어", icon: "💄" },
   { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
@@ -307,15 +306,15 @@ const SEARCH_SYNONYMS = {
   유정란: { terms: ["유정란", "계란", "달걀"] },
   계란: { terms: ["유정란", "계란", "달걀"] },
   달걀: { terms: ["유정란", "계란", "달걀"] },
-  생선: { category: "seafood" },
-  수산: { category: "seafood" },
-  해산물: { category: "seafood" },
+  생선: { category: "seafood_coupon" },
+  수산: { category: "seafood_coupon" },
+  수산쿠폰: { category: "seafood_coupon" },
+  쿠폰: { category: "seafood_coupon" },
+  해산물: { category: "seafood_coupon" },
   야채: { category: "produce" },
   채소: { category: "produce" },
   나물: { category: "produce" },
   과일: { category: "produce" },
-  쌀: { category: "grain" },
-  잡곡: { category: "grain" },
   반찬: { category: "processed" },
   간식: { category: "snack" },
   디저트: { category: "snack" },
@@ -780,10 +779,9 @@ function renderReservationLoadMoreButton(items, grid, loadMoreWrap) {
 // 품목 수가 적어 테마별로 잘게 나누지 않고, 주간할인과 같은 큰 카테고리로만 묶는다.
 const RESERVATION_CATEGORY_LABELS = [
   { value: "meat", label: "정육", icon: "🥩" },
+  { value: "seafood", label: "수산", icon: "🐟" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
-  { value: "health", label: "면역·건강보조", icon: "🍯" },
   { value: "kitchen", label: "주방용품", icon: "🍳" },
-  { value: "living", label: "생활용품", icon: "🧴" },
 ];
 
 // 공급일 문자열("8/19(수)", "~8/31", "8/27(목)~29(토)")에서 정렬용 숫자(월*100+일)를 뽑는다.
