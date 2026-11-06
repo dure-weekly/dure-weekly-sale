@@ -289,7 +289,6 @@ const CATEGORY_LABELS = [
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "produce", label: "과일·채소", icon: "🥬" },
   { value: "snack", label: "간식", icon: "🍪" },
-  { value: "rice_cake", label: "두레방아", icon: "🍡" },
   { value: "snack_side", label: "맛찬(완성)", icon: "🍱" },
   { value: "health_gift", label: "장수·건강", icon: "🧧" },
   { value: "living", label: "생활용품", icon: "🧴" },
@@ -781,7 +780,8 @@ const RESERVATION_CATEGORY_LABELS = [
   { value: "meat", label: "정육", icon: "🥩" },
   { value: "seafood", label: "수산", icon: "🐟" },
   { value: "processed", label: "가공·반찬", icon: "🧂" },
-  { value: "kitchen", label: "주방용품", icon: "🍳" },
+  { value: "snack", label: "간식", icon: "🍪" },
+  { value: "gimjang", label: "김장", icon: "🥬" },
 ];
 
 // 공급일 문자열("8/19(수)", "~8/31", "8/27(목)~29(토)")에서 정렬용 숫자(월*100+일)를 뽑는다.
